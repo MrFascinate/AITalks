@@ -51,7 +51,7 @@ export default function Testimonials() {
       {/* Background Action Photo */}
       <div className="absolute inset-0">
         <img
-          src="https://drive.google.com/uc?export=view&id=1Jdh_fvC8nKFKqEUUT7idh-aTyc-2KF7u"
+          src="/studio shot-2.jpg"
           alt=""
           className="w-full h-full object-cover opacity-5"
         />

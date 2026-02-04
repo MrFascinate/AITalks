@@ -20,7 +20,7 @@ export default function Topics() {
       {/* Background Action Photo */}
       <div className="absolute inset-0">
         <img
-          src="https://drive.google.com/uc?export=view&id=1s533HY1_mv5d-0d7xCdwLql3h3WY9ma1"
+          src="/53970768967_337ff285aa_o.jpg"
           alt=""
           className="w-full h-full object-cover opacity-10"
         />

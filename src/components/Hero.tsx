@@ -145,7 +145,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 rounded-3xl" />
                 <div className="absolute inset-4 bg-gradient-to-br from-primary-900 to-primary-950 rounded-2xl overflow-hidden">
                   <img
-                    src="https://drive.google.com/uc?export=view&id=13QLfD6gbB4k4mUwC8vRb73FdLZTO5PYL"
+                    src="/headshot_smart-17-crop.jpg"
                     alt="Justin Shaifer - Keynote Speaker"
                     className="w-full h-full object-cover object-center"
                   />
