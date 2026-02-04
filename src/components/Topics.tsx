@@ -16,8 +16,17 @@ export default function Topics() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="topics" className="py-24 bg-primary-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="topics" className="py-24 bg-primary-900 relative overflow-hidden">
+      {/* Background Action Photo */}
+      <div className="absolute inset-0">
+        <img
+          src="https://drive.google.com/uc?export=view&id=1s533HY1_mv5d-0d7xCdwLql3h3WY9ma1"
+          alt=""
+          className="w-full h-full object-cover opacity-10"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-900 via-primary-900/95 to-primary-900" />
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}

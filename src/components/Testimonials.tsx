@@ -47,8 +47,17 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-24 bg-primary-950 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="py-24 bg-primary-950 overflow-hidden relative">
+      {/* Background Action Photo */}
+      <div className="absolute inset-0">
+        <img
+          src="https://drive.google.com/uc?export=view&id=1Jdh_fvC8nKFKqEUUT7idh-aTyc-2KF7u"
+          alt=""
+          className="w-full h-full object-cover opacity-5"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-950 via-primary-950/98 to-primary-950" />
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}

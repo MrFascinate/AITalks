@@ -140,15 +140,14 @@ export default function Hero() {
               {/* Main image container */}
               <div className="relative aspect-square max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 rounded-3xl" />
-                <div className="absolute inset-4 bg-gradient-to-br from-slate-800 to-primary-950 rounded-2xl overflow-hidden flex items-center justify-center">
-                  {/* Placeholder with initials - can be replaced with actual image */}
-                  <div className="text-center">
-                    <div className="w-32 h-32 mx-auto bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mb-4 animate-pulse-glow">
-                      <span className="text-4xl font-bold text-white">JS</span>
-                    </div>
-                    <p className="text-gray-400 text-sm">Keynote Speaker</p>
-                    <p className="text-gray-500 text-xs">STEM Media Producer</p>
-                  </div>
+                <div className="absolute inset-4 bg-gradient-to-br from-primary-900 to-primary-950 rounded-2xl overflow-hidden">
+                  <img
+                    src="https://drive.google.com/uc?export=view&id=13QLfD6gbB4k4mUwC8vRb73FdLZTO5PYL"
+                    alt="Justin Shaifer - Keynote Speaker"
+                    className="w-full h-full object-cover object-center"
+                  />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-950/60 via-transparent to-transparent" />
                 </div>
               </div>
 

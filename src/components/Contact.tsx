@@ -10,8 +10,14 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 bg-primary-950 relative overflow-hidden">
-      {/* Background decoration */}
+      {/* Background Action Photo */}
       <div className="absolute inset-0">
+        <img
+          src="https://drive.google.com/uc?export=view&id=12KlC6V5FSsHRvNY1WWBy7oAZyAfgFqrW"
+          alt=""
+          className="w-full h-full object-cover opacity-8"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-950/95 via-primary-950/90 to-primary-950/95" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-full blur-3xl" />
       </div>
 
