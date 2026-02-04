@@ -5,11 +5,21 @@ import { speakerData } from '../data/speakerData';
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary-950">
-      {/* Animated Background */}
+      {/* Animated Background with Motherboard Texture */}
       <div className="absolute inset-0">
+        {/* Motherboard Pattern */}
+        <div
+          className="absolute inset-0 opacity-60"
+          style={{
+            backgroundImage: `url('/images/motherboard-pattern.svg')`,
+            backgroundSize: '200px 200px',
+            backgroundRepeat: 'repeat',
+          }}
+        />
+
         {/* Gradient Orbs */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/30 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl"
           animate={{
             x: [0, 100, 0],
             y: [0, -50, 0],
@@ -21,7 +31,7 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/30 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl"
           animate={{
             x: [0, -100, 0],
             y: [0, 50, 0],
@@ -33,15 +43,8 @@ export default function Hero() {
           }}
         />
 
-        {/* Grid Pattern */}
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: '50px 50px',
-          }}
-        />
+        {/* Overlay gradient for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-950/50 via-transparent to-primary-950/80" />
       </div>
 
       {/* Content */}

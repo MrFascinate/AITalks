@@ -77,8 +77,17 @@ export default function Stats() {
 
   return (
     <section className="relative py-20 bg-primary-900 overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-30">
+      {/* Background with Motherboard Texture */}
+      <div className="absolute inset-0">
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage: `url('/images/motherboard-pattern.svg')`,
+            backgroundSize: '200px 200px',
+            backgroundRepeat: 'repeat',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-900/90 via-primary-900/70 to-primary-900/90" />
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl" />
       </div>

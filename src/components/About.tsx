@@ -32,8 +32,20 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24 bg-primary-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-24 bg-primary-950 relative overflow-hidden">
+      {/* Motherboard Texture Background */}
+      <div className="absolute inset-0">
+        <div
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage: `url('/images/motherboard-pattern.svg')`,
+            backgroundSize: '200px 200px',
+            backgroundRepeat: 'repeat',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-950/95 via-primary-950/80 to-primary-950/95" />
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Visual */}
           <motion.div

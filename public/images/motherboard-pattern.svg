@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <pattern id="circuit" patternUnits="userSpaceOnUse" width="200" height="200">
+      <!-- Background -->
+      <rect width="200" height="200" fill="#0a1433"/>
+
+      <!-- Main horizontal traces -->
+      <path d="M0 50 H80 M120 50 H200" stroke="#1e4fd1" stroke-width="1" opacity="0.15"/>
+      <path d="M0 100 H60 L80 80 H120 L140 100 H200" stroke="#1e4fd1" stroke-width="1" opacity="0.12"/>
+      <path d="M0 150 H200" stroke="#1e4fd1" stroke-width="1" opacity="0.1"/>
+
+      <!-- Main vertical traces -->
+      <path d="M50 0 V80 M50 120 V200" stroke="#1e4fd1" stroke-width="1" opacity="0.15"/>
+      <path d="M100 0 V40 L120 60 V140 L100 160 V200" stroke="#1e4fd1" stroke-width="1" opacity="0.12"/>
+      <path d="M150 0 V200" stroke="#1e4fd1" stroke-width="1" opacity="0.1"/>
+
+      <!-- Diagonal traces -->
+      <path d="M0 0 L40 40 M160 160 L200 200" stroke="#3b6df0" stroke-width="0.5" opacity="0.08"/>
+      <path d="M200 0 L160 40 M40 160 L0 200" stroke="#3b6df0" stroke-width="0.5" opacity="0.08"/>
+
+      <!-- Circuit nodes/pads -->
+      <circle cx="50" cy="50" r="4" fill="#1e4fd1" opacity="0.2"/>
+      <circle cx="50" cy="50" r="2" fill="#3b6df0" opacity="0.3"/>
+      <circle cx="100" cy="100" r="5" fill="#1e4fd1" opacity="0.15"/>
+      <circle cx="100" cy="100" r="2.5" fill="#f59e0b" opacity="0.2"/>
+      <circle cx="150" cy="50" r="3" fill="#1e4fd1" opacity="0.2"/>
+      <circle cx="150" cy="150" r="4" fill="#1e4fd1" opacity="0.2"/>
+      <circle cx="50" cy="150" r="3" fill="#1e4fd1" opacity="0.2"/>
+
+      <!-- IC chip representation -->
+      <rect x="75" y="75" width="50" height="50" fill="none" stroke="#1e4fd1" stroke-width="1" opacity="0.1" rx="2"/>
+      <rect x="80" y="80" width="40" height="40" fill="#0f1f4d" opacity="0.5"/>
+
+      <!-- Small traces from IC -->
+      <path d="M75 85 H70 M75 95 H65 M75 105 H70 M75 115 H65" stroke="#1e4fd1" stroke-width="0.5" opacity="0.15"/>
+      <path d="M125 85 H130 M125 95 H135 M125 105 H130 M125 115 H135" stroke="#1e4fd1" stroke-width="0.5" opacity="0.15"/>
+      <path d="M85 75 V70 M95 75 V65 M105 75 V70 M115 75 V65" stroke="#1e4fd1" stroke-width="0.5" opacity="0.15"/>
+      <path d="M85 125 V130 M95 125 V135 M105 125 V130 M115 125 V135" stroke="#1e4fd1" stroke-width="0.5" opacity="0.15"/>
+
+      <!-- Vias (small connection points) -->
+      <circle cx="20" cy="20" r="1.5" fill="#3b6df0" opacity="0.25"/>
+      <circle cx="180" cy="20" r="1.5" fill="#3b6df0" opacity="0.25"/>
+      <circle cx="20" cy="180" r="1.5" fill="#3b6df0" opacity="0.25"/>
+      <circle cx="180" cy="180" r="1.5" fill="#3b6df0" opacity="0.25"/>
+      <circle cx="70" cy="130" r="1" fill="#f59e0b" opacity="0.2"/>
+      <circle cx="130" cy="70" r="1" fill="#f59e0b" opacity="0.2"/>
+
+      <!-- Additional detail traces -->
+      <path d="M20 20 H35 V35" stroke="#3b6df0" stroke-width="0.5" opacity="0.1"/>
+      <path d="M180 20 H165 V35" stroke="#3b6df0" stroke-width="0.5" opacity="0.1"/>
+      <path d="M20 180 H35 V165" stroke="#3b6df0" stroke-width="0.5" opacity="0.1"/>
+      <path d="M180 180 H165 V165" stroke="#3b6df0" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="200" height="200" fill="url(#circuit)"/>
+</svg>

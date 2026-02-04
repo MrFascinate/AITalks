@@ -90,3 +90,57 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Motherboard/Circuit Board Pattern */
+.circuit-bg {
+  background-color: #0a1433;
+  background-image:
+    /* Circuit traces - horizontal */
+    linear-gradient(90deg, transparent 0%, transparent 48%, rgba(59, 109, 240, 0.08) 48%, rgba(59, 109, 240, 0.08) 52%, transparent 52%, transparent 100%),
+    /* Circuit traces - vertical */
+    linear-gradient(0deg, transparent 0%, transparent 48%, rgba(59, 109, 240, 0.08) 48%, rgba(59, 109, 240, 0.08) 52%, transparent 52%, transparent 100%),
+    /* Circuit nodes */
+    radial-gradient(circle at 50% 50%, rgba(59, 109, 240, 0.15) 0%, rgba(59, 109, 240, 0.15) 3%, transparent 3%),
+    /* Secondary traces */
+    linear-gradient(45deg, transparent 0%, transparent 49%, rgba(30, 79, 209, 0.05) 49%, rgba(30, 79, 209, 0.05) 51%, transparent 51%, transparent 100%),
+    linear-gradient(-45deg, transparent 0%, transparent 49%, rgba(30, 79, 209, 0.05) 49%, rgba(30, 79, 209, 0.05) 51%, transparent 51%, transparent 100%);
+  background-size:
+    60px 60px,
+    60px 60px,
+    60px 60px,
+    30px 30px,
+    30px 30px;
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0;
+}
+
+/* Animated circuit pulse effect */
+@keyframes circuit-pulse {
+  0%, 100% {
+    opacity: 0.03;
+  }
+  50% {
+    opacity: 0.08;
+  }
+}
+
+.circuit-animated {
+  position: relative;
+}
+
+.circuit-animated::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    /* Glowing traces */
+    linear-gradient(90deg, transparent 0%, transparent 45%, rgba(245, 158, 11, 0.1) 50%, transparent 55%, transparent 100%),
+    linear-gradient(0deg, transparent 0%, transparent 45%, rgba(245, 158, 11, 0.1) 50%, transparent 55%, transparent 100%);
+  background-size: 120px 120px;
+  animation: circuit-pulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
