@@ -4,7 +4,7 @@ import { speakerData } from '../data/speakerData';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary-950">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Gradient Orbs */}
@@ -140,7 +140,7 @@ export default function Hero() {
               {/* Main image container */}
               <div className="relative aspect-square max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 rounded-3xl" />
-                <div className="absolute inset-4 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden flex items-center justify-center">
+                <div className="absolute inset-4 bg-gradient-to-br from-slate-800 to-primary-950 rounded-2xl overflow-hidden flex items-center justify-center">
                   {/* Placeholder with initials - can be replaced with actual image */}
                   <div className="text-center">
                     <div className="w-32 h-32 mx-auto bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mb-4 animate-pulse-glow">
@@ -154,7 +154,7 @@ export default function Hero() {
 
               {/* Floating badges */}
               <motion.div
-                className="absolute -top-4 -right-4 bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 shadow-xl"
+                className="absolute -top-4 -right-4 bg-primary-900 border border-primary-800 rounded-xl px-4 py-2 shadow-xl"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
@@ -163,7 +163,7 @@ export default function Hero() {
               </motion.div>
 
               <motion.div
-                className="absolute -bottom-4 -left-4 bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 shadow-xl"
+                className="absolute -bottom-4 -left-4 bg-primary-900 border border-primary-800 rounded-xl px-4 py-2 shadow-xl"
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >

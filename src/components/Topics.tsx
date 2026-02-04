@@ -16,7 +16,7 @@ export default function Topics() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="topics" className="py-24 bg-slate-800">
+    <section id="topics" className="py-24 bg-primary-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -50,7 +50,7 @@ export default function Topics() {
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-accent-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-primary-500/50 transition-all duration-300">
+                <div className="relative bg-primary-950/50 backdrop-blur-sm border border-primary-800/50 rounded-2xl p-8 hover:border-primary-500/50 transition-all duration-300">
                   <div className="flex items-start gap-5">
                     <div className="flex-shrink-0">
                       <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -114,7 +114,7 @@ export default function Topics() {
             {speakerData.audiences.map((audience) => (
               <span
                 key={audience}
-                className="bg-slate-700/50 border border-slate-600/50 text-gray-300 px-4 py-2 rounded-full text-sm hover:border-primary-500/50 hover:text-primary-400 transition-all"
+                className="bg-primary-800/50 border border-primary-700/50 text-gray-300 px-4 py-2 rounded-full text-sm hover:border-primary-500/50 hover:text-primary-400 transition-all"
               >
                 {audience}
               </span>

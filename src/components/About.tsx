@@ -32,7 +32,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24 bg-slate-900">
+    <section id="about" className="py-24 bg-primary-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Visual */}
@@ -54,7 +54,7 @@ export default function About() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 hover:border-primary-500/50 transition-all duration-300 group"
+                    className="bg-primary-900/80 backdrop-blur-sm border border-primary-800/50 rounded-xl p-5 hover:border-primary-500/50 transition-all duration-300 group"
                   >
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-500/20 to-accent-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                       <item.icon className="w-6 h-6 text-primary-400" />
@@ -88,7 +88,7 @@ export default function About() {
             </div>
 
             {/* Media Features */}
-            <div className="mt-8 pt-8 border-t border-slate-700/50">
+            <div className="mt-8 pt-8 border-t border-primary-800/50">
               <p className="text-gray-400 text-sm mb-4">Featured in</p>
               <div className="flex flex-wrap items-center gap-6">
                 {speakerData.mediaFeatures.map((media) => (

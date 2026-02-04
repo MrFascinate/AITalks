@@ -76,7 +76,7 @@ export default function Stats() {
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
   return (
-    <section className="relative py-20 bg-slate-800 overflow-hidden">
+    <section className="relative py-20 bg-primary-900 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl" />
@@ -108,7 +108,7 @@ export default function Stats() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="relative group"
             >
-              <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 text-center hover:border-primary-500/50 transition-all duration-300">
+              <div className="bg-primary-950/50 backdrop-blur-sm border border-primary-800/50 rounded-2xl p-6 text-center hover:border-primary-500/50 transition-all duration-300">
                 {/* Icon */}
                 <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${stat.color} mb-4`}>
                   <stat.icon className="w-7 h-7 text-white" />

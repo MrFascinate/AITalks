@@ -47,7 +47,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-24 bg-slate-900 overflow-hidden">
+    <section id="testimonials" className="py-24 bg-primary-950 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -78,7 +78,7 @@ export default function Testimonials() {
           {/* Background decoration */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-accent-500/5 rounded-3xl" />
 
-          <div className="relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8 md:p-12">
+          <div className="relative bg-primary-900/50 backdrop-blur-sm border border-primary-800/50 rounded-3xl p-8 md:p-12">
             {/* Quote Icon */}
             <div className="absolute top-6 left-6 md:top-8 md:left-8">
               <Quote className="w-12 h-12 text-primary-500/20" />
@@ -130,7 +130,7 @@ export default function Testimonials() {
             <div className="flex items-center justify-center gap-4 mt-8">
               <button
                 onClick={() => paginate(-1)}
-                className="w-12 h-12 rounded-full bg-slate-700/50 border border-slate-600/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
+                className="w-12 h-12 rounded-full bg-primary-800/50 border border-primary-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -147,7 +147,7 @@ export default function Testimonials() {
                     className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                       index === currentIndex
                         ? 'w-8 bg-gradient-to-r from-primary-500 to-accent-500'
-                        : 'bg-slate-600 hover:bg-slate-500'
+                        : 'bg-primary-700 hover:bg-primary-600'
                     }`}
                   />
                 ))}
@@ -155,7 +155,7 @@ export default function Testimonials() {
 
               <button
                 onClick={() => paginate(1)}
-                className="w-12 h-12 rounded-full bg-slate-700/50 border border-slate-600/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
+                className="w-12 h-12 rounded-full bg-primary-800/50 border border-primary-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>

@@ -27,7 +27,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-900/95 backdrop-blur-md shadow-lg'
+          ? 'bg-primary-950/95 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -81,7 +81,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-slate-900/95 backdrop-blur-md"
+            className="md:hidden bg-primary-950/95 backdrop-blur-md"
           >
             <div className="px-4 py-4 space-y-3">
               {navLinks.map((link) => (

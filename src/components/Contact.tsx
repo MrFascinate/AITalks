@@ -9,7 +9,7 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="py-24 bg-slate-900 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-primary-950 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-full blur-3xl" />
@@ -86,13 +86,13 @@ export default function Contact() {
                 href={speakerData.socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-gray-400 hover:text-[#0A66C2] hover:border-[#0A66C2]/50 transition-all"
+                className="w-12 h-12 rounded-full bg-primary-900/50 border border-primary-800/50 flex items-center justify-center text-gray-400 hover:text-[#0A66C2] hover:border-[#0A66C2]/50 transition-all"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href={`mailto:contact@justinshaifer.com`}
-                className="w-12 h-12 rounded-full bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-gray-400 hover:text-primary-400 hover:border-primary-500/50 transition-all"
+                className="w-12 h-12 rounded-full bg-primary-900/50 border border-primary-800/50 flex items-center justify-center text-gray-400 hover:text-primary-400 hover:border-primary-500/50 transition-all"
               >
                 <Mail className="w-5 h-5" />
               </a>
