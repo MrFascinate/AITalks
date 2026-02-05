@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Heart, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { Linkedin, Mail, ExternalLink } from 'lucide-react';
 import { speakerData } from '../data/speakerData';
 
 const footerLinks = [
@@ -93,17 +93,10 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="section-divider mb-8" />
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex items-center justify-center">
           <p className="text-gray-500 text-sm">
-            © {currentYear} Justin Shaifer. All rights reserved.
+            © {currentYear} Fascinate Media. All rights reserved.
           </p>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-gray-500 text-sm flex items-center gap-1"
-          >
-            Made with <Heart className="w-4 h-4 text-red-500" /> for innovation
-          </motion.p>
         </div>
       </div>
     </footer>

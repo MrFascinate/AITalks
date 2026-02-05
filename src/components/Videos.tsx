@@ -4,11 +4,6 @@ import { Play } from 'lucide-react';
 
 const videos = [
   {
-    id: '1082939720',
-    title: 'AI in Business Leadership',
-    description: 'Exploring how AI transforms leadership strategies',
-  },
-  {
     id: '1075551079',
     title: 'Future of Work',
     description: 'Preparing teams for the AI-powered workplace',

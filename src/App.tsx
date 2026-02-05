@@ -8,18 +8,20 @@ import Testimonials from './components/Testimonials'
 import Clients from './components/Clients'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import StickyBookingButton from './components/StickyBookingButton'
 
 function App() {
   return (
     <div className="min-h-screen bg-primary-950">
       <Navbar />
+      <StickyBookingButton />
       <main>
         <Hero />
         <Stats />
         <About />
         <Topics />
-        <Videos />
         <Testimonials />
+        <Videos />
         <Clients />
         <Contact />
       </main>
