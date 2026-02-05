@@ -11,12 +11,77 @@ const clients = [
   { name: 'PBS', color: '#2638C4' },
 ];
 
-const mediaFeatures = [
-  { name: 'Forbes', color: '#B1000A' },
-  { name: 'ABC News', color: '#000000' },
-  { name: 'Yahoo Finance', color: '#6001D2' },
-  { name: 'NBC News', color: '#F37021' },
-  { name: 'AfroTech', color: '#FF6B35' },
+// Forbes Logo SVG Component
+const ForbesLogo = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 200 50" fill="currentColor">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle"
+          style={{ fontFamily: 'Georgia, serif', fontSize: '36px', fontWeight: 'bold', fontStyle: 'italic' }}>
+      Forbes
+    </text>
+  </svg>
+);
+
+// NBC News Logo SVG Component (Peacock style)
+const NBCNewsLogo = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 200 50" fill="currentColor">
+    <g transform="translate(20, 5)">
+      {/* NBC Peacock simplified */}
+      <path d="M15 20 L20 5 L25 20" fill="#FF6B00" />
+      <path d="M25 20 L30 8 L35 20" fill="#FFD700" />
+      <path d="M35 20 L40 10 L45 20" fill="#4CBB17" />
+      <path d="M5 20 L10 10 L15 20" fill="#0066CC" />
+      <path d="M0 20 L5 8 L10 20" fill="#CC0066" />
+      <path d="M10 20 L15 5 L20 20" fill="#9933CC" />
+    </g>
+    <text x="130" y="30" style={{ fontFamily: 'Arial, sans-serif', fontSize: '18px', fontWeight: 'bold' }}>
+      NBC NEWS
+    </text>
+  </svg>
+);
+
+// Yahoo Finance Logo SVG Component
+const YahooFinanceLogo = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 220 50" fill="currentColor">
+    <text x="10" y="32" style={{ fontFamily: 'Helvetica Neue, Arial, sans-serif', fontSize: '24px', fontWeight: 'bold' }}>
+      Yahoo!
+    </text>
+    <text x="95" y="32" style={{ fontFamily: 'Helvetica Neue, Arial, sans-serif', fontSize: '18px', fontWeight: '500' }}>
+      finance
+    </text>
+  </svg>
+);
+
+// AfroTech Logo SVG Component
+const AfroTechLogo = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 180 50" fill="currentColor">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle"
+          style={{ fontFamily: 'Arial Black, sans-serif', fontSize: '22px', fontWeight: '900', letterSpacing: '2px' }}>
+      AFROTECH
+    </text>
+  </svg>
+);
+
+const mediaLogos = [
+  {
+    name: 'Forbes',
+    Logo: ForbesLogo,
+    hoverColor: '#B1000A'
+  },
+  {
+    name: 'NBC News',
+    Logo: NBCNewsLogo,
+    hoverColor: '#F37021'
+  },
+  {
+    name: 'Yahoo Finance',
+    Logo: YahooFinanceLogo,
+    hoverColor: '#6001D2'
+  },
+  {
+    name: 'AfroTech',
+    Logo: AfroTechLogo,
+    hoverColor: '#FF6B35'
+  },
 ];
 
 export default function Clients() {
@@ -53,8 +118,8 @@ export default function Clients() {
         </motion.div>
 
         {/* Media Logos Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-16">
-          {mediaFeatures.map((media, index) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          {mediaLogos.map((media, index) => (
             <motion.div
               key={media.name}
               initial={{ opacity: 0, y: 20 }}
@@ -62,14 +127,14 @@ export default function Clients() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="group"
             >
-              <div className="card-gradient-border h-20">
-                <div className="relative z-10 h-full flex items-center justify-center">
-                  <span
-                    className="text-lg font-bold text-gray-400 group-hover:text-gradient transition-all duration-300"
-                    style={{ fontFamily: media.name === 'Forbes' ? 'Georgia, serif' : 'inherit' }}
-                  >
-                    {media.name}
-                  </span>
+              <div className="card-gradient-border h-24">
+                <div
+                  className="relative z-10 h-full flex items-center justify-center px-4 text-gray-400 group-hover:text-white transition-all duration-300"
+                  style={{
+                    ['--hover-color' as string]: media.hoverColor
+                  }}
+                >
+                  <media.Logo className="w-full h-10 fill-current" />
                 </div>
               </div>
             </motion.div>

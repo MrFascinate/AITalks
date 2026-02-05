@@ -3,7 +3,7 @@ export const speakerData = {
   nickname: "Mr. Fascinate",
   tagline: "Empowering Leaders for the Age of AI",
   title: "Forbes 30 Under 30 | Keynote Speaker | STEM Media Producer",
-  shortBio: "The \"Millennial Bill Nye\" electrifying audiences with cutting-edge AI insights and real-world experience.",
+  shortBio: "The AI & STEM Educator, Keynote Speaker and Sci-Fi Author who electrifies audiences with AI insights and real-world experience.",
   fullBio: `Recently named Forbes 30 Under 30, Justin "Mr. Fascinate" Shaifer is a Science and Technology thought leader, STEM educator, investor, and keynote speaker on a mission to empower the world with innovation.
 
 As a south-side Chicago native raised by a single parent, Justin is passionate about empowering underrepresented communities. At Fascinate Media, he serves as both executive producer and on-camera talent, creating inspiring content about innovation, AI & STEM literacy, and the Future of Work.
@@ -11,9 +11,9 @@ As a south-side Chicago native raised by a single parent, Justin is passionate a
 Justin transforms complex topics into digestible concepts, sparking curiosity while empowering educators and students who feel "underestimated" to find their place in STEM. His work has reached millions of students, educators, and corporate stakeholders.`,
 
   stats: {
-    audienceFeedback: 526,
-    studentsReached: "1M+",
-    corporateClients: "50+",
+    audienceFeedback: 10000,
+    studentsReached: "5M+",
+    corporateClients: "250+",
     satisfactionRate: "98%",
   },
 

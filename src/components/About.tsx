@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Award, Tv, BookOpen, Sparkles, ArrowRight } from 'lucide-react';
+import { Award, Linkedin, BookOpen, Sparkles, ArrowRight } from 'lucide-react';
 import { speakerData } from '../data/speakerData';
 
 const highlights = [
@@ -11,14 +11,14 @@ const highlights = [
     description: "Recognized as a leading innovator in science and technology",
   },
   {
-    icon: Tv,
-    title: '"Millennial Bill Nye"',
-    description: "Making complex topics digestible and engaging",
+    icon: Linkedin,
+    title: "LinkedIn Top Voice in Technology",
+    description: "Instructor on LinkedIn Learning Platform",
   },
   {
     icon: BookOpen,
-    title: "STEM Educator",
-    description: "Empowering underrepresented communities in STEM",
+    title: "STEM & AI Educator",
+    description: "Creating educational programming around STEM and AI for professionals, educators and students",
   },
   {
     icon: Sparkles,
@@ -56,6 +56,31 @@ export default function About() {
                 transition={{ duration: 4, repeat: Infinity }}
               />
 
+              {/* Speaker Reel Video */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6 }}
+                className="relative mb-6"
+              >
+                <div className="card-gradient-border">
+                  <div className="relative z-10 p-2">
+                    <div className="vimeo-container">
+                      <iframe
+                        src="https://player.vimeo.com/video/1082939720?badge=0&autopause=0&player_id=0&app_id=58479"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                        title="AI and Innovation Keynote Speaker Reel"
+                      />
+                    </div>
+                    <div className="p-3 text-center">
+                      <p className="text-primary-400 text-sm font-medium uppercase tracking-wider">
+                        AI and Innovation Keynote Speaker Reel
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
               {/* Highlights grid */}
               <div className="relative grid grid-cols-2 gap-4">
                 {highlights.map((item, index) => (
@@ -63,7 +88,7 @@ export default function About() {
                     key={item.title}
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                     className="card-gradient-border group"
                   >
                     <div className="relative z-10 p-5">

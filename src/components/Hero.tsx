@@ -33,16 +33,6 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6"
-            >
-              <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
-              <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Forbes 30 Under 30</span>
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -124,8 +114,8 @@ export default function Hero() {
                   whileHover={{ y: -5 }}
                 >
                   <div className="relative z-10">
-                    <p className="text-4xl font-bold text-gradient font-display">{speakerData.stats.audienceFeedback}+</p>
-                    <p className="text-gray-400 text-sm uppercase tracking-wider mt-2">5-Star Reviews</p>
+                    <p className="text-4xl font-bold text-gradient font-display">{speakerData.stats.audienceFeedback.toLocaleString()}+</p>
+                    <p className="text-gray-400 text-sm uppercase tracking-wider mt-2">Audience Reviews</p>
                   </div>
                 </motion.div>
 
@@ -135,7 +125,7 @@ export default function Hero() {
                 >
                   <div className="relative z-10">
                     <p className="text-4xl font-bold text-gradient font-display">{speakerData.stats.studentsReached}</p>
-                    <p className="text-gray-400 text-sm uppercase tracking-wider mt-2">Students Reached</p>
+                    <p className="text-gray-400 text-sm uppercase tracking-wider mt-2">Reached</p>
                   </div>
                 </motion.div>
 
@@ -145,7 +135,7 @@ export default function Hero() {
                 >
                   <div className="relative z-10">
                     <p className="text-4xl font-bold text-gradient font-display">{speakerData.stats.corporateClients}</p>
-                    <p className="text-gray-400 text-sm uppercase tracking-wider mt-2">Corporate Clients</p>
+                    <p className="text-gray-400 text-sm uppercase tracking-wider mt-2">Corporate & Educator Clients</p>
                   </div>
                 </motion.div>
 

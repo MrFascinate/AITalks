@@ -7,22 +7,24 @@ import { speakerData } from '../data/speakerData';
 const stats = [
   {
     icon: MessageSquare,
-    value: speakerData.stats.audienceFeedback,
+    value: 10000,
     label: "Audience Reviews",
     suffix: "+",
+    displayValue: "10,000+",
   },
   {
     icon: Users,
-    value: 1000000,
-    label: "Students Reached",
+    value: 5000000,
+    label: "Reached",
     suffix: "+",
-    displayValue: "1M+",
+    displayValue: "5M+",
   },
   {
     icon: Building2,
-    value: 50,
-    label: "Corporate Clients",
+    value: 250,
+    label: "Corporate & Educator Clients",
     suffix: "+",
+    displayValue: "250+",
   },
   {
     icon: Star,
