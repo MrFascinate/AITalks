@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react';
 import { speakerData } from '../data/speakerData';
 
 export default function Testimonials() {
@@ -48,15 +48,14 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="py-24 bg-primary-950 overflow-hidden relative">
-      {/* Background Action Photo */}
+      {/* Background decoration */}
       <div className="absolute inset-0">
-        <img
-          src="/studio shot-2.jpg"
-          alt=""
-          className="w-full h-full object-cover opacity-5"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-950 via-primary-950/98 to-primary-950" />
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-accent-400/5 rounded-full blur-3xl" />
       </div>
+
+      <div className="section-divider absolute top-0 left-0 right-0" />
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -65,12 +64,13 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary-400 font-semibold text-sm uppercase tracking-wider">
-            Testimonials
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4">
-            What People Are{' '}
-            <span className="text-gradient">Saying</span>
+          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
+            <Star size={16} className="text-primary-500" />
+            <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Testimonials</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4 font-display">
+            WHAT PEOPLE ARE{' '}
+            <span className="text-gradient">SAYING</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Feedback from {speakerData.stats.audienceFeedback}+ audience members across conferences and events worldwide.
@@ -84,90 +84,89 @@ export default function Testimonials() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative max-w-4xl mx-auto"
         >
-          {/* Background decoration */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-accent-500/5 rounded-3xl" />
-
-          <div className="relative bg-primary-900/50 backdrop-blur-sm border border-primary-800/50 rounded-3xl p-8 md:p-12">
-            {/* Quote Icon */}
-            <div className="absolute top-6 left-6 md:top-8 md:left-8">
-              <Quote className="w-12 h-12 text-primary-500/20" />
-            </div>
-
-            {/* Testimonial Content */}
-            <div className="relative min-h-[280px] flex items-center justify-center">
-              <AnimatePresence initial={false} custom={direction} mode="wait">
-                <motion.div
-                  key={currentIndex}
-                  custom={direction}
-                  variants={variants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{
-                    x: { type: "spring", stiffness: 300, damping: 30 },
-                    opacity: { duration: 0.2 },
-                  }}
-                  className="text-center px-4"
-                >
-                  {/* Highlight Badge */}
-                  <div className="inline-flex items-center gap-2 bg-primary-500/10 border border-primary-500/20 rounded-full px-4 py-2 mb-6">
-                    <span className="w-2 h-2 bg-primary-400 rounded-full" />
-                    <span className="text-primary-300 text-sm font-medium">
-                      {testimonials[currentIndex].highlight}
-                    </span>
-                  </div>
-
-                  {/* Quote */}
-                  <blockquote className="text-xl md:text-2xl text-white font-medium leading-relaxed mb-8">
-                    "{testimonials[currentIndex].quote}"
-                  </blockquote>
-
-                  {/* Author */}
-                  <div>
-                    <p className="text-white font-semibold text-lg">
-                      {testimonials[currentIndex].author}
-                    </p>
-                    <p className="text-gray-400">
-                      {testimonials[currentIndex].role}
-                    </p>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            {/* Navigation */}
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <button
-                onClick={() => paginate(-1)}
-                className="w-12 h-12 rounded-full bg-primary-800/50 border border-primary-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-
-              {/* Dots */}
-              <div className="flex items-center gap-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => {
-                      setDirection(index > currentIndex ? 1 : -1);
-                      setCurrentIndex(index);
-                    }}
-                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                      index === currentIndex
-                        ? 'w-8 bg-gradient-to-r from-primary-500 to-accent-500'
-                        : 'bg-primary-700 hover:bg-primary-600'
-                    }`}
-                  />
-                ))}
+          <div className="card-gradient-border">
+            <div className="relative z-10 p-8 md:p-12">
+              {/* Quote Icon */}
+              <div className="absolute top-6 left-6 md:top-8 md:left-8">
+                <Quote className="w-12 h-12 text-primary-500/30" />
               </div>
 
-              <button
-                onClick={() => paginate(1)}
-                className="w-12 h-12 rounded-full bg-primary-800/50 border border-primary-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
+              {/* Testimonial Content */}
+              <div className="relative min-h-[280px] flex items-center justify-center">
+                <AnimatePresence initial={false} custom={direction} mode="wait">
+                  <motion.div
+                    key={currentIndex}
+                    custom={direction}
+                    variants={variants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{
+                      x: { type: "spring", stiffness: 300, damping: 30 },
+                      opacity: { duration: 0.2 },
+                    }}
+                    className="text-center px-4"
+                  >
+                    {/* Highlight Badge */}
+                    <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
+                      <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
+                      <span className="text-primary-300 text-sm font-medium uppercase tracking-wider">
+                        {testimonials[currentIndex].highlight}
+                      </span>
+                    </div>
+
+                    {/* Quote */}
+                    <blockquote className="text-xl md:text-2xl text-white font-medium leading-relaxed mb-8">
+                      "{testimonials[currentIndex].quote}"
+                    </blockquote>
+
+                    {/* Author */}
+                    <div>
+                      <p className="text-gradient font-bold text-lg">
+                        {testimonials[currentIndex].author}
+                      </p>
+                      <p className="text-gray-400">
+                        {testimonials[currentIndex].role}
+                      </p>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* Navigation */}
+              <div className="flex items-center justify-center gap-4 mt-8">
+                <button
+                  onClick={() => paginate(-1)}
+                  className="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+
+                {/* Dots */}
+                <div className="flex items-center gap-2">
+                  {testimonials.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => {
+                        setDirection(index > currentIndex ? 1 : -1);
+                        setCurrentIndex(index);
+                      }}
+                      className={`h-2.5 rounded-full transition-all duration-300 ${
+                        index === currentIndex
+                          ? 'w-8 bg-gradient-to-r from-primary-500 to-accent-400'
+                          : 'w-2.5 bg-primary-700 hover:bg-primary-600'
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                <button
+                  onClick={() => paginate(1)}
+                  className="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </div>
             </div>
           </div>
         </motion.div>

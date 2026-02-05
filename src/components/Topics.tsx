@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Rocket, Briefcase, TrendingUp, Users } from 'lucide-react';
+import { Rocket, Briefcase, TrendingUp, Users, Mic } from 'lucide-react';
 import { speakerData, audienceOutcomes } from '../data/speakerData';
 
 const iconMap: Record<string, React.ElementType> = {
@@ -17,15 +17,18 @@ export default function Topics() {
 
   return (
     <section id="topics" className="py-24 bg-primary-900 relative overflow-hidden">
-      {/* Background Action Photo */}
+      {/* Background */}
       <div className="absolute inset-0">
         <img
           src="/53970768967_337ff285aa_o.jpg"
           alt=""
-          className="w-full h-full object-cover opacity-10"
+          className="w-full h-full object-cover opacity-5"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-900 via-primary-900/95 to-primary-900" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-900 via-primary-900/98 to-primary-900" />
       </div>
+
+      <div className="section-divider absolute top-0 left-0 right-0" />
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -34,12 +37,13 @@ export default function Topics() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary-400 font-semibold text-sm uppercase tracking-wider">
-            Keynote Topics
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4">
-            Dynamic{' '}
-            <span className="text-gradient">Technical Showcases</span>
+          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
+            <Mic size={16} className="text-primary-500" />
+            <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Keynote Topics</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4 font-display">
+            DYNAMIC{' '}
+            <span className="text-gradient">TECHNICAL SHOWCASES</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Raving reviews from tens of thousands of audience members for presentations that transform complex topics into actionable insights.
@@ -56,19 +60,18 @@ export default function Topics() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative"
+                className="card-gradient-border group"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-accent-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative bg-primary-950/50 backdrop-blur-sm border border-primary-800/50 rounded-2xl p-8 hover:border-primary-500/50 transition-all duration-300">
+                <div className="relative z-10 p-8">
                   <div className="flex items-start gap-5">
                     <div className="flex-shrink-0">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-accent-400 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <IconComponent className="w-7 h-7 text-white" />
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors">
-                        {topic.title}
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-gradient transition-all font-display">
+                        {topic.title.toUpperCase()}
                       </h3>
                       <p className="text-gray-400">
                         {topic.description}
@@ -86,28 +89,30 @@ export default function Topics() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="bg-gradient-to-br from-primary-500/10 to-accent-500/10 border border-primary-500/20 rounded-2xl p-8 md:p-10"
+          className="card-gradient-border"
         >
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-6 text-center">
-            What Your Audience Will Gain
-          </h3>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {audienceOutcomes.map((outcome, index) => (
-              <motion.div
-                key={outcome}
-                initial={{ opacity: 0, x: -20 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                className="flex items-center gap-3"
-              >
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span className="text-gray-300">{outcome}</span>
-              </motion.div>
-            ))}
+          <div className="relative z-10 p-8 md:p-10">
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-6 text-center font-display">
+              WHAT YOUR AUDIENCE <span className="text-gradient">WILL GAIN</span>
+            </h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {audienceOutcomes.map((outcome, index) => (
+                <motion.div
+                  key={outcome}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+                  className="flex items-center gap-3"
+                >
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary-500 to-accent-400 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-gray-300">{outcome}</span>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
 
@@ -118,12 +123,12 @@ export default function Topics() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-12 text-center"
         >
-          <p className="text-gray-400 mb-4">Perfect for</p>
+          <p className="text-gray-400 mb-4 uppercase tracking-wider text-sm">Perfect for</p>
           <div className="flex flex-wrap justify-center gap-3">
             {speakerData.audiences.map((audience) => (
               <span
                 key={audience}
-                className="bg-primary-800/50 border border-primary-700/50 text-gray-300 px-4 py-2 rounded-full text-sm hover:border-primary-500/50 hover:text-primary-400 transition-all"
+                className="btn-gradient-border py-2 px-4 text-sm cursor-default"
               >
                 {audience}
               </span>

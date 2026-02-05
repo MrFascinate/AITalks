@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Topics', href: '#topics' },
+  { name: 'Videos', href: '#videos' },
   { name: 'Testimonials', href: '#testimonials' },
   { name: 'Contact', href: '#contact' },
 ];
@@ -23,54 +24,55 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-primary-950/95 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
-      }`}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <motion.a
-            href="#"
-            className="text-xl md:text-2xl font-bold text-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <span className="text-gradient">Mr. Fascinate</span>
-          </motion.a>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <motion.a
-                key={link.name}
-                href={link.href}
-                className="text-gray-300 hover:text-white transition-colors font-medium"
-                whileHover={{ y: -2 }}
-              >
-                {link.name}
-              </motion.a>
-            ))}
+      <div className={`floating-header transition-all duration-300 ${
+        isScrolled ? 'shadow-2xl shadow-primary-500/10' : ''
+      }`}>
+        <div className="relative z-10 px-6 py-3 md:px-8 md:py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
             <motion.a
-              href="#contact"
-              className="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-primary-500/25 transition-all"
+              href="#"
+              className="text-lg md:text-xl font-bold text-white font-display"
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
-              Book Now
+              <span className="text-gradient">MR. FASCINATE</span>
             </motion.a>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+              {navLinks.map((link) => (
+                <motion.a
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-300 hover:text-white transition-colors font-medium text-sm uppercase tracking-wider"
+                  whileHover={{ y: -2 }}
+                >
+                  {link.name}
+                </motion.a>
+              ))}
+              <motion.a
+                href="#contact"
+                className="btn-gradient-border text-sm py-2 px-6"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Book Now
+              </motion.a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-white p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -78,17 +80,18 @@ export default function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-primary-950/95 backdrop-blur-md"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="mt-2 glass rounded-2xl overflow-hidden"
           >
-            <div className="px-4 py-4 space-y-3">
+            <div className="px-6 py-4 space-y-3">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block text-gray-300 hover:text-white py-2 font-medium"
+                  className="block text-gray-300 hover:text-white py-2 font-medium text-sm uppercase tracking-wider"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
@@ -96,7 +99,7 @@ export default function Navbar() {
               ))}
               <a
                 href="#contact"
-                className="block bg-gradient-to-r from-primary-500 to-accent-500 text-white px-6 py-3 rounded-full font-semibold text-center mt-4"
+                className="block btn-gradient-solid text-center mt-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Book Now

@@ -5,83 +5,60 @@ import { speakerData } from '../data/speakerData';
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary-950">
-      {/* Animated Background with Motherboard Texture */}
-      <div className="absolute inset-0">
-        {/* Motherboard Pattern */}
-        <div
-          className="absolute inset-0 opacity-60"
-          style={{
-            backgroundImage: `url('/images/motherboard-pattern.svg')`,
-            backgroundSize: '200px 200px',
-            backgroundRepeat: 'repeat',
-          }}
-        />
-
-        {/* Gradient Orbs */}
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, -100, 0],
-            y: [0, 50, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-
-        {/* Overlay gradient for depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-950/50 via-transparent to-primary-950/80" />
+      {/* Video Background */}
+      <div className="video-bg-container">
+        {/* Fallback to image if no video is available */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+          poster="/headshot_smart-17-crop.jpg"
+        >
+          {/* Add your video source here when available */}
+          <source src="/banner-video.mp4" type="video/mp4" />
+        </video>
+        {/* Overlay gradients */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-950 via-primary-950/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary-950 via-transparent to-primary-950/50" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-primary-500/10 border border-primary-500/20 rounded-full px-4 py-2 mb-6"
+              transition={{ delay: 0.4 }}
+              className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6"
             >
-              <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
-              <span className="text-primary-300 text-sm font-medium">Forbes 30 Under 30</span>
+              <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
+              <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Forbes 30 Under 30</span>
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4"
+              transition={{ delay: 0.5 }}
+              className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-4 font-display tracking-tight"
             >
-              Justin{' '}
-              <span className="text-gradient">"{speakerData.nickname}"</span>{' '}
-              Shaifer
+              JUSTIN{' '}
+              <span className="text-gradient">"{speakerData.nickname.toUpperCase()}"</span>{' '}
+              SHAIFER
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="text-xl sm:text-2xl text-gray-300 mb-6"
+              transition={{ delay: 0.6 }}
+              className="text-xl sm:text-2xl text-gray-300 mb-6 font-light"
             >
               {speakerData.tagline}
             </motion.p>
@@ -89,8 +66,8 @@ export default function Hero() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="text-gray-400 text-lg mb-8 max-w-xl"
+              transition={{ delay: 0.7 }}
+              className="text-gray-400 text-lg mb-8 max-w-xl leading-relaxed"
             >
               {speakerData.shortBio}
             </motion.p>
@@ -98,80 +75,90 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.8 }}
               className="flex flex-wrap gap-4"
             >
               <motion.a
                 href="#contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-500 to-accent-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-primary-500/25 transition-all"
+                className="btn-gradient-solid inline-flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Book a Keynote
-                <ArrowRight size={20} />
+                <ArrowRight size={18} />
               </motion.a>
 
               <motion.a
                 href={speakerData.socialLinks.talkadot}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 glass text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all"
+                className="btn-gradient-border inline-flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Play size={20} />
+                <Play size={18} />
                 View Profile
               </motion.a>
             </motion.div>
           </motion.div>
 
-          {/* Image / Visual Element */}
+          {/* Stats / Visual Element */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative"
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="hidden lg:block"
           >
             <div className="relative">
-              {/* Decorative circles */}
+              {/* Decorative glow */}
               <motion.div
-                className="absolute -inset-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full opacity-20 blur-2xl"
-                animate={{ scale: [1, 1.1, 1] }}
+                className="absolute -inset-8 bg-gradient-to-r from-primary-500/20 to-accent-400/20 rounded-full blur-3xl"
+                animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
                 transition={{ duration: 4, repeat: Infinity }}
               />
 
-              {/* Main image container */}
-              <div className="relative aspect-square max-w-md mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 rounded-3xl" />
-                <div className="absolute inset-4 bg-gradient-to-br from-primary-900 to-primary-950 rounded-2xl overflow-hidden">
-                  <img
-                    src="/headshot_smart-17-crop.jpg"
-                    alt="Justin Shaifer - Keynote Speaker"
-                    className="w-full h-full object-cover object-center"
-                  />
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-950/60 via-transparent to-transparent" />
-                </div>
+              {/* Stats Grid */}
+              <div className="relative grid grid-cols-2 gap-4">
+                <motion.div
+                  className="card-gradient-border p-6 text-center stat-item"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="relative z-10">
+                    <p className="text-4xl font-bold text-gradient font-display">{speakerData.stats.audienceFeedback}+</p>
+                    <p className="text-gray-400 text-sm uppercase tracking-wider mt-2">5-Star Reviews</p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  className="card-gradient-border p-6 text-center stat-item"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="relative z-10">
+                    <p className="text-4xl font-bold text-gradient font-display">{speakerData.stats.studentsReached}</p>
+                    <p className="text-gray-400 text-sm uppercase tracking-wider mt-2">Students Reached</p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  className="card-gradient-border p-6 text-center stat-item"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="relative z-10">
+                    <p className="text-4xl font-bold text-gradient font-display">{speakerData.stats.corporateClients}</p>
+                    <p className="text-gray-400 text-sm uppercase tracking-wider mt-2">Corporate Clients</p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  className="card-gradient-border p-6 text-center stat-item"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="relative z-10">
+                    <p className="text-4xl font-bold text-gradient font-display">{speakerData.stats.satisfactionRate}</p>
+                    <p className="text-gray-400 text-sm uppercase tracking-wider mt-2">Satisfaction Rate</p>
+                  </div>
+                </motion.div>
               </div>
-
-              {/* Floating badges */}
-              <motion.div
-                className="absolute -top-4 -right-4 bg-primary-900 border border-primary-800 rounded-xl px-4 py-2 shadow-xl"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-              >
-                <p className="text-primary-400 font-bold text-lg">{speakerData.stats.audienceFeedback}+</p>
-                <p className="text-gray-400 text-xs">Reviews</p>
-              </motion.div>
-
-              <motion.div
-                className="absolute -bottom-4 -left-4 bg-primary-900 border border-primary-800 rounded-xl px-4 py-2 shadow-xl"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              >
-                <p className="text-accent-400 font-bold text-lg">{speakerData.stats.satisfactionRate}</p>
-                <p className="text-gray-400 text-xs">Satisfaction</p>
-              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -183,9 +170,9 @@ export default function Hero() {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex items-start justify-center p-1">
+        <div className="w-6 h-10 border-2 border-primary-500/50 rounded-full flex items-start justify-center p-1">
           <motion.div
-            className="w-2 h-2 bg-primary-400 rounded-full"
+            className="w-2 h-2 bg-primary-500 rounded-full"
             animate={{ y: [0, 16, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           />

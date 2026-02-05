@@ -10,7 +10,6 @@ const stats = [
     value: speakerData.stats.audienceFeedback,
     label: "Audience Reviews",
     suffix: "+",
-    color: "from-primary-500 to-primary-600",
   },
   {
     icon: Users,
@@ -18,21 +17,18 @@ const stats = [
     label: "Students Reached",
     suffix: "+",
     displayValue: "1M+",
-    color: "from-accent-500 to-accent-600",
   },
   {
     icon: Building2,
     value: 50,
     label: "Corporate Clients",
     suffix: "+",
-    color: "from-emerald-500 to-emerald-600",
   },
   {
     icon: Star,
     value: 98,
     label: "Satisfaction Rate",
     suffix: "%",
-    color: "from-amber-500 to-amber-600",
   },
 ];
 
@@ -77,20 +73,14 @@ export default function Stats() {
 
   return (
     <section className="relative py-20 bg-primary-900 overflow-hidden">
-      {/* Background with Motherboard Texture */}
+      {/* Background decoration */}
       <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 opacity-40"
-          style={{
-            backgroundImage: `url('/images/motherboard-pattern.svg')`,
-            backgroundSize: '200px 200px',
-            backgroundRepeat: 'repeat',
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-900/90 via-primary-900/70 to-primary-900/90" />
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
       </div>
+
+      <div className="section-divider absolute top-0 left-0 right-0" />
+      <div className="section-divider absolute bottom-0 left-0 right-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -100,11 +90,12 @@ export default function Stats() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="text-primary-400 font-semibold text-sm uppercase tracking-wider">
-            Trusted by Industry Leaders
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
-            Impact by the Numbers
+          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-4">
+            <span className="w-2 h-2 bg-primary-500 rounded-full" />
+            <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Trusted by Leaders</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 font-display">
+            IMPACT BY THE <span className="text-gradient">NUMBERS</span>
           </h2>
         </motion.div>
 
@@ -115,28 +106,27 @@ export default function Stats() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative group"
+              className="stat-item"
             >
-              <div className="bg-primary-950/50 backdrop-blur-sm border border-primary-800/50 rounded-2xl p-6 text-center hover:border-primary-500/50 transition-all duration-300">
-                {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${stat.color} mb-4`}>
-                  <stat.icon className="w-7 h-7 text-white" />
+              <div className="card-gradient-border p-6 text-center h-full">
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary-500/10 border border-primary-500/20 mb-4">
+                    <stat.icon className="w-7 h-7 text-primary-400" />
+                  </div>
+
+                  {/* Value */}
+                  <div className="text-3xl md:text-4xl font-bold text-gradient font-display mb-2">
+                    <AnimatedCounter
+                      value={stat.value}
+                      suffix={stat.suffix}
+                      displayValue={stat.displayValue}
+                    />
+                  </div>
+
+                  {/* Label */}
+                  <p className="text-gray-400 text-sm uppercase tracking-wider">{stat.label}</p>
                 </div>
-
-                {/* Value */}
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  <AnimatedCounter
-                    value={stat.value}
-                    suffix={stat.suffix}
-                    displayValue={stat.displayValue}
-                  />
-                </div>
-
-                {/* Label */}
-                <p className="text-gray-400 text-sm md:text-base">{stat.label}</p>
-
-                {/* Hover effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary-500/5 to-accent-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </motion.div>
           ))}
@@ -153,10 +143,10 @@ export default function Stats() {
             href={speakerData.socialLinks.talkadot}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors"
+            className="btn-gradient-border inline-flex items-center gap-2 py-2 px-6 text-sm"
           >
-            <span className="text-sm">Data powered by</span>
-            <span className="font-semibold text-primary-400">Talkadot</span>
+            <span>Data powered by</span>
+            <span className="font-semibold text-gradient">Talkadot</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
