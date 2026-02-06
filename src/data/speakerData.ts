@@ -59,6 +59,36 @@ Justin transforms complex topics into digestible concepts, sparking curiosity wh
       role: "K-12 Administrator",
       highlight: "Transformative Session",
     },
+    {
+      quote: "Justin brought the perfect mix of entertainment and education. Our entire team left feeling empowered to embrace AI in their daily work.",
+      author: "Michelle Torres",
+      role: "VP of Learning & Development, Fortune 500 Company",
+      highlight: "Perfect Balance",
+    },
+    {
+      quote: "The most engaging keynote we've ever had. Justin made AI accessible to everyone in the room, from tech experts to complete beginners.",
+      author: "David Chen",
+      role: "Conference Director, TechConnect Summit",
+      highlight: "Most Engaging Keynote",
+    },
+    {
+      quote: "Justin's energy is contagious. He turned what could have been a dry topic into an interactive experience that had our audience on their feet.",
+      author: "Sarah Johnson",
+      role: "Event Manager, National Educators Conference",
+      highlight: "Contagious Energy",
+    },
+    {
+      quote: "We've booked many speakers over the years, but Justin stands out for his ability to make complex AI concepts feel approachable and exciting.",
+      author: "Robert Williams",
+      role: "CEO, Innovation Labs Inc.",
+      highlight: "Stands Out",
+    },
+    {
+      quote: "Justin's presentation on the Future of Work was exactly what our leadership team needed. Practical, inspiring, and immediately actionable.",
+      author: "Amanda Pierce",
+      role: "Chief People Officer, GlobalTech Solutions",
+      highlight: "Immediately Actionable",
+    },
   ],
 
   clients: [

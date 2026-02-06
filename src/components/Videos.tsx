@@ -5,18 +5,18 @@ import { Play } from 'lucide-react';
 const videos = [
   {
     id: '1075551079',
-    title: 'Future of Work',
-    description: 'Preparing teams for the AI-powered workplace',
+    title: 'AI Tools for Daily Productivity',
+    description: 'Practical AI applications to streamline your workflow and boost efficiency',
   },
   {
     id: '1074161713',
-    title: 'STEM Education Innovation',
-    description: 'Making science accessible and engaging',
+    title: 'Engaging Gen Z in STEM',
+    description: 'Fresh perspectives on inspiring the next generation of innovators',
   },
   {
     id: '1074161755',
-    title: 'Tech for Social Impact',
-    description: 'Using technology to drive positive change',
+    title: 'The Future of Work with AI',
+    description: 'How AI is reshaping industries and empowering teams worldwide',
   },
 ];
 

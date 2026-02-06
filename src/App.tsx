@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Stats from './components/Stats'
+import LogoWall from './components/LogoWall'
 import About from './components/About'
 import Topics from './components/Topics'
 import Videos from './components/Videos'
@@ -18,6 +19,7 @@ function App() {
       <main>
         <Hero />
         <Stats />
+        <LogoWall />
         <About />
         <Topics />
         <Testimonials />
