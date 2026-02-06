@@ -81,6 +81,16 @@ export default function Stats() {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
       </div>
 
+      {/* Transparent headshot background */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img
+          src="/headshot8.jpg"
+          alt=""
+          className="h-full max-h-[600px] object-contain opacity-10"
+          style={{ filter: 'grayscale(100%)' }}
+        />
+      </div>
+
       <div className="section-divider absolute top-0 left-0 right-0" />
       <div className="section-divider absolute bottom-0 left-0 right-0" />
 

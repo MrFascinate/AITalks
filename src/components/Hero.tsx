@@ -5,20 +5,17 @@ import { speakerData } from '../data/speakerData';
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary-950">
-      {/* Video Background */}
+      {/* Video Background - Vimeo Embed */}
       <div className="video-bg-container">
-        {/* Fallback to image if no video is available */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-          poster="/headshot_smart-17-crop.jpg"
-        >
-          {/* Add your video source here when available */}
-          <source src="/banner-video.mp4" type="video/mp4" />
-        </video>
+        <div className="absolute inset-0 w-full h-full">
+          <iframe
+            src="https://player.vimeo.com/video/1072452218?background=1&autoplay=1&loop=1&muted=1&controls=0"
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
+            style={{ width: '177.78vh', height: '100vh' }}
+            allow="autoplay; fullscreen"
+            title="Website Banner Loop"
+          />
+        </div>
         {/* Overlay gradients */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary-950 via-primary-950/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary-950 via-transparent to-primary-950/50" />

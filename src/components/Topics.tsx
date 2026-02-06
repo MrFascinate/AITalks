@@ -41,6 +41,21 @@ export default function Topics() {
             <Mic size={16} className="text-primary-500" />
             <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Keynote Topics</span>
           </div>
+
+          {/* Featured Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-8 max-w-3xl mx-auto"
+          >
+            <img
+              src="/Group-165-1.png"
+              alt="Dynamic Technical Showcases"
+              className="w-full h-auto rounded-lg"
+            />
+          </motion.div>
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4 font-display">
             DYNAMIC{' '}
             <span className="text-gradient">TECHNICAL SHOWCASES</span>
