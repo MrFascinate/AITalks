@@ -4,7 +4,11 @@ import { useRef } from 'react';
 import { ArrowRight, Calendar, Mail, Linkedin, ExternalLink, Send } from 'lucide-react';
 import { speakerData } from '../data/speakerData';
 
-export default function Contact() {
+interface ContactProps {
+  onBookClick: () => void;
+}
+
+export default function Contact({ onBookClick }: ContactProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -58,10 +62,8 @@ export default function Contact() {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-                <motion.a
-                  href={speakerData.ctaLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <motion.button
+                  onClick={onBookClick}
                   className="w-full sm:w-auto btn-gradient-solid inline-flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -69,7 +71,7 @@ export default function Contact() {
                   <Calendar className="w-5 h-5" />
                   Book a Consultation
                   <ArrowRight className="w-5 h-5" />
-                </motion.a>
+                </motion.button>
 
                 <motion.a
                   href={speakerData.socialLinks.talkadot}
