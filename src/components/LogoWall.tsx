@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const logos = [
+const logosRow1 = [
   '/Logo-Wall-Horizontal-Youtube-Banner-1-1-3.png',
   '/Logo-Wall-Horizontal-Youtube-Banner-1-1-5.png',
   '/Logo-Wall-Horizontal-Youtube-Banner-1-1-6.png',
@@ -8,6 +8,9 @@ const logos = [
   '/Logo-Wall-Horizontal-Youtube-Banner-1-1-8.png',
   '/Logo-Wall-Horizontal-Youtube-Banner-1-1-9.png',
   '/Logo-Wall-Horizontal-Youtube-Banner-1-1-10.png',
+];
+
+const logosRow2 = [
   '/Logo-Wall-Horizontal-Youtube-Banner-1-1-11.png',
   '/Logo-Wall-Horizontal-Youtube-Banner-1-1-12.png',
   '/Logo-Wall-Horizontal-Youtube-Banner-1-1-13.png',
@@ -30,27 +33,52 @@ export default function LogoWall() {
           Trusted by world-class organizations and collaborators
         </p>
 
-        {/* Marquee container */}
-        <div className="relative overflow-hidden">
+        {/* Row 1 - scrolls left */}
+        <div className="relative overflow-hidden mb-6">
           <motion.div
-            className="flex gap-12 items-center"
+            className="flex gap-16 items-center"
             animate={{ x: ['0%', '-50%'] }}
             transition={{
-              duration: 30,
+              duration: 15,
               repeat: Infinity,
               ease: 'linear',
             }}
           >
-            {/* Double the logos for seamless loop */}
-            {[...logos, ...logos].map((logo, index) => (
+            {[...logosRow1, ...logosRow1].map((logo, index) => (
               <div
-                key={`logo-${index}`}
-                className="flex-shrink-0 hover:opacity-100 opacity-80 transition-opacity duration-300"
+                key={`row1-${index}`}
+                className="flex-shrink-0 hover:opacity-100 opacity-90 transition-opacity duration-300"
               >
                 <img
                   src={logo}
                   alt="Partner logo"
-                  className="h-12 w-auto object-contain"
+                  className="h-14 w-auto object-contain"
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Row 2 - scrolls right */}
+        <div className="relative overflow-hidden">
+          <motion.div
+            className="flex gap-16 items-center"
+            animate={{ x: ['-50%', '0%'] }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: 'linear',
+            }}
+          >
+            {[...logosRow2, ...logosRow2].map((logo, index) => (
+              <div
+                key={`row2-${index}`}
+                className="flex-shrink-0 hover:opacity-100 opacity-90 transition-opacity duration-300"
+              >
+                <img
+                  src={logo}
+                  alt="Partner logo"
+                  className="h-14 w-auto object-contain"
                 />
               </div>
             ))}

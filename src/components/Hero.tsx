@@ -8,7 +8,7 @@ interface HeroProps {
 
 export default function Hero({ onBookClick }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary-950">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-primary-950">
       {/* Video Background - Vimeo Embed */}
       <div className="video-bg-container">
         <div className="absolute inset-0 w-full h-full">
