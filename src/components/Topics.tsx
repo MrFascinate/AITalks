@@ -42,27 +42,33 @@ export default function Topics() {
             <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Keynote Topics</span>
           </div>
 
-          {/* Featured Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-8 max-w-3xl mx-auto"
-          >
-            <img
-              src="/Group-165-1.png"
-              alt="Dynamic Technical Showcases"
-              className="w-full h-auto rounded-lg"
-            />
-          </motion.div>
+          {/* Title with Image */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
+            {/* Featured Image - Left */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex-shrink-0"
+            >
+              <img
+                src="/Group-165-1.png"
+                alt="Dynamic Technical Showcases"
+                className="w-48 md:w-56 h-auto rounded-lg"
+              />
+            </motion.div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4 font-display">
-            DYNAMIC{' '}
-            <span className="text-gradient">TECHNICAL SHOWCASES</span>
-          </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Raving reviews from tens of thousands of audience members for presentations that transform complex topics into actionable insights.
-          </p>
+            {/* Title - Right */}
+            <div className="text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-display">
+                DYNAMIC{' '}
+                <span className="text-gradient">TECHNICAL SHOWCASES</span>
+              </h2>
+              <p className="text-gray-400 max-w-xl text-lg">
+                Raving reviews from tens of thousands of audience members for presentations that transform complex topics into actionable insights.
+              </p>
+            </div>
+          </div>
         </motion.div>
 
         {/* Topics Grid */}
