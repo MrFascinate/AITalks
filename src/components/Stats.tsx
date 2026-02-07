@@ -84,7 +84,7 @@ export default function Stats() {
       {/* Transparent headshot background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <img
-          src="/headshot8.jpg"
+          src="/headshot_smart-17-crop.jpg"
           alt=""
           className="h-full max-h-[600px] object-contain opacity-10"
           style={{ filter: 'grayscale(100%)' }}
