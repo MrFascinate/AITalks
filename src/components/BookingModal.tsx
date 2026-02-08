@@ -104,7 +104,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                 {/* Header */}
                 <div className="text-center mb-6">
                   <h2 className="text-2xl md:text-3xl font-bold text-white font-display">
-                    BOOK A <span className="text-gradient">CONSULTATION</span>
+                    BOOK <span className="text-gradient">NOW</span>
                   </h2>
                   <p className="text-gray-400 mt-2">
                     Fill out the form below and we'll get back to you shortly.

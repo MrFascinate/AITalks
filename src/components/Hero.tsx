@@ -75,7 +75,7 @@ export default function Hero({ onBookClick }: HeroProps) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Book a Keynote
+                Book Now
                 <ArrowRight size={18} />
               </motion.button>
 

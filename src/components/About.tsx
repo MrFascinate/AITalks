@@ -186,7 +186,7 @@ export default function About() {
                 href="#contact"
                 className="btn-gradient-solid inline-flex items-center gap-2"
               >
-                Book a Consultation
+                Book Now
                 <ArrowRight size={18} />
               </a>
             </motion.div>
