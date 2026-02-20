@@ -42,6 +42,24 @@ Justin transforms complex topics into digestible concepts, sparking curiosity wh
 
   testimonials: [
     {
+      quote: "Justin's energy is contagious. He turned what could have been a dry topic into an interactive experience that had our audience on their feet.",
+      author: "Sarah Johnson",
+      role: "Event Manager, National Educators Conference",
+      highlight: "Contagious Energy",
+    },
+    {
+      quote: "We've booked many speakers over the years, but Justin stands out for his ability to make complex AI concepts feel approachable and exciting.",
+      author: "Robert Williams",
+      role: "CEO, Innovation Labs Inc.",
+      highlight: "Stands Out",
+    },
+    {
+      quote: "Justin's presentation on the Future of Work was exactly what our leadership team needed. Practical, inspiring, and immediately actionable.",
+      author: "Amanda Pierce",
+      role: "Chief People Officer, GlobalTech Solutions",
+      highlight: "Immediately Actionable",
+    },
+    {
       quote: "Justin Shaifer is a gifted public speaker. He has an uncanny ability to analyze, understand, and relate to his audience.",
       author: "Edward Barnette",
       role: "Co-Founder, NSBE (National Society of Black Engineers)",
@@ -70,24 +88,6 @@ Justin transforms complex topics into digestible concepts, sparking curiosity wh
       author: "David Chen",
       role: "Conference Director, TechConnect Summit",
       highlight: "Most Engaging Keynote",
-    },
-    {
-      quote: "Justin's energy is contagious. He turned what could have been a dry topic into an interactive experience that had our audience on their feet.",
-      author: "Sarah Johnson",
-      role: "Event Manager, National Educators Conference",
-      highlight: "Contagious Energy",
-    },
-    {
-      quote: "We've booked many speakers over the years, but Justin stands out for his ability to make complex AI concepts feel approachable and exciting.",
-      author: "Robert Williams",
-      role: "CEO, Innovation Labs Inc.",
-      highlight: "Stands Out",
-    },
-    {
-      quote: "Justin's presentation on the Future of Work was exactly what our leadership team needed. Practical, inspiring, and immediately actionable.",
-      author: "Amanda Pierce",
-      role: "Chief People Officer, GlobalTech Solutions",
-      highlight: "Immediately Actionable",
     },
   ],
 

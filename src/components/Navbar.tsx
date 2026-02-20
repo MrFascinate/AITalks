@@ -5,9 +5,9 @@ import { Menu, X } from 'lucide-react';
 const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Topics', href: '#topics' },
-  { name: 'Videos', href: '#videos' },
   { name: 'Testimonials', href: '#testimonials' },
   { name: 'Contact', href: '#contact' },
+  { name: 'Videos', href: '#videos' },
 ];
 
 export default function Navbar() {

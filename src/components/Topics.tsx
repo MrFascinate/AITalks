@@ -8,8 +8,9 @@ const topics = [
   {
     icon: Rocket,
     title: 'Your Workday Streamlined with AI',
-    description: 'Practical AI tools and techniques to transform daily workflows and boost productivity.',
+    description: 'Practical AI tools and techniques to help corporate professionals transform daily workflows and boost productivity.',
     details: `Are you sure you need to be working so hard? Having direct "conversations" with your data, receiving expert-level consulting and research, and getting a head-start on creative work can all be achieved by leveraging AI. Justin will show you how to become an AI power-user by integrating cutting-edge tools into your daily workflow.`,
+    learnMoreUrl: 'https://vimeo.com/1077757454?fl=pl&fe=sh',
     bullets: [
       'Discover specific AI tools that match your role and workflow',
       'Master prompt engineering frameworks for professional-grade results',
@@ -23,6 +24,7 @@ const topics = [
     title: 'AI Empowerment & Future of Work',
     description: 'Preparing educators, leaders, and teams to thrive in an AI-driven world.',
     details: `Dive into the nuanced world of Artificial Intelligence with Justin Shaifer. He demystifies the crucial role AI plays in today's educational landscape and beyond — introducing practical AI tools to revolutionize teaching practices, boost student engagement, and future-proof careers. Customized for Higher Education and K-12 audiences.`,
+    learnMoreUrl: 'https://vimeo.com/1077747719?fl=pl&fe=sh',
     bullets: [
       'Build AI literacy and confidence across your organization',
       'Explore the best AI tools for the classroom and the boardroom',
@@ -36,6 +38,7 @@ const topics = [
     title: 'How to Engage Gen Z',
     description: 'Bridge traditional teaching with modern demands to inspire the next generation.',
     details: `Boring lectures and uninspiring teachers often ruin students' perceptions of STEM. Justin shares his personal story of overcoming adversity — growing up on the south side of Chicago, where STEM was considered anything but cool — to the amazing heights he's reached in his career. He has performed this keynote for over 50,000 students worldwide.`,
+    learnMoreUrl: 'https://vimeo.com/1166811589?share=copy&fl=sv&fe=ci',
     bullets: [
       "Understand Gen Z's core values, communication styles, and motivators",
       'Use storytelling and hands-on learning to make real connections',
@@ -176,7 +179,21 @@ export default function Topics() {
                     >
                       <div className="relative z-10 px-6 md:px-8 pb-8 pt-0">
                         <div className="border-t border-primary-500/20 pt-6">
-                          <p className="text-gray-300 mb-5 leading-relaxed">{topic.details}</p>
+                          <p className="text-gray-300 mb-3 leading-relaxed">{topic.details}</p>
+                          {topic.learnMoreUrl && (
+                            <a
+                              href={topic.learnMoreUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-primary-400 hover:text-primary-300 font-medium mb-5 transition-colors"
+                            >
+                              Learn more
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                            </a>
+                          )}
+                          {!topic.learnMoreUrl && <div className="mb-5" />}
                           <ul className="space-y-3">
                             {topic.bullets.map((bullet) => (
                               <li key={bullet} className="flex items-start gap-3">
