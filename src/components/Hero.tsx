@@ -4,9 +4,10 @@ import { speakerData } from '../data/speakerData';
 
 interface HeroProps {
   onBookClick: () => void;
+  onVideoClick: (url: string) => void;
 }
 
-export default function Hero({ onBookClick }: HeroProps) {
+export default function Hero({ onBookClick, onVideoClick }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-primary-950">
       {/* Video Background - Vimeo Embed */}
@@ -79,17 +80,15 @@ export default function Hero({ onBookClick }: HeroProps) {
                 <ArrowRight size={18} />
               </motion.button>
 
-              <motion.a
-                href="https://vimeo.com/1082939720?fl=pl&fe=sh"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button
+                onClick={() => onVideoClick('https://vimeo.com/1082939720')}
                 className="btn-gradient-border inline-flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Play size={18} />
                 View Reel
-              </motion.a>
+              </motion.button>
             </motion.div>
           </motion.div>
         </div>
