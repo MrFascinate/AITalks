@@ -40,28 +40,48 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // Submit to Formspree - sends email to your inbox
+      // Replace YOUR_FORM_ID with your actual Formspree form ID
+      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          subject: formData.subject,
+          message: formData.message,
+          'How did you find me': formData.howDidYouFind.join(', '),
+        }),
+      });
 
-    // Here you would typically send the data to your backend
-    console.log('Form submitted:', formData);
+      if (response.ok) {
+        setSubmitted(true);
+        // Reset after showing success
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            subject: '',
+            message: '',
+            howDidYouFind: [],
+          });
+          onClose();
+        }, 2000);
+      } else {
+        alert('Something went wrong. Please try again or email directly.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Something went wrong. Please try again or email directly.');
+    }
 
     setIsSubmitting(false);
-    setSubmitted(true);
-
-    // Reset after showing success
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-        howDidYouFind: [],
-      });
-      onClose();
-    }, 2000);
   };
 
   const isFormValid =
