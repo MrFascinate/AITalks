@@ -6,8 +6,8 @@ const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Topics', href: '#topics' },
   { name: 'Testimonials', href: '#testimonials' },
-  { name: 'Contact', href: '#contact' },
   { name: 'Videos', href: '#videos' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {

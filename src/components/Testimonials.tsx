@@ -88,7 +88,7 @@ export default function Testimonials() {
             <div className="relative z-10 p-8 md:p-12">
               {/* Quote Icon */}
               <div className="absolute top-6 left-6 md:top-8 md:left-8">
-                <Quote className="w-12 h-12 text-primary-500/30" />
+                <Quote className="w-6 h-6 text-primary-500/30" />
               </div>
 
               {/* Testimonial Content */}
