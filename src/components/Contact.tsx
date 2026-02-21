@@ -51,15 +51,6 @@ export default function Contact({ onBookClick }: ContactProps) {
         >
           <div className="card-gradient-border">
             <div className="relative z-10 p-8 md:p-12">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 font-display">
-                  {speakerData.ctaText.toUpperCase()}
-                </h3>
-                <p className="text-gray-400">
-                  Elevate your audience with cutting-edge AI insights and dynamic technical showcases.
-                </p>
-              </div>
-
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                 <motion.button
