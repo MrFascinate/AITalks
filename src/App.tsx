@@ -33,7 +33,7 @@ function App() {
         <Hero onBookClick={openBookingModal} onVideoClick={openVideoModal} />
         <Stats />
         <LogoWall />
-        <About />
+        <About onBookClick={openBookingModal} />
         <Topics onVideoClick={openVideoModal} />
         <Testimonials />
         <Videos />

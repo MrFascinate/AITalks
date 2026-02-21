@@ -27,7 +27,11 @@ const highlights = [
   },
 ];
 
-export default function About() {
+interface AboutProps {
+  onBookClick: () => void;
+}
+
+export default function About({ onBookClick }: AboutProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -239,13 +243,13 @@ export default function About() {
               transition={{ delay: 0.6 }}
               className="mt-8"
             >
-              <a
-                href="#contact"
+              <button
+                onClick={onBookClick}
                 className="btn-gradient-solid inline-flex items-center gap-2"
               >
                 Book Now
                 <ArrowRight size={18} />
-              </a>
+              </button>
             </motion.div>
           </motion.div>
         </div>
