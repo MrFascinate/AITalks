@@ -29,7 +29,7 @@ export default function LogoWall() {
       <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-primary-950 to-transparent z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-gray-500 text-sm uppercase tracking-wider mb-8">
+        <p className="relative z-20 text-center text-gray-500 text-sm uppercase tracking-wider mb-8">
           Trusted by world-class organizations and collaborators
         </p>
 
