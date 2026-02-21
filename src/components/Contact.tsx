@@ -69,7 +69,7 @@ export default function Contact({ onBookClick }: ContactProps) {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Calendar className="w-5 h-5" />
-                  Book Now
+                  Request a Quote
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
 

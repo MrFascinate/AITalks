@@ -12,6 +12,11 @@ export default function Hero({ onBookClick, onVideoClick }: HeroProps) {
     <section className="relative min-h-screen flex items-center overflow-hidden bg-primary-950">
       {/* Video Background - Vimeo Embed */}
       <div className="video-bg-container">
+        {/* Static fallback image - shows immediately while video loads */}
+        <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/headshot8.jpg)' }}
+        />
         <div className="absolute inset-0 w-full h-full">
           <iframe
             src="https://player.vimeo.com/video/1072452218?background=1&autoplay=1&loop=1&muted=1&controls=0"

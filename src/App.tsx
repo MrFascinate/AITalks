@@ -8,6 +8,7 @@ import Topics from './components/Topics'
 import Videos from './components/Videos'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
+import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import StickyBookingButton from './components/StickyBookingButton'
 import BookingModal from './components/BookingModal'
@@ -38,6 +39,7 @@ function App() {
         <Testimonials />
         <Videos />
         <Contact onBookClick={openBookingModal} />
+        <FAQ />
       </main>
       <Footer />
     </div>

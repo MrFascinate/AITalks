@@ -88,8 +88,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
     formData.name &&
     formData.email &&
     formData.subject &&
-    formData.message &&
-    formData.howDidYouFind.length > 0;
+    formData.message;
 
   return (
     <AnimatePresence>
@@ -248,7 +247,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                     {/* How did you find me */}
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        How did you find me? <span className="text-red-400">*</span>
+                        How did you find me? <span className="text-gray-500">(optional)</span>
                       </label>
                       <div className="space-y-2">
                         {howDidYouFindOptions.map((option) => (
