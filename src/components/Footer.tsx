@@ -63,7 +63,7 @@ export default function Footer() {
                 <Linkedin className="w-5 h-5" />
               </motion.a>
               <motion.a
-                href="https://www.instagram.com/mrfascinate"
+                href="https://www.instagram.com/mr.fascinate"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-[#E4405F] hover:border-[#E4405F]/50 transition-all"

@@ -73,7 +73,7 @@ export default function Testimonials() {
             <span className="text-gradient">SAYING</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Feedback from {speakerData.stats.audienceFeedback}+ audience members across conferences and events worldwide.
+            Feedback from {speakerData.stats.audienceFeedback.toLocaleString()}+ audience members across conferences and events worldwide.
           </p>
         </motion.div>
 

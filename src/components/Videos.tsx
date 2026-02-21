@@ -93,7 +93,7 @@ export default function Videos() {
           className="text-center mt-12"
         >
           <a
-            href="https://vimeo.com/fascinateai"
+            href="https://vimeo.com/fascinatemedia"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gradient-border inline-flex items-center gap-2"

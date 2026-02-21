@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ArrowRight, Calendar, Mail, Linkedin, ExternalLink, Send } from 'lucide-react';
+import { ArrowRight, Calendar, Instagram, Linkedin, ExternalLink, Send } from 'lucide-react';
 import { speakerData } from '../data/speakerData';
 
 interface ContactProps {
@@ -89,11 +89,13 @@ export default function Contact({ onBookClick }: ContactProps) {
                   <Linkedin className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  href={`mailto:contact@justinshaifer.com`}
-                  className="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-primary-400 hover:border-primary-500/50 transition-all"
+                  href="https://www.instagram.com/mr.fascinate"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-[#E4405F] hover:border-[#E4405F]/50 transition-all"
                   whileHover={{ scale: 1.1, y: -2 }}
                 >
-                  <Mail className="w-5 h-5" />
+                  <Instagram className="w-5 h-5" />
                 </motion.a>
               </div>
             </div>
