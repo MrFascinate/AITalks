@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { Linkedin, Instagram, ExternalLink } from 'lucide-react';
 import { speakerData } from '../data/speakerData';
 
 const footerLinks = [
@@ -63,11 +63,13 @@ export default function Footer() {
                 <Linkedin className="w-5 h-5" />
               </motion.a>
               <motion.a
-                href={`mailto:contact@justinshaifer.com`}
-                className="w-10 h-10 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-primary-400 hover:border-primary-500/50 transition-all"
+                href="https://www.instagram.com/mrfascinate"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-[#E4405F] hover:border-[#E4405F]/50 transition-all"
                 whileHover={{ scale: 1.1 }}
               >
-                <Mail className="w-5 h-5" />
+                <Instagram className="w-5 h-5" />
               </motion.a>
               <motion.a
                 href={speakerData.socialLinks.talkadot}
