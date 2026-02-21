@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Rocket, Briefcase, Laptop, Users, Mic, ChevronDown } from 'lucide-react';
+import { Rocket, Briefcase, Laptop, Users, Mic, ChevronDown, FileText } from 'lucide-react';
 import { audienceOutcomes } from '../data/speakerData';
 
 const topics = [
@@ -11,6 +11,7 @@ const topics = [
     description: 'Practical AI tools and techniques to help corporate professionals transform daily workflows and boost productivity.',
     details: `Are you sure you need to be working so hard? Having direct "conversations" with your data, receiving expert-level consulting and research, and getting a head-start on creative work can all be achieved by leveraging AI. Justin will show you how to become an AI power-user by integrating cutting-edge tools into your daily workflow.`,
     learnMoreUrl: 'https://vimeo.com/1077757454?fl=pl&fe=sh',
+    onePagerUrl: '/one-pagers/workday-ai.html',
     bullets: [
       'Discover specific AI tools that match your role and workflow',
       'Master prompt engineering frameworks for professional-grade results',
@@ -25,6 +26,7 @@ const topics = [
     description: 'Preparing educators, leaders, and teams to thrive in an AI-driven world.',
     details: `Dive into the nuanced world of Artificial Intelligence with Justin Shaifer. He demystifies the crucial role AI plays in today's educational landscape and beyond — introducing practical AI tools to revolutionize teaching practices, boost student engagement, and future-proof careers. Customized for Higher Education and K-12 audiences.`,
     learnMoreUrl: 'https://vimeo.com/1077747719?fl=pl&fe=sh',
+    onePagerUrl: '/one-pagers/ai-empowerment.html',
     bullets: [
       'Build AI literacy and confidence across your organization',
       'Explore the best AI tools for the classroom and the boardroom',
@@ -39,6 +41,7 @@ const topics = [
     description: 'Bridge traditional teaching with modern demands to inspire the next generation.',
     details: `Boring lectures and uninspiring teachers often ruin students' perceptions of STEM. Justin shares his personal story of overcoming adversity — growing up on the south side of Chicago, where STEM was considered anything but cool — to the amazing heights he's reached in his career. He has performed this keynote for over 50,000 students worldwide.`,
     learnMoreUrl: 'https://vimeo.com/1166811589?share=copy&fl=sv&fe=ci',
+    onePagerUrl: '/one-pagers/engage-gen-z.html',
     bullets: [
       "Understand Gen Z's core values, communication styles, and motivators",
       'Use storytelling and hands-on learning to make real connections',
@@ -52,6 +55,7 @@ const topics = [
     title: 'Hands-on AI Working Sessions',
     description: 'Interactive workshops where participants build real AI skills with applied examples.',
     details: `Justin uses his experience creating hands-on educational courses to walk professionals through how to use AI tools such as AI Agents, AI Browsers, and automated workflows — with hands-on experience and applied examples tailored to your industry.`,
+    onePagerUrl: '/one-pagers/hands-on-ai.html',
     bullets: [
       'Build and deploy AI Agents tailored to your workflow',
       'Explore AI Browsers and autonomous research tools',
@@ -184,19 +188,31 @@ export default function Topics({ onVideoClick }: TopicsProps) {
                       <div className="relative z-10 px-6 md:px-8 pb-8 pt-0">
                         <div className="border-t border-primary-500/20 pt-6">
                           <p className="text-gray-300 mb-3 leading-relaxed">{topic.details}</p>
-                          {topic.learnMoreUrl && (
-                            <button
-                              onClick={() => onVideoClick(topic.learnMoreUrl!)}
-                              className="inline-flex items-center gap-1 text-primary-400 hover:text-primary-300 font-medium mb-5 transition-colors"
-                            >
-                              Learn more
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                              </svg>
-                            </button>
-                          )}
-                          {!topic.learnMoreUrl && <div className="mb-5" />}
+                          <div className="flex flex-wrap items-center gap-4 mb-5">
+                            {topic.learnMoreUrl && (
+                              <button
+                                onClick={() => onVideoClick(topic.learnMoreUrl!)}
+                                className="inline-flex items-center gap-1 text-primary-400 hover:text-primary-300 font-medium transition-colors"
+                              >
+                                Watch video
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                              </button>
+                            )}
+                            {topic.onePagerUrl && (
+                              <a
+                                href={topic.onePagerUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 text-sm font-semibold text-white bg-primary-500/20 hover:bg-primary-500/30 border border-primary-500/40 hover:border-primary-500/70 px-3 py-1.5 rounded-lg transition-all"
+                              >
+                                <FileText size={14} />
+                                View One-Pager
+                              </a>
+                            )}
+                          </div>
                           <ul className="space-y-3">
                             {topic.bullets.map((bullet) => (
                               <li key={bullet} className="flex items-start gap-3">

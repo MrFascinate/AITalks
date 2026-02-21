@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hands-on AI Working Sessions — Justin Shaifer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Montserrat',sans-serif;background:#11111C;color:#fff;width:210mm;min-height:297mm;margin:0 auto}
+  .page{display:grid;grid-template-columns:2fr 3fr;min-height:297mm}
+  .left{background:linear-gradient(160deg,#0d1526 0%,#11111C 60%);position:relative;overflow:hidden;display:flex;flex-direction:column}
+  .left-photo{width:100%;height:320px;object-fit:cover;object-position:center 10%;filter:grayscale(15%)}
+  .left-content{padding:28px 24px;flex:1;display:flex;flex-direction:column;gap:20px}
+  .badge{background:linear-gradient(135deg,#2585E8,#1a6fd4);padding:6px 14px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;width:fit-content}
+  .speaker-name{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;line-height:1.1;color:#fff}
+  .speaker-name span{color:#2585E8}
+  .credential{font-size:10px;color:#94a3b8;letter-spacing:1px;text-transform:uppercase;border-top:1px solid rgba(37,133,232,0.2);padding-top:12px}
+  .credential-item{margin-bottom:5px;font-size:10px;color:#cbd5e1}
+  .divider{width:40px;height:3px;background:linear-gradient(90deg,#2585E8,#38bdf8);border-radius:2px}
+  .format-box{background:rgba(37,133,232,0.08);border:1px solid rgba(37,133,232,0.2);border-radius:8px;padding:12px 14px}
+  .format-title{font-size:9px;color:#2585E8;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+  .format-item{font-size:10px;color:#cbd5e1;line-height:1.6;margin-bottom:4px}
+  .logo-strip{background:rgba(37,133,232,0.08);padding:12px 16px;border-top:1px solid rgba(37,133,232,0.15)}
+  .logo-strip p{font-size:8px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
+  .client-tags{display:flex;flex-wrap:wrap;gap:4px}
+  .client-tag{font-size:8px;color:#94a3b8;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:2px 7px;border-radius:3px}
+  .contact-block{margin-top:auto;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px}
+  .contact-label{font-size:9px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px}
+  .contact-item{font-size:10px;color:#94a3b8;margin-bottom:4px}
+  .contact-item span{color:#2585E8}
+  .right{background:#0f1623;padding:36px 36px 28px;display:flex;flex-direction:column;gap:0}
+  .topic-label{font-size:9px;color:#2585E8;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:10px}
+  .topic-title{font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;line-height:1.15;color:#fff;margin-bottom:6px}
+  .topic-title span{background:linear-gradient(135deg,#2585E8,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .accent-line{width:50px;height:3px;background:linear-gradient(90deg,#2585E8,#38bdf8);border-radius:2px;margin:14px 0}
+  .overview-text{font-size:11px;line-height:1.7;color:#94a3b8;margin-bottom:20px}
+  .section-heading{font-size:9px;color:#2585E8;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+  .tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px}
+  .tool-card{background:rgba(37,133,232,0.06);border:1px solid rgba(37,133,232,0.2);border-radius:8px;padding:10px 12px}
+  .tool-icon{font-size:16px;margin-bottom:5px}
+  .tool-name{font-size:10px;font-weight:700;color:#fff;margin-bottom:3px}
+  .tool-desc{font-size:9.5px;color:#64748b;line-height:1.4}
+  .takeaways{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+  .takeaway{display:flex;gap:10px;align-items:flex-start}
+  .check{width:16px;height:16px;min-width:16px;background:linear-gradient(135deg,#2585E8,#38bdf8);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .check svg{width:9px;height:9px}
+  .takeaway-text{font-size:11px;color:#cbd5e1;line-height:1.5}
+  .audience-box{background:rgba(37,133,232,0.06);border:1px solid rgba(37,133,232,0.2);border-radius:8px;padding:12px 16px;margin-bottom:18px}
+  .audience-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .audience-tag{font-size:9px;color:#2585E8;border:1px solid rgba(37,133,232,0.35);padding:3px 10px;border-radius:12px}
+  .cta-block{margin-top:auto;background:linear-gradient(135deg,#2585E8,#1a6fd4);border-radius:8px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+  .cta-text{font-size:11px;font-weight:600;color:#fff}
+  .cta-url{font-size:11px;color:rgba(255,255,255,0.8);font-weight:500}
+  @media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}.no-print{display:none!important}}
+</style>
+</head>
+<body>
+<div class="no-print" style="background:#1e293b;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;font-family:Montserrat,sans-serif;font-size:13px;color:#94a3b8">
+  <span>One-Pager Preview</span>
+  <button onclick="window.print()" style="background:#2585E8;color:#fff;border:none;padding:8px 20px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer">Download PDF</button>
+</div>
+<div class="page">
+  <div class="left">
+    <img class="left-photo" src="/53970768967_337ff285aa_o.jpg" alt="Justin Shaifer speaking"/>
+    <div class="left-content">
+      <div>
+        <div class="badge">Workshop</div>
+        <div style="margin-top:12px">
+          <div class="speaker-name">JUSTIN <span>"MR. FASCINATE"</span> SHAIFER</div>
+        </div>
+        <div class="divider" style="margin-top:12px"></div>
+      </div>
+      <div class="format-box">
+        <div class="format-title">Session Format Options</div>
+        <div class="format-item">⏱ Half-day workshop (3–4 hrs)</div>
+        <div class="format-item">📅 Full-day intensive (6–8 hrs)</div>
+        <div class="format-item">🔄 Multi-session series</div>
+        <div class="format-item">💻 Virtual or In-person</div>
+      </div>
+      <div>
+        <div class="credential">Credentials</div>
+        <div class="credential-item">📋 Forbes 30 Under 30 — Education</div>
+        <div class="credential-item">💼 LinkedIn Learning Instructor</div>
+        <div class="credential-item">🎓 Hands-on Course Creator</div>
+        <div class="credential-item">🤖 AI Tools Practitioner</div>
+      </div>
+      <div class="logo-strip" style="margin:0 -24px">
+        <p>Past Clients & Collaborators</p>
+        <div class="client-tags">
+          <span class="client-tag">Google</span>
+          <span class="client-tag">LinkedIn</span>
+          <span class="client-tag">NVIDIA</span>
+          <span class="client-tag">Intuit</span>
+          <span class="client-tag">DevLearn 2024</span>
+        </div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-label">Book This Workshop</div>
+        <div class="contact-item">🌐 <span>justinshaifer.com</span></div>
+        <div class="contact-item">📸 <span>@mr.fascinate</span></div>
+        <div class="contact-item">💼 <span>linkedin.com/in/jshaifer</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="topic-label">Interactive Workshop</div>
+    <div class="topic-title">HANDS-ON <span>AI WORKING</span> SESSIONS</div>
+    <div style="font-size:12px;color:#64748b;font-style:italic;margin-top:4px">Build Real AI Skills with Applied Examples</div>
+    <div class="accent-line"></div>
+
+    <p class="overview-text">Justin uses his experience creating hands-on educational courses to walk professionals through how to use AI tools such as AI Agents, AI Browsers, and automated workflows — with hands-on experience and applied examples tailored to your industry. This isn't a lecture. Participants leave with real, working skills.</p>
+
+    <div class="section-heading">Tools Covered in This Session</div>
+    <div class="tools-grid">
+      <div class="tool-card"><div class="tool-icon">🤖</div><div class="tool-name">AI Agents</div><div class="tool-desc">Build autonomous agents that work for you around the clock</div></div>
+      <div class="tool-card"><div class="tool-icon">🌐</div><div class="tool-name">AI Browsers</div><div class="tool-desc">Autonomous research tools that gather and synthesize information</div></div>
+      <div class="tool-card"><div class="tool-icon">⚡</div><div class="tool-name">Automated Workflows</div><div class="tool-desc">No-code pipelines that eliminate repetitive manual tasks</div></div>
+      <div class="tool-card"><div class="tool-icon">✍️</div><div class="tool-name">Prompt Engineering</div><div class="tool-desc">Professional frameworks for consistent, high-quality outputs</div></div>
+    </div>
+
+    <div class="section-heading">What Participants Walk Away With</div>
+    <div class="takeaways">
+      <div class="takeaway"><div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div class="takeaway-text">A working AI Agent tailored to their specific role or industry</div></div>
+      <div class="takeaway"><div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div class="takeaway-text">Configured automated workflows they can deploy immediately</div></div>
+      <div class="takeaway"><div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div class="takeaway-text">Prompt templates and frameworks for ongoing professional use</div></div>
+    </div>
+
+    <div class="audience-box">
+      <div class="section-heading" style="margin-bottom:0">Ideal For</div>
+      <div class="audience-tags">
+        <span class="audience-tag">Corporate Teams</span>
+        <span class="audience-tag">Offsite Retreats</span>
+        <span class="audience-tag">L&D Programs</span>
+        <span class="audience-tag">Tech Departments</span>
+        <span class="audience-tag">Agencies</span>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <div class="cta-text">Ready to book this workshop?</div>
+      <div class="cta-url">justinshaifer.com</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

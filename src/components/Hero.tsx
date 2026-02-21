@@ -32,8 +32,8 @@ export default function Hero({ onBookClick, onVideoClick }: HeroProps) {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="max-w-3xl">
+      <div className="relative z-10 w-full px-4 sm:px-8 lg:px-16 xl:px-24 pt-32 pb-20">
+        <div className="max-w-2xl">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI Empowerment & Future of Work — Justin Shaifer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Montserrat',sans-serif;background:#11111C;color:#fff;width:210mm;min-height:297mm;margin:0 auto}
+  .page{display:grid;grid-template-columns:2fr 3fr;min-height:297mm}
+  .left{background:linear-gradient(160deg,#0d1526 0%,#11111C 60%);position:relative;overflow:hidden;display:flex;flex-direction:column}
+  .left-photo{width:100%;height:320px;object-fit:cover;object-position:center top;filter:grayscale(15%)}
+  .left-content{padding:28px 24px;flex:1;display:flex;flex-direction:column;gap:20px}
+  .badge{background:linear-gradient(135deg,#2585E8,#1a6fd4);padding:6px 14px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;width:fit-content}
+  .speaker-name{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;line-height:1.1;color:#fff}
+  .speaker-name span{color:#2585E8}
+  .credential{font-size:10px;color:#94a3b8;letter-spacing:1px;text-transform:uppercase;border-top:1px solid rgba(37,133,232,0.2);padding-top:12px}
+  .credential-item{margin-bottom:5px;font-size:10px;color:#cbd5e1}
+  .divider{width:40px;height:3px;background:linear-gradient(90deg,#2585E8,#38bdf8);border-radius:2px}
+  .logo-strip{background:rgba(37,133,232,0.08);padding:12px 16px;border-top:1px solid rgba(37,133,232,0.15)}
+  .logo-strip p{font-size:8px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
+  .client-tags{display:flex;flex-wrap:wrap;gap:4px}
+  .client-tag{font-size:8px;color:#94a3b8;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:2px 7px;border-radius:3px}
+  .contact-block{margin-top:auto;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px}
+  .contact-label{font-size:9px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px}
+  .contact-item{font-size:10px;color:#94a3b8;margin-bottom:4px}
+  .contact-item span{color:#2585E8}
+  .right{background:#0f1623;padding:36px 36px 28px;display:flex;flex-direction:column;gap:0}
+  .topic-label{font-size:9px;color:#2585E8;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:10px}
+  .topic-title{font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;line-height:1.15;color:#fff;margin-bottom:6px}
+  .topic-title span{background:linear-gradient(135deg,#2585E8,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .accent-line{width:50px;height:3px;background:linear-gradient(90deg,#2585E8,#38bdf8);border-radius:2px;margin:14px 0}
+  .overview-text{font-size:11px;line-height:1.7;color:#94a3b8;margin-bottom:20px}
+  .section-heading{font-size:9px;color:#2585E8;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+  .takeaways{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+  .takeaway{display:flex;gap:10px;align-items:flex-start}
+  .check{width:16px;height:16px;min-width:16px;background:linear-gradient(135deg,#2585E8,#38bdf8);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .check svg{width:9px;height:9px}
+  .takeaway-text{font-size:11px;color:#cbd5e1;line-height:1.5}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+  .track-box{background:rgba(37,133,232,0.06);border:1px solid rgba(37,133,232,0.2);border-radius:8px;padding:12px 14px}
+  .track-title{font-size:9px;color:#2585E8;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+  .track-item{font-size:9.5px;color:#94a3b8;line-height:1.5;margin-bottom:3px}
+  .audience-box{background:rgba(37,133,232,0.06);border:1px solid rgba(37,133,232,0.2);border-radius:8px;padding:12px 16px;margin-bottom:18px}
+  .audience-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .audience-tag{font-size:9px;color:#2585E8;border:1px solid rgba(37,133,232,0.35);padding:3px 10px;border-radius:12px}
+  .cta-block{margin-top:auto;background:linear-gradient(135deg,#2585E8,#1a6fd4);border-radius:8px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+  .cta-text{font-size:11px;font-weight:600;color:#fff}
+  .cta-url{font-size:11px;color:rgba(255,255,255,0.8);font-weight:500}
+  @media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}.no-print{display:none!important}}
+</style>
+</head>
+<body>
+<div class="no-print" style="background:#1e293b;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;font-family:Montserrat,sans-serif;font-size:13px;color:#94a3b8">
+  <span>One-Pager Preview</span>
+  <button onclick="window.print()" style="background:#2585E8;color:#fff;border:none;padding:8px 20px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer">Download PDF</button>
+</div>
+<div class="page">
+  <div class="left">
+    <img class="left-photo" src="/studio shot-2.jpg" alt="Justin Shaifer"/>
+    <div class="left-content">
+      <div>
+        <div class="badge">Keynote Topic</div>
+        <div style="margin-top:12px">
+          <div class="speaker-name">JUSTIN <span>"MR. FASCINATE"</span> SHAIFER</div>
+        </div>
+        <div class="divider" style="margin-top:12px"></div>
+      </div>
+      <div>
+        <div class="credential">Credentials</div>
+        <div class="credential-item">📋 Forbes 30 Under 30 — Education</div>
+        <div class="credential-item">💼 LinkedIn Top Voice in Technology</div>
+        <div class="credential-item">🎓 LinkedIn Learning Instructor</div>
+        <div class="credential-item">🎤 TEDx Speaker</div>
+        <div class="credential-item">🎬 Executive Producer, Fascinate Media</div>
+      </div>
+      <div class="logo-strip" style="margin:0 -24px">
+        <p>Past Clients & Collaborators</p>
+        <div class="client-tags">
+          <span class="client-tag">NCTIES</span>
+          <span class="client-tag">Smithsonian</span>
+          <span class="client-tag">Antelope Valley</span>
+          <span class="client-tag">AZ School Boards</span>
+          <span class="client-tag">Concept Schools</span>
+          <span class="client-tag">PBS</span>
+        </div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-label">Book This Keynote</div>
+        <div class="contact-item">🌐 <span>justinshaifer.com</span></div>
+        <div class="contact-item">📸 <span>@mr.fascinate</span></div>
+        <div class="contact-item">💼 <span>linkedin.com/in/jshaifer</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="topic-label">Education & Future of Work</div>
+    <div class="topic-title">AI <span>EMPOWERMENT</span> &amp; FUTURE OF WORK</div>
+    <div style="font-size:12px;color:#64748b;font-style:italic;margin-top:4px">Tools to Empower the Next Generation</div>
+    <div class="accent-line"></div>
+
+    <p class="overview-text">Dive into the nuanced world of Artificial Intelligence with Justin Shaifer. He demystifies the crucial role AI plays in today's educational landscape and beyond — introducing practical AI tools to revolutionize teaching practices, boost student engagement, and future-proof careers. Customized for Higher Education and K-12 audiences.</p>
+
+    <div class="section-heading">What Your Audience Will Learn</div>
+    <div class="takeaways">
+      <div class="takeaway"><div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div class="takeaway-text">Build AI literacy and confidence across your organization or classroom</div></div>
+      <div class="takeaway"><div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div class="takeaway-text">Explore the best AI tools for the classroom and the boardroom</div></div>
+      <div class="takeaway"><div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div class="takeaway-text">Understand why educators and leaders need AI today — not tomorrow</div></div>
+      <div class="takeaway"><div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div class="takeaway-text">Develop future-proof skills that keep students and professionals competitive</div></div>
+    </div>
+
+    <div class="section-heading">Customized Tracks</div>
+    <div class="two-col">
+      <div class="track-box">
+        <div class="track-title">Higher Education</div>
+        <div class="track-item">→ AI Literacy for Campus</div>
+        <div class="track-item">→ Best AI Tools for Classroom</div>
+        <div class="track-item">→ Faculty Development</div>
+      </div>
+      <div class="track-box">
+        <div class="track-title">K–12</div>
+        <div class="track-item">→ Why Educators Need AI Today</div>
+        <div class="track-item">→ Future-Proof Skills</div>
+        <div class="track-item">→ Student Engagement</div>
+      </div>
+    </div>
+
+    <div class="audience-box">
+      <div class="section-heading" style="margin-bottom:0">Ideal For</div>
+      <div class="audience-tags">
+        <span class="audience-tag">Higher Ed Conferences</span>
+        <span class="audience-tag">K–12 Summits</span>
+        <span class="audience-tag">School Boards</span>
+        <span class="audience-tag">Faculty PD Days</span>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <div class="cta-text">Ready to book this keynote?</div>
+      <div class="cta-url">justinshaifer.com</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
