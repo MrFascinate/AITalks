@@ -199,7 +199,20 @@ export default function About() {
                       </a>
                       , has earned him hundreds of keynote opportunities around the world.
                     </p>
-                    <p>Justin's presentations receive raving reviews from tens of thousands of audience members for dynamic technical showcases, and fresh perspectives on Media, STEM, AI and innovation.</p>
+                    <p>Ranging from "Your Workday Streamlined with AI" and "How to Win the War on Information with Science" to "How to Lead Gen Z," Justin's presentations receive raving reviews from tens of thousands of audience members for dynamic technical showcases, and fresh perspectives on Media, STEM, AI and innovation.</p>
+                    <p>
+                      Shaped by his experiences growing up on the south side of Chicago, Justin is committed to democratizing STEM education. As co-host and producer of{' '}
+                      <a
+                        href="https://www.instagram.com/curiositytheorypod"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary-400 hover:text-primary-300 underline underline-offset-2"
+                      >
+                        Curiosity Theory
+                      </a>
+                      , he's helping achieve this mission. The popular science and technology podcast has reached millions with accessible educational content since its inception.
+                    </p>
+                    <p>Justin's work has been featured in Forbes, NBC News, Yahoo Finance, AfroTech, and more.</p>
                   </motion.div>
                 )}
               </AnimatePresence>
