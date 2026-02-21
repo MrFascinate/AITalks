@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Award, Linkedin, BookOpen, Sparkles, ArrowRight, Play, X } from 'lucide-react';
+import { Award, Linkedin, BookOpen, Sparkles, ArrowRight, Play, X, ChevronDown } from 'lucide-react';
 
 const highlights = [
   {
@@ -27,18 +27,11 @@ const highlights = [
   },
 ];
 
-const bioParagraphs = [
-  `Justin "Mr. Fascinate" Shaifer is an award-winning STEM thought leader, educator, and keynote speaker on a mission to empower the world with innovation.`,
-  `At Fascinate Media, he serves as both executive producer and on-camera talent, creating educational content about innovation, AI & STEM literacy, and the Future of Work. His roster of past clients and collaborators include LinkedIn, Intuit, NVIDIA, Google, PBS, Discovery, Bill Nye the Science Guy, and Al Roker.`,
-  `His team continues ongoing research and development by producing experimental media projects using AI tools; such as AI Agents, Unreal Engine and Virtual Reality.`,
-  `Named Forbes 30 under 30 in education and a LinkedIn Top Voice in Technology, Justin serves as a featured instructor for LinkedIn Learning, creating educational AI content for enterprise and individual learners on their global platform. Justin's active speaking career, which exploded after a popular TEDx talk about Generation Z, has earned him hundreds of keynote opportunities around the world.`,
-  `Justin's presentations receive raving reviews from tens of thousands of audience members for dynamic technical showcases, and fresh perspectives on Media, STEM, AI and innovation.`,
-];
-
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <section id="about" className="py-24 bg-primary-950 relative overflow-hidden">
@@ -170,9 +163,60 @@ export default function About() {
             </h2>
 
             <div className="space-y-4 text-gray-300 leading-relaxed">
-              {bioParagraphs.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+              {/* Initial bio - always visible */}
+              <p>Justin "Mr. Fascinate" Shaifer is an award-winning STEM thought leader, educator, and keynote speaker on a mission to empower the world with innovation.</p>
+              <p>At Fascinate Media, he serves as both executive producer and on-camera talent, creating educational content about innovation, AI & STEM literacy, and the Future of Work. His roster of past clients and collaborators include LinkedIn, Intuit, NVIDIA, Google, PBS, Discovery, Bill Nye the Science Guy, and Al Roker.</p>
+
+              {/* Expanded bio */}
+              <AnimatePresence>
+                {isExpanded && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.35, ease: 'easeInOut' }}
+                    className="overflow-hidden space-y-4"
+                  >
+                    <p>His team continues ongoing research and development by producing experimental media projects using AI tools; such as AI Agents, Unreal Engine and Virtual Reality.</p>
+                    <p>
+                      Named{' '}
+                      <a
+                        href="https://www.forbes.com/profile/justin-shaifer/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary-400 hover:text-primary-300 underline underline-offset-2"
+                      >
+                        Forbes 30 under 30
+                      </a>{' '}
+                      in education and a LinkedIn Top Voice in Technology, Justin serves as a featured instructor for LinkedIn Learning, creating educational AI content for enterprise and individual learners on their global platform. Justin's active speaking career, which exploded after a popular{' '}
+                      <a
+                        href="https://youtu.be/9Ad00XQ3JD0?si=0MG7_-WN0UlSrIE5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary-400 hover:text-primary-300 underline underline-offset-2"
+                      >
+                        TEDx talk about Generation Z
+                      </a>
+                      , has earned him hundreds of keynote opportunities around the world.
+                    </p>
+                    <p>Justin's presentations receive raving reviews from tens of thousands of audience members for dynamic technical showcases, and fresh perspectives on Media, STEM, AI and innovation.</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* Expand/Collapse button */}
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-medium transition-colors mt-2"
+              >
+                {isExpanded ? 'Show less' : 'Read more'}
+                <motion.div
+                  animate={{ rotate: isExpanded ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ChevronDown size={18} />
+                </motion.div>
+              </button>
             </div>
 
             {/* CTA Button */}
