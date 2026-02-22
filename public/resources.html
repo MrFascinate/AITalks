@@ -40,15 +40,6 @@
   .download-btn::before{content:"";position:absolute;inset:0;padding:1px;border-radius:60px;background:linear-gradient(90deg,#2585E8,rgba(4,150,255,0) 50%,#2585E8);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;pointer-events:none}
   .download-btn:hover{background:#2585E8;border-color:#2585E8}
 
-  /* Latest PDF section */
-  .latest-section{margin:40px 0 0}
-  .latest-banner{background:linear-gradient(135deg,rgba(37,133,232,0.15),rgba(37,133,232,0.05));border:1px solid rgba(37,133,232,0.3);border-radius:12px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-  .latest-text h3{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;margin-bottom:4px}
-  .latest-text p{font-size:14px;color:#94a3b8}
-  #latest-filename{color:#38bdf8;font-weight:600}
-  .latest-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#2585E8,#1a6fd4);color:#fff;padding:14px 28px;border-radius:60px;font-size:14px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;border:none;font-family:'Montserrat',sans-serif;transition:transform 0.2s,box-shadow 0.2s;white-space:nowrap}
-  .latest-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(37,133,232,0.4)}
-
   /* Modal */
   .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
   .modal-overlay.active{display:flex}
@@ -119,20 +110,6 @@
 
 <div class="container">
 
-  <!-- Latest Upload Banner -->
-  <div class="latest-section">
-    <div class="latest-banner">
-      <div class="latest-text">
-        <h3>LATEST RELEASE</h3>
-        <p>Most recently added: <span id="latest-filename">Loading...</span></p>
-      </div>
-      <button class="latest-btn" id="latestDownloadBtn" onclick="openLatestModal()" disabled>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download Latest
-      </button>
-    </div>
-  </div>
-
   <!-- Corporate Teams -->
   <div class="category-title">For Corporate Teams</div>
   <div class="resource-grid" id="corporateGrid">
@@ -143,7 +120,7 @@
       <div class="card-body">
         <div class="card-title">How to Date AI Tools Effectively</div>
         <div class="card-desc">Justin's guide for quickly building expertise in the use of new AI tools — practical, actionable, and field-tested.</div>
-        <button class="download-btn" onclick="openModal('How to Date AI Tools Effectively', 'corporate-1')">
+        <button class="download-btn" onclick="openModal('How to Date AI Tools Effectively')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Free
         </button>
@@ -157,7 +134,7 @@
       <div class="card-body">
         <div class="card-title">F.A.S.T. Prompt Engineering Framework</div>
         <div class="card-desc">A breakdown of Justin's FAST Framework for prompting AI tools for optimal results in any business context.</div>
-        <button class="download-btn" onclick="openModal('F.A.S.T. Prompt Engineering Framework', 'corporate-2')">
+        <button class="download-btn" onclick="openModal('F.A.S.T. Prompt Engineering Framework')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Free
         </button>
@@ -171,7 +148,7 @@
       <div class="card-body">
         <div class="card-title">Learn AI Free — Curated Resource List</div>
         <div class="card-desc">Links to AI influencers, podcasts, and newsletters for staying current with the latest AI advancements.</div>
-        <button class="download-btn" onclick="openModal('Learn AI Free — Curated Resource List', 'corporate-3')">
+        <button class="download-btn" onclick="openModal('Learn AI Free — Curated Resource List')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Free
         </button>
@@ -189,7 +166,7 @@
       <div class="card-body">
         <div class="card-title">AI Policy Roadmap</div>
         <div class="card-desc">A guide for co-creating a flexible, adaptable AI policy with your students — works for various age groups.</div>
-        <button class="download-btn" onclick="openModal('AI Policy Roadmap', 'edu-1')">
+        <button class="download-btn" onclick="openModal('AI Policy Roadmap')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Free
         </button>
@@ -203,7 +180,7 @@
       <div class="card-body">
         <div class="card-title">STEM Shark Tank</div>
         <div class="card-desc">A competitive activity that incorporates AI, STEM literacy, soft skills, and entrepreneurship into one engaging session.</div>
-        <button class="download-btn" onclick="openModal('STEM Shark Tank', 'edu-2')">
+        <button class="download-btn" onclick="openModal('STEM Shark Tank')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Free
         </button>
@@ -217,17 +194,13 @@
       <div class="card-body">
         <div class="card-title">Your STEM Hero</div>
         <div class="card-desc">Student groups create a custom STEM Hero avatar with a unique path to STEM success using AI tools.</div>
-        <button class="download-btn" onclick="openModal('Your STEM Hero', 'edu-3')">
+        <button class="download-btn" onclick="openModal('Your STEM Hero')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Free
         </button>
       </div>
     </div>
   </div>
-
-  <!-- Dynamic GitHub PDFs -->
-  <div class="category-title" id="latestCategoryTitle" style="display:none">Latest Uploads</div>
-  <div class="resource-grid" id="githubGrid"></div>
 
 </div>
 
@@ -241,96 +214,22 @@
 
 <script>
   // ─── CONFIGURATION ─────────────────────────────────────────────────────────
-  // Set this to your GitHub repo in the format: "username/repo-name"
-  // The page will fetch the most recently uploaded PDF files from this repo.
-  const GITHUB_REPO = 'MrFascinate/AITalks'; // ← update this
-  const GITHUB_PATH = 'public/one-pagers';   // ← folder path within the repo (leave blank '' for root)
-  const FORMSPREE_ID = 'mykddqdv';           // ← your Formspree form ID
+  // Email submissions are sent to fascinatesci@gmail.com via FormSubmit.co
+  // The first submission will require email verification (check your inbox).
+  const SUBMIT_EMAIL = 'fascinatesci@gmail.com';
   // ───────────────────────────────────────────────────────────────────────────
 
   let currentResourceName = '';
-  let currentDownloadUrl = '';
-  let latestPdf = null;
 
-  // Fetch latest PDFs from GitHub
-  async function fetchGitHubPdfs() {
-    try {
-      const path = GITHUB_PATH ? `/${GITHUB_PATH}` : '';
-      const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents${path}`);
-      if (!res.ok) return;
-      const files = await res.json();
-
-      // Filter for PDF files only, sort by newest (GitHub API returns by name; use commits API for date)
-      const pdfs = files.filter(f => f.name.toLowerCase().endsWith('.pdf'));
-
-      if (pdfs.length === 0) return;
-
-      // Fetch commit dates for each PDF to sort by newest
-      const withDates = await Promise.all(pdfs.map(async (f) => {
-        try {
-          const commitRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/commits?path=${f.path}&per_page=1`);
-          const commits = await commitRes.json();
-          const date = commits[0]?.commit?.committer?.date || '2000-01-01';
-          return {...f, date};
-        } catch {
-          return {...f, date: '2000-01-01'};
-        }
-      }));
-
-      withDates.sort((a, b) => new Date(b.date) - new Date(a.date));
-      latestPdf = withDates[0];
-
-      // Update latest banner
-      const nameEl = document.getElementById('latest-filename');
-      if (nameEl) nameEl.textContent = latestPdf.name.replace('.pdf', '').replace(/-/g, ' ').replace(/_/g, ' ');
-      const latestBtn = document.getElementById('latestDownloadBtn');
-      if (latestBtn) latestBtn.disabled = false;
-
-      // Render extra PDF cards if more than one file
-      if (withDates.length > 1) {
-        const grid = document.getElementById('githubGrid');
-        const catTitle = document.getElementById('latestCategoryTitle');
-        if (catTitle) catTitle.style.display = 'block';
-
-        withDates.slice(0, 6).forEach(f => {
-          const displayName = f.name.replace('.pdf', '').replace(/-/g, ' ').replace(/_/g, ' ');
-          const card = document.createElement('div');
-          card.className = 'resource-card';
-          card.innerHTML = `
-            <div class="card-image-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
-            </div>
-            <div class="card-body">
-              <div class="card-title">${displayName}</div>
-              <div class="card-desc">Free resource from Justin Shaifer. Enter your email to download.</div>
-              <button class="download-btn" onclick="openModal('${displayName.replace(/'/g,"\\'")}', null, '${f.download_url}')">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Download Free
-              </button>
-            </div>`;
-          grid.appendChild(card);
-        });
-      }
-    } catch (e) {
-      console.log('GitHub fetch skipped:', e.message);
-    }
-  }
-
-  function openModal(name, resourceKey, downloadUrl) {
+  function openModal(name) {
     currentResourceName = name;
-    currentDownloadUrl = downloadUrl || '';
     document.getElementById('modalResourceName').textContent = name;
     document.getElementById('formArea').style.display = 'block';
     document.getElementById('successMsg').style.display = 'none';
     document.getElementById('emailInput').value = '';
     document.getElementById('submitBtn').disabled = false;
+    document.getElementById('submitBtn').textContent = 'Download Now';
     document.getElementById('emailModal').classList.add('active');
-  }
-
-  function openLatestModal() {
-    if (!latestPdf) return;
-    const name = latestPdf.name.replace('.pdf','').replace(/-/g,' ').replace(/_/g,' ');
-    openModal(name, null, latestPdf.download_url);
   }
 
   function closeModal() {
@@ -349,23 +248,17 @@
     btn.textContent = 'Sending...';
 
     try {
-      await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      await fetch(`https://formsubmit.co/ajax/${SUBMIT_EMAIL}`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-        body: JSON.stringify({email, resource: currentResourceName, _subject: `Free Resource Download: ${currentResourceName}`})
+        body: JSON.stringify({
+          email: email,
+          resource: currentResourceName,
+          _subject: `Free Resource Download: ${currentResourceName}`
+        })
       });
     } catch(err) {
-      console.log('Formspree submit error (non-blocking):', err);
-    }
-
-    // Trigger download
-    if (currentDownloadUrl) {
-      const a = document.createElement('a');
-      a.href = currentDownloadUrl;
-      a.download = '';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+      console.log('Form submit error (non-blocking):', err);
     }
 
     // Show success
@@ -373,9 +266,6 @@
     document.getElementById('successMsg').style.display = 'block';
     setTimeout(closeModal, 3000);
   });
-
-  // Fetch GitHub PDFs on page load
-  fetchGitHubPdfs();
 </script>
 </body>
 </html>
