@@ -10,7 +10,7 @@ const videos = [
   },
   {
     id: '1074161713',
-    title: 'Engaging Gen Z in STEM',
+    title: 'What are AI Agents?',
     description: 'Fresh perspectives on inspiring the next generation of innovators',
   },
   {
