@@ -164,9 +164,9 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
       </div>
       <div class="card-body">
-        <div class="card-title">AI Policy Roadmap</div>
-        <div class="card-desc">A guide for co-creating a flexible, adaptable AI policy with your students — works for various age groups.</div>
-        <button class="download-btn" onclick="openModal('AI Policy Roadmap')">
+        <div class="card-title">Engaging Gen Z Tool Kit</div>
+        <div class="card-desc">Strategies and activities for connecting with Gen Z through technology, storytelling, and hands-on engagement.</div>
+        <button class="download-btn" onclick="openModal('Engaging Gen Z Tool Kit')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Free
         </button>
@@ -214,15 +214,25 @@
 
 <script>
   // ─── CONFIGURATION ─────────────────────────────────────────────────────────
-  // Email submissions are sent to fascinatesci@gmail.com via FormSubmit.co
-  // The first submission will require email verification (check your inbox).
   const SUBMIT_EMAIL = 'fascinatesci@gmail.com';
+
+  // PDF file mappings
+  const PDF_FILES = {
+    'How to Date AI Tools Effectively': '/pdfs/Date AI Tools Effectively - Fascinate AI Resources_2_14_2026.pdf',
+    'F.A.S.T. Prompt Engineering Framework': '/pdfs/FAST Prompt Engineering Framework - Fascinate AI Resources.pdf',
+    'Learn AI Free — Curated Resource List': '/pdfs/FREE AI Learning - Fascinate AI Resources.pdf',
+    'Engaging Gen Z Tool Kit': '/pdfs/Engaging Gen Z Tool Kit.pdf',
+    'STEM Shark Tank': '/pdfs/STEM Shark Tank - Fascinate AI Resources.pdf',
+    'Your STEM Hero': '/pdfs/Your STEM Hero - Fascinate AI Resources.pdf'
+  };
   // ───────────────────────────────────────────────────────────────────────────
 
   let currentResourceName = '';
+  let currentPdfUrl = '';
 
   function openModal(name) {
     currentResourceName = name;
+    currentPdfUrl = PDF_FILES[name] || '';
     document.getElementById('modalResourceName').textContent = name;
     document.getElementById('formArea').style.display = 'block';
     document.getElementById('successMsg').style.display = 'none';
@@ -259,6 +269,16 @@
       });
     } catch(err) {
       console.log('Form submit error (non-blocking):', err);
+    }
+
+    // Trigger PDF download
+    if (currentPdfUrl) {
+      const link = document.createElement('a');
+      link.href = currentPdfUrl;
+      link.download = '';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
 
     // Show success
