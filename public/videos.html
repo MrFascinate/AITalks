@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI Videos — Justin Shaifer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Montserrat',sans-serif;background:#11111C;color:#fff;min-height:100vh}
+  .header{background:linear-gradient(180deg,#0d1526 0%,#11111C 100%);padding:40px 24px 60px;text-align:center}
+  .back-link{display:inline-flex;align-items:center;gap:8px;color:#94a3b8;text-decoration:none;font-size:14px;margin-bottom:24px;transition:color 0.2s}
+  .back-link:hover{color:#2585E8}
+  .back-link svg{width:20px;height:20px}
+  .page-title{font-family:'Oswald',sans-serif;font-size:48px;font-weight:700;margin-bottom:12px}
+  .page-title span{background:linear-gradient(135deg,#2585E8,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .page-subtitle{font-size:18px;color:#94a3b8;max-width:600px;margin:0 auto}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px 60px}
+  .video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px}
+  .video-card{background:#0f1623;border:1px solid rgba(37,133,232,0.15);border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s}
+  .video-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.3);border-color:rgba(37,133,232,0.4)}
+  .thumbnail-wrapper{position:relative;aspect-ratio:16/9;overflow:hidden;background:#1a1a2e}
+  .thumbnail{width:100%;height:100%;object-fit:cover;transition:transform 0.3s}
+  .video-card:hover .thumbnail{transform:scale(1.05)}
+  .play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);opacity:0;transition:opacity 0.3s}
+  .video-card:hover .play-overlay{opacity:1}
+  .play-btn{width:64px;height:64px;background:linear-gradient(135deg,#2585E8,#1a6fd4);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,133,232,0.4)}
+  .play-btn svg{width:24px;height:24px;fill:#fff;margin-left:4px}
+  .video-info{padding:20px}
+  .video-title{font-size:16px;font-weight:600;color:#fff;margin-bottom:8px;line-height:1.4}
+  .video-desc{font-size:13px;color:#64748b;line-height:1.5}
+  .cta-section{text-align:center;padding:40px 24px 80px;background:linear-gradient(180deg,#11111C 0%,#0d1526 100%)}
+  .cta-text{font-size:20px;color:#94a3b8;margin-bottom:24px}
+  .cta-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#2585E8,#1a6fd4);color:#fff;text-decoration:none;padding:16px 32px;border-radius:8px;font-size:16px;font-weight:600;transition:transform 0.2s,box-shadow 0.2s}
+  .cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,133,232,0.4)}
+  .cta-btn svg{width:20px;height:20px}
+  @media (max-width:768px){
+    .page-title{font-size:36px}
+    .video-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="header">
+  <a href="/" class="back-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+    Back to Home
+  </a>
+  <h1 class="page-title">AI <span>VIDEO</span> GALLERY</h1>
+  <p class="page-subtitle">Watch Justin Shaifer break down AI concepts, share practical tips, and inspire audiences around the world.</p>
+</div>
+
+<div class="container">
+  <div class="video-grid">
+    <a href="https://vimeo.com/1075551079" target="_blank" rel="noopener" class="video-card">
+      <div class="thumbnail-wrapper">
+        <img class="thumbnail" src="https://vumbnail.com/1075551079.jpg" alt="AI Video" loading="lazy"/>
+        <div class="play-overlay">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">AI Insights & Innovation</div>
+        <div class="video-desc">Exploring cutting-edge AI tools and their real-world applications.</div>
+      </div>
+    </a>
+
+    <a href="https://vimeo.com/1075550647" target="_blank" rel="noopener" class="video-card">
+      <div class="thumbnail-wrapper">
+        <img class="thumbnail" src="https://vumbnail.com/1075550647.jpg" alt="AI Video" loading="lazy"/>
+        <div class="play-overlay">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">The Future of Work</div>
+        <div class="video-desc">How AI is transforming industries and creating new opportunities.</div>
+      </div>
+    </a>
+
+    <a href="https://vimeo.com/1097189159" target="_blank" rel="noopener" class="video-card">
+      <div class="thumbnail-wrapper">
+        <img class="thumbnail" src="https://vumbnail.com/1097189159.jpg" alt="AI Video" loading="lazy"/>
+        <div class="play-overlay">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">AI for Education</div>
+        <div class="video-desc">Empowering educators and students with AI-powered learning tools.</div>
+      </div>
+    </a>
+
+    <a href="https://vimeo.com/1074161713" target="_blank" rel="noopener" class="video-card">
+      <div class="thumbnail-wrapper">
+        <img class="thumbnail" src="https://vumbnail.com/1074161713.jpg" alt="AI Video" loading="lazy"/>
+        <div class="play-overlay">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Practical AI Applications</div>
+        <div class="video-desc">Hands-on demonstrations of AI tools you can use today.</div>
+      </div>
+    </a>
+
+    <a href="https://vimeo.com/1154892061" target="_blank" rel="noopener" class="video-card">
+      <div class="thumbnail-wrapper">
+        <img class="thumbnail" src="https://vumbnail.com/1154892061.jpg" alt="AI Video" loading="lazy"/>
+        <div class="play-overlay">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">AI Productivity Hacks</div>
+        <div class="video-desc">Streamline your workflow with intelligent automation.</div>
+      </div>
+    </a>
+
+    <a href="https://vimeo.com/1154893202" target="_blank" rel="noopener" class="video-card">
+      <div class="thumbnail-wrapper">
+        <img class="thumbnail" src="https://vumbnail.com/1154893202.jpg" alt="AI Video" loading="lazy"/>
+        <div class="play-overlay">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Keynote Highlights</div>
+        <div class="video-desc">Best moments from speaking engagements worldwide.</div>
+      </div>
+    </a>
+
+    <a href="https://vimeo.com/1154892514" target="_blank" rel="noopener" class="video-card">
+      <div class="thumbnail-wrapper">
+        <img class="thumbnail" src="https://vumbnail.com/1154892514.jpg" alt="AI Video" loading="lazy"/>
+        <div class="play-overlay">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Engaging Gen Z</div>
+        <div class="video-desc">Connecting with the next generation through technology and storytelling.</div>
+      </div>
+    </a>
+
+    <a href="https://vimeo.com/1154892831" target="_blank" rel="noopener" class="video-card">
+      <div class="thumbnail-wrapper">
+        <img class="thumbnail" src="https://vumbnail.com/1154892831.jpg" alt="AI Video" loading="lazy"/>
+        <div class="play-overlay">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Workshop Sessions</div>
+        <div class="video-desc">Interactive learning experiences that build real AI skills.</div>
+      </div>
+    </a>
+
+    <a href="https://vimeo.com/1154892954" target="_blank" rel="noopener" class="video-card">
+      <div class="thumbnail-wrapper">
+        <img class="thumbnail" src="https://vumbnail.com/1154892954.jpg" alt="AI Video" loading="lazy"/>
+        <div class="play-overlay">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Tech Talks & Panels</div>
+        <div class="video-desc">Discussions with industry leaders on AI trends and innovations.</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="cta-section">
+  <p class="cta-text">Ready to bring this energy to your event?</p>
+  <a href="/#contact" class="cta-btn">
+    Book Justin Now
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+  </a>
+</div>
+</body>
+</html>
