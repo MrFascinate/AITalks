@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, BookOpen } from 'lucide-react';
 import { speakerData } from '../data/speakerData';
 
 interface HeroProps {
@@ -94,6 +94,16 @@ export default function Hero({ onBookClick, onVideoClick }: HeroProps) {
                 <Play size={18} />
                 View Reel
               </motion.button>
+
+              <motion.a
+                href="/resources.html"
+                className="btn-gradient-border inline-flex items-center gap-2"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <BookOpen size={18} />
+                Free Resources
+              </motion.a>
             </motion.div>
           </motion.div>
         </div>
