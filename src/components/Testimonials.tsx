@@ -138,6 +138,7 @@ export default function Testimonials() {
                 <button
                   onClick={() => paginate(-1)}
                   className="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
+                  aria-label="Previous testimonial"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
@@ -163,6 +164,7 @@ export default function Testimonials() {
                 <button
                   onClick={() => paginate(1)}
                   className="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
+                  aria-label="Next testimonial"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>

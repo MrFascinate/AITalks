@@ -52,13 +52,14 @@ export default function Footer() {
           {/* Connect */}
           <div>
             <h3 className="text-white font-semibold mb-4 uppercase tracking-wider text-sm">Connect</h3>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mb-4">
               <motion.a
                 href={speakerData.socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-[#0A66C2] hover:border-[#0A66C2]/50 transition-all"
                 whileHover={{ scale: 1.1 }}
+                aria-label="Follow on LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </motion.a>
@@ -68,6 +69,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-[#E4405F] hover:border-[#E4405F]/50 transition-all"
                 whileHover={{ scale: 1.1 }}
+                aria-label="Follow on Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </motion.a>
@@ -77,19 +79,25 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-primary-400 hover:border-primary-500/50 transition-all"
                 whileHover={{ scale: 1.1 }}
+                aria-label="View Talkadot profile"
               >
                 <ExternalLink className="w-5 h-5" />
               </motion.a>
             </div>
-            <a
-              href={speakerData.socialLinks.talkadot}
+
+            {/* Newsletter */}
+            <p className="text-gray-400 text-sm mb-2">Subscribe to The Fascinate Forecast</p>
+            <motion.a
+              href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7322697279771922432"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-gray-400 hover:text-gradient transition-all mt-4 text-sm"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#0A66C2] hover:bg-[#004182] text-white text-sm font-medium rounded-full transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              View Talkadot Profile
-              <ExternalLink className="w-4 h-4" />
-            </a>
+              <Linkedin className="w-4 h-4" />
+              Subscribe on LinkedIn
+            </motion.a>
           </div>
         </div>
 
