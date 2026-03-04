@@ -5,10 +5,6 @@ import { HelpCircle, ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'What topics does Justin speak about?',
-    answer: `Justin's keynotes focus on AI literacy and practical applications, STEM education and innovation, engaging Gen Z audiences, and the future of work. His most popular presentations include "Your Workday Streamlined with AI," "AI Empowerment & Future of Work," "How to Engage Gen Z," and hands-on AI working sessions. Each presentation can be customized to your audience and event goals.`,
-  },
-  {
     question: 'Is Justin available for virtual events?',
     answer: `Yes! Justin is available for both in-person and virtual events worldwide. For virtual presentations, he brings the same energy and interactivity through engaging demos, live polls, and Q&A sessions. His virtual setup is broadcast-quality, ensuring a professional experience for your remote audience.`,
   },
@@ -29,8 +25,16 @@ const faqs = [
     answer: `Yes, Justin has spoken at events worldwide, including Dubai's GITEX Future Stars Conference. International bookings are welcome, and travel arrangements can be coordinated based on your event location and requirements.`,
   },
   {
-    question: 'What AV/technical requirements are needed?',
-    answer: `For in-person events, Justin requires a lavalier or headset microphone, HDMI connection for presentations, and a confidence monitor when available. For live demonstrations, a stable internet connection is essential. A detailed technical rider is provided upon booking confirmation.`,
+    question: 'Do you offer extras (book signings, meet-and-greets)?',
+    answer: `Justin offers a variety of add-ons to enhance the attendee experience. These include signed posters, meet-and-greets, extended Q&A sessions, custom videos for attendees, and time to answer questions after the presentation. Let us know what would work best for your event!`,
+  },
+  {
+    question: 'What kind of promotional support do you offer to help market the event?',
+    answer: `Justin is happy to create custom promotional videos to help market your event. He also actively promotes events across his social platforms, which have a combined reach of over 80,000 followers. This helps drive awareness and excitement before your event.`,
+  },
+  {
+    question: 'What should I know about working with you?',
+    answer: `With over 200 keynotes delivered in the past 8 years, Justin is easy to work with and highly adaptable. He's tech-savvy, handles his own presentation setup, and always connects with the A/V team in advance to ensure everything runs smoothly on event day.`,
   },
   {
     question: 'How do we get started with booking?',
