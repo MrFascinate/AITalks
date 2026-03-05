@@ -95,7 +95,7 @@ export default function Stats() {
           src="/suit%20transparent.png"
           alt="Justin Shaifer"
           className="w-full h-auto object-contain"
-          style={{ filter: 'drop-shadow(0 0 40px rgba(0, 136, 255, 0.4))' }}
+          style={{ filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6))' }}
         />
       </motion.div>
 
