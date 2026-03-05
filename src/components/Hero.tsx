@@ -20,8 +20,8 @@ export default function Hero({ onBookClick, onVideoClick }: HeroProps) {
         <div className="absolute inset-0 w-full h-full">
           <iframe
             src="https://player.vimeo.com/video/1072452218?background=1&autoplay=1&loop=1&muted=1&controls=0"
-            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
-            style={{ width: '177.78vh', height: '100vh' }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            style={{ width: '250vh', height: '140vh' }}
             allow="autoplay; fullscreen"
             title="Website Banner Loop"
           />
