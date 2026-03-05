@@ -37,10 +37,14 @@ export default function Navbar() {
             {/* Logo */}
             <motion.a
               href="#"
-              className="text-lg md:text-xl font-bold text-white font-display"
+              className="flex items-center"
               whileHover={{ scale: 1.05 }}
             >
-              <span className="text-gradient">MR. FASCINATE</span>
+              <img
+                src="/mr_fascinate_logo_transparent_blue.png"
+                alt="Mr. Fascinate"
+                className="h-8 md:h-10 w-auto"
+              />
             </motion.a>
 
             {/* Desktop Navigation */}
