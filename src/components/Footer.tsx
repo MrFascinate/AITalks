@@ -24,8 +24,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <a href="#" className="text-2xl font-bold text-white font-display">
-              <span className="text-gradient">MR. FASCINATE</span>
+            <a href="#">
+              <img
+                src="/mr_fascinate_logo_transparent_blue.png"
+                alt="Mr. Fascinate"
+                className="h-8 w-auto"
+              />
             </a>
             <p className="text-gray-400 mt-3 max-w-xs">
               {speakerData.tagline}
