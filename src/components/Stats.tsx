@@ -86,7 +86,7 @@ export default function Stats() {
 
       {/* Left side - Suit image (positioned at bottom) */}
       <motion.div
-        className="hidden lg:block absolute bottom-0 left-0 w-[45%] max-w-[700px]"
+        className="hidden lg:block absolute bottom-0 left-0 w-[55%]"
         initial={{ opacity: 0, x: -30 }}
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.6 }}
