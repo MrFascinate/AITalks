@@ -43,7 +43,7 @@ export default function Navbar() {
               <img
                 src="/mr_fascinate_logo_transparent_blue.png"
                 alt="Mr. Fascinate"
-                className="h-32 md:h-40 w-auto"
+                className="h-10 md:h-12 w-auto"
               />
             </motion.a>
 
