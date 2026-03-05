@@ -125,6 +125,6 @@ Justin transforms complex topics into digestible concepts, sparking curiosity wh
 export const audienceOutcomes = [
   "Practical knowledge of AI tools and techniques",
   "Deeper understanding of engaging Gen Z students",
-  "Growth mindset for lifelong learning",
+  "Frameworks for success in the Future of Work",
   "Actionable strategies for the AI-driven landscape",
 ];
