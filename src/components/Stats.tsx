@@ -89,12 +89,13 @@ export default function Stats() {
           {/* Left side - Suit image */}
           <div className="hidden lg:block lg:w-1/3">
             <motion.img
-              src="/suit_transparent.png"
+              src="/suit%20transparent.png"
               alt="Justin Shaifer"
               initial={{ opacity: 0, x: -30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6 }}
-              className="w-full h-auto max-h-[500px] object-contain"
+              className="w-full h-auto max-h-[500px] object-contain drop-shadow-2xl"
+              style={{ filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5))' }}
             />
           </div>
 
