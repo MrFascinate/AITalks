@@ -37,7 +37,7 @@ const topics = [
   },
   {
     icon: Users,
-    title: 'How to Engage Gen Z',
+    title: 'How to Engage Gen Z in STEM',
     description: 'Bridge traditional teaching with modern demands to inspire the next generation.',
     details: `Boring lectures and uninspiring teachers often ruin students' perceptions of STEM. Justin shares his personal story of overcoming adversity — growing up on the south side of Chicago, where STEM was considered anything but cool — to the amazing heights he's reached in his career. He has performed this keynote for over 50,000 students worldwide.`,
     learnMoreUrl: 'https://vimeo.com/1166811589?share=copy&fl=sv&fe=ci',
