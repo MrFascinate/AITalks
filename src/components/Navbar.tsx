@@ -37,13 +37,13 @@ export default function Navbar() {
             {/* Logo */}
             <motion.a
               href="#"
-              className="flex items-center"
+              className="flex items-center flex-shrink-0"
               whileHover={{ scale: 1.05 }}
             >
               <img
                 src="/mr_fascinate_logo_transparent_blue.png"
                 alt="Mr. Fascinate"
-                className="h-6 md:h-8 w-auto"
+                className="h-6 md:h-8 w-auto object-contain"
               />
             </motion.a>
 
