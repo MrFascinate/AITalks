@@ -25,7 +25,7 @@ const videos = [
     category: 'Branded Content',
     description: 'Justin hosts a car commercial for Chevy\'s EV, describing how sustainable energy sources can empower us to build the future.',
     thumbnail: '/CHEVY DTU.gif',
-    link: '#',
+    link: 'https://vimeo.com/1173691521?share=copy&fl=sv&fe=ci',
   },
 ];
 
