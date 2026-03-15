@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Award, Linkedin, BookOpen, Sparkles, ArrowRight, Play, X, ChevronDown } from 'lucide-react';
+import { Award, Linkedin, BookOpen, Video, ArrowRight, Play, X, ChevronDown } from 'lucide-react';
 
 const highlights = [
   {
@@ -21,7 +21,7 @@ const highlights = [
     description: "Creating educational programming around STEM and AI for professionals, educators and students",
   },
   {
-    icon: Sparkles,
+    icon: Video,
     title: "Media Producer",
     description: "Executive producer at Fascinate Media",
   },
