@@ -1,22 +1,31 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Play } from 'lucide-react';
+import { Play, ExternalLink } from 'lucide-react';
 
 const videos = [
   {
-    id: '1075551079',
-    title: 'AI Tools for Daily Productivity',
-    description: 'Practical AI applications to streamline your workflow and boost efficiency',
+    title: 'AI Agents for Everyday Professionals',
+    source: 'LinkedIn Learning',
+    category: 'Education',
+    description: 'In this course, Justin Shaifer introduces beginner-friendly AI agent platform n8n, explores practical use cases for automating everyday work.',
+    thumbnail: '/linkedin learning n8n.gif',
+    link: 'https://www.linkedin.com/learning/ai-agents-for-everyday-professionals-simple-automations-to-speed-up-your-work-no-code-required/when-to-use-and-not-use-an-ai-agent',
   },
   {
-    id: '1074161713',
-    title: 'What are AI Agents?',
-    description: 'Fresh perspectives on inspiring the next generation of innovators',
+    title: 'Curiosity Theory',
+    source: 'Fascinate Media',
+    category: 'Series',
+    description: 'An educational science podcast where co-hosts Dr. Dakotah Tyler and Justin Shaifer talk space, science, the future, and culture.',
+    thumbnail: '/curiosity theory.gif',
+    link: 'https://www.curiositytheorypod.com/',
   },
   {
-    id: '1074161755',
-    title: 'The Future of Work with AI',
-    description: 'How AI is reshaping industries and empowering teams worldwide',
+    title: "What's Cool About Electric",
+    source: 'Chevrolet',
+    category: 'Branded Content',
+    description: 'Justin hosts a car commercial for Chevy\'s EV, describing how sustainable energy sources can empower us to build the future.',
+    thumbnail: '/CHEVY DTU.gif',
+    link: '#',
   },
 ];
 
@@ -51,38 +60,55 @@ export default function Videos() {
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-display">
-            AI <span className="text-gradient">VIDEOS</span>
+            EDUCATIONAL <span className="text-gradient">CONTENT</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Watch insights on AI, leadership, and the future of technology
+            Watch educational content about AI, STEM and the Future, produced by Justin
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {videos.map((video, index) => (
-            <motion.div
-              key={video.id}
+            <motion.a
+              key={video.title}
+              href={video.link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="card-gradient-border group"
+              className="card-gradient-border group block"
             >
-              <div className="relative z-10 p-2">
-                <div className="vimeo-container">
-                  <iframe
-                    src={`https://player.vimeo.com/video/${video.id}?badge=0&autopause=0&player_id=0&app_id=58479`}
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                    title={video.title}
+              <div className="relative z-10">
+                {/* Thumbnail with category badge */}
+                <div className="relative aspect-video overflow-hidden rounded-t-[15px]">
+                  <img
+                    src={video.thumbnail}
+                    alt={video.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  {/* Category badge */}
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-accent-400 text-primary-950 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-md">
+                      {video.category}
+                    </span>
+                  </div>
                 </div>
-                <div className="p-4">
+
+                {/* Content */}
+                <div className="p-5">
                   <h3 className="text-xl font-bold text-white font-display group-hover:text-gradient transition-all">
                     {video.title}
                   </h3>
-                  <p className="text-gray-400 mt-2">{video.description}</p>
+                  <p className="text-primary-400 text-sm font-semibold uppercase tracking-wider mt-2">
+                    {video.source}
+                  </p>
+                  <p className="text-gray-400 mt-3 text-sm leading-relaxed line-clamp-3">
+                    {video.description}
+                  </p>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 
@@ -93,11 +119,13 @@ export default function Videos() {
           className="text-center mt-12"
         >
           <a
-            href="/videos.html"
+            href="https://fascinate.media"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-gradient-border inline-flex items-center gap-2"
           >
             View All Videos
-            <Play size={18} />
+            <ExternalLink size={18} />
           </a>
         </motion.div>
       </div>

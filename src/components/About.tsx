@@ -169,7 +169,7 @@ export default function About({ onBookClick }: AboutProps) {
             <div className="space-y-4 text-gray-300 leading-relaxed">
               {/* Initial bio - always visible */}
               <p>Justin "Mr. Fascinate" Shaifer is an award-winning STEM thought leader, enterprise AI trainer, and keynote speaker on a mission to empower the world with innovation.</p>
-              <p>At Fascinate Media, he serves as both executive producer and on-camera talent, creating educational content about innovation, AI & STEM literacy, and the Future of Work. His roster of past clients and collaborators include LinkedIn, Intuit, NVIDIA, Google, PBS, Discovery, Bill Nye the Science Guy, and Al Roker.</p>
+              <p>At <a href="https://fascinate.media" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 underline underline-offset-2">Fascinate Media</a>, he serves as both executive producer and on-camera talent, creating educational content about innovation, AI & STEM literacy, and the Future of Work. His roster of past clients and collaborators include LinkedIn, Intuit, NVIDIA, Google, PBS, Discovery, Bill Nye the Science Guy, and Al Roker.</p>
 
               {/* Expanded bio */}
               <AnimatePresence>
