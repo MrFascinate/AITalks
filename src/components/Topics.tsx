@@ -84,9 +84,10 @@ export default function Topics({ onVideoClick }: TopicsProps) {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src="/53970768967_337ff285aa_o.jpg"
+          src="/53970768967_337ff285aa_o.webp"
           alt=""
           className="w-full h-full object-cover opacity-5"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary-900 via-primary-900/98 to-primary-900" />
       </div>
@@ -118,6 +119,7 @@ export default function Topics({ onVideoClick }: TopicsProps) {
                 src="/Group-165-1.png"
                 alt="Dynamic Keynote Speaker"
                 className="w-48 md:w-56 h-auto rounded-lg"
+                loading="lazy"
               />
             </motion.div>
 

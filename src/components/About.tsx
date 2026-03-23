@@ -103,6 +103,7 @@ export default function About({ onBookClick }: AboutProps) {
                         src="/headshot8.jpg"
                         alt="Justin Shaifer - AI and Innovation Keynote Speaker"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
                       />
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-primary-950/80 via-primary-950/20 to-transparent" />

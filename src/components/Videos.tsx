@@ -86,6 +86,7 @@ export default function Videos() {
                     src={video.thumbnail}
                     alt={video.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                   />
                   {/* Category badge */}
                   <div className="absolute top-4 left-4">

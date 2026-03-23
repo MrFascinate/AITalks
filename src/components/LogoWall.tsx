@@ -53,6 +53,7 @@ export default function LogoWall() {
                   src={logo}
                   alt="Partner logo"
                   className="h-14 w-auto object-contain"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -79,6 +80,7 @@ export default function LogoWall() {
                   src={logo}
                   alt="Partner logo"
                   className="h-14 w-auto object-contain"
+                  loading="lazy"
                 />
               </div>
             ))}
