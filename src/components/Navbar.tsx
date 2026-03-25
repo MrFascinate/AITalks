@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sparkles } from 'lucide-react';
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -60,6 +60,14 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <motion.a
+                href="/ai-assessment.html"
+                className="inline-flex items-center gap-1.5 text-accent-400 hover:text-white transition-colors font-medium text-sm uppercase tracking-wider"
+                whileHover={{ y: -2 }}
+              >
+                <Sparkles size={14} />
+                AI Assessment
+              </motion.a>
+              <motion.a
                 href="#contact"
                 className="btn-gradient-border text-sm py-2 px-6"
                 whileHover={{ scale: 1.05 }}
@@ -103,6 +111,14 @@ export default function Navbar() {
                   {link.name}
                 </a>
               ))}
+              <a
+                href="/ai-assessment.html"
+                className="flex items-center gap-2 text-accent-400 hover:text-white py-2 font-medium text-sm uppercase tracking-wider"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Sparkles size={14} />
+                AI Assessment
+              </a>
               <a
                 href="#contact"
                 className="block btn-gradient-solid text-center mt-4"
