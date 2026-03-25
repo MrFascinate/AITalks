@@ -65,7 +65,7 @@ export default function Navbar() {
                 whileHover={{ y: -2 }}
               >
                 <Sparkles size={14} />
-                AI Assessment
+                Take AI Assessment
               </motion.a>
               <motion.a
                 href="#contact"
@@ -117,7 +117,7 @@ export default function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <Sparkles size={14} />
-                AI Assessment
+                Take AI Assessment
               </a>
               <a
                 href="#contact"
