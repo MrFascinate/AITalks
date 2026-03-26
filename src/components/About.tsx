@@ -237,12 +237,12 @@ export default function About({ onBookClick }: AboutProps) {
               </button>
             </div>
 
-            {/* CTA Button */}
+            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.6 }}
-              className="mt-8"
+              className="mt-8 flex flex-wrap gap-4"
             >
               <button
                 onClick={onBookClick}
@@ -251,6 +251,13 @@ export default function About({ onBookClick }: AboutProps) {
                 Book Now
                 <ArrowRight size={18} />
               </button>
+              <a
+                href="/resources.html"
+                className="btn-gradient-border inline-flex items-center gap-2"
+              >
+                <BookOpen size={18} />
+                Free Resources
+              </a>
             </motion.div>
           </motion.div>
         </div>
