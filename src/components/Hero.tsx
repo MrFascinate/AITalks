@@ -102,7 +102,7 @@ export default function Hero({ onBookClick, onVideoClick }: HeroProps) {
                 whileTap={{ scale: 0.95 }}
               >
                 <Sparkles size={18} />
-                Take AI Assessment
+                Free AI Assessment
               </motion.a>
             </motion.div>
           </motion.div>
