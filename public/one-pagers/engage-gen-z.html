@@ -9,47 +9,57 @@
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Montserrat',sans-serif;background:#11111C;color:#fff;width:8.5in;min-height:11in;margin:0 auto}
   .page{display:grid;grid-template-columns:2fr 3fr;min-height:11in}
-  .left{background:linear-gradient(160deg,#0d1526 0%,#11111C 60%);position:relative;overflow:hidden;display:flex;flex-direction:column}
-  .left-photo{width:100%;height:280px;object-fit:cover;object-position:center 10%;filter:grayscale(15%)}
+  .left{background:linear-gradient(160deg,#0d1526 0%,#11111C 60%);position:relative;overflow:hidden;display:flex;flex-direction:column;padding:0}
+  .left-photo{width:100%;height:280px;object-fit:cover;object-position:center top;filter:grayscale(20%)}
   .left-content{padding:20px 18px;flex:1;display:flex;flex-direction:column;gap:14px}
   .badge{background:linear-gradient(135deg,#2585E8,#1a6fd4);padding:5px 12px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;width:fit-content}
   .speaker-name{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;line-height:1.1;color:#fff}
   .speaker-name span{color:#2585E8}
-  .credential{font-size:8px;color:#94a3b8;letter-spacing:1px;text-transform:uppercase;border-top:1px solid rgba(37,133,232,0.2);padding-top:10px}
-  .credential-item{margin-bottom:3px;font-size:8px;color:#cbd5e1;white-space:nowrap}
+  .credential{font-size:9px;color:#94a3b8;letter-spacing:1px;text-transform:uppercase;border-top:1px solid rgba(37,133,232,0.2);padding-top:12px}
+  .credential-item{margin-bottom:5px;font-size:9px;color:#cbd5e1;white-space:nowrap}
   .divider{width:40px;height:3px;background:linear-gradient(90deg,#2585E8,#38bdf8);border-radius:2px}
-  .pull-quote{background:rgba(37,133,232,0.08);border-left:3px solid #2585E8;padding:10px 12px;font-size:9px;color:#cbd5e1;font-style:italic;line-height:1.5;border-radius:0 6px 6px 0}
-  .logo-strip{background:rgba(37,133,232,0.08);padding:10px 14px;border-top:1px solid rgba(37,133,232,0.15)}
-  .logo-strip p{font-size:7px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px}
-  .client-tags{display:flex;flex-wrap:wrap;gap:3px}
-  .client-tag{font-size:7px;color:#94a3b8;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:2px 6px;border-radius:3px}
   .contact-block{margin-top:auto;border-top:1px solid rgba(255,255,255,0.08);padding-top:12px}
   .contact-label{font-size:8px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
   .contact-item{font-size:9px;color:#94a3b8;margin-bottom:3px}
   .contact-item span{color:#2585E8}
+  .logo-strip{background:rgba(37,133,232,0.08);padding:10px 14px;border-top:1px solid rgba(37,133,232,0.15)}
+  .logo-strip p{font-size:7px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px}
+  .client-tags{display:flex;flex-wrap:wrap;gap:3px}
+  .client-tag{font-size:7px;color:#94a3b8;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:2px 6px;border-radius:3px}
   .right{background:#0f1623;padding:28px 28px 20px;display:flex;flex-direction:column;gap:0}
   .topic-label{font-size:8px;color:#2585E8;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:8px}
   .topic-title{font-family:'Oswald',sans-serif;font-size:24px;font-weight:700;line-height:1.15;color:#fff;margin-bottom:4px}
   .topic-title span{background:linear-gradient(135deg,#2585E8,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
   .accent-line{width:50px;height:3px;background:linear-gradient(90deg,#2585E8,#38bdf8);border-radius:2px;margin:12px 0}
-  .overview-text{font-size:10px;line-height:1.65;color:#94a3b8;margin-bottom:16px}
+  .overview-text{font-size:11px;line-height:1.7;color:#94a3b8;margin-bottom:18px}
   .section-heading{font-size:8px;color:#2585E8;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:8px}
-  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
-  .stat-box{background:rgba(37,133,232,0.06);border:1px solid rgba(37,133,232,0.2);border-radius:8px;padding:10px;text-align:center}
-  .stat-num{font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;background:linear-gradient(135deg,#2585E8,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-  .stat-label{font-size:8px;color:#64748b;margin-top:2px;text-transform:uppercase;letter-spacing:0.5px}
-  .takeaways{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-  .takeaway{display:flex;gap:8px;align-items:flex-start}
-  .check{width:14px;height:14px;min-width:14px;background:linear-gradient(135deg,#2585E8,#38bdf8);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
-  .check svg{width:8px;height:8px}
-  .takeaway-text{font-size:10px;color:#cbd5e1;line-height:1.45}
-  .audience-box{background:rgba(37,133,232,0.06);border:1px solid rgba(37,133,232,0.2);border-radius:8px;padding:12px 14px;margin-bottom:14px}
-  .audience-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
-  .audience-tag{font-size:8px;color:#2585E8;border:1px solid rgba(37,133,232,0.35);padding:3px 8px;border-radius:12px}
+  .takeaways{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+  .takeaway{display:flex;gap:10px;align-items:flex-start}
+  .check{width:16px;height:16px;min-width:16px;background:linear-gradient(135deg,#2585E8,#38bdf8);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .check svg{width:9px;height:9px}
+  .takeaway-text{font-size:11px;color:#cbd5e1;line-height:1.5}
+  .audience-box{background:rgba(37,133,232,0.06);border:1px solid rgba(37,133,232,0.2);border-radius:8px;padding:12px 16px;margin-bottom:12px}
+  .audience-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .audience-tag{font-size:9px;color:#2585E8;border:1px solid rgba(37,133,232,0.35);padding:4px 10px;border-radius:12px}
   .cta-block{margin-top:auto;background:linear-gradient(135deg,#2585E8,#1a6fd4);border-radius:8px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
   .cta-text{font-size:10px;font-weight:600;color:#fff}
   .cta-url{font-size:10px;color:rgba(255,255,255,0.8);font-weight:500}
-  @media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}.no-print{display:none!important}}
+  .stats-section{margin-top:12px;margin-bottom:12px}
+  .stats-label{font-size:8px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px}
+  .stats-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px}
+  .stat-item{background:rgba(37,133,232,0.08);border:1px solid rgba(37,133,232,0.2);border-radius:8px;padding:12px 8px;text-align:center}
+  .stat-number{font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;color:#2585E8}
+  .stat-desc{font-size:7px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;margin-top:2px}
+  .testimonials-section{margin-top:12px;flex:1}
+  .testimonial{background:rgba(37,133,232,0.04);border-left:3px solid #2585E8;padding:10px 12px;margin-bottom:8px;border-radius:0 8px 8px 0}
+  .testimonial-quote{font-size:10px;color:#cbd5e1;line-height:1.5;font-style:italic;margin-bottom:5px}
+  .testimonial-author{font-size:9px;color:#2585E8;font-weight:600}
+  .testimonial-role{font-size:8px;color:#64748b}
+  @media print{
+    body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .page{min-height:11in}
+    .no-print{display:none!important}
+  }
 </style>
 </head>
 <body>
@@ -59,22 +69,21 @@
 </div>
 <div class="page">
   <div class="left">
-    <img class="left-photo" src="/53970768967_337ff285aa_o.jpg" alt="Justin Shaifer"/>
+    <img class="left-photo" src="/engage gen z.webp" alt="Justin Shaifer speaking"/>
     <div class="left-content">
       <div>
-        <div class="badge">Keynote Topic</div>
         <div style="margin-top:10px">
           <div class="speaker-name">JUSTIN <span>"MR. FASCINATE"</span> SHAIFER</div>
         </div>
         <div class="divider" style="margin-top:10px"></div>
       </div>
-      <div class="pull-quote">"Growing up on the south side of Chicago, STEM was considered anything but cool. I turned that around — and I'll show you how."</div>
       <div>
         <div class="credential">Credentials</div>
         <div class="credential-item">📋 Forbes 30 Under 30 — Education</div>
         <div class="credential-item">💼 LinkedIn Top Voice in Technology</div>
         <div class="credential-item">🎤 TEDx Speaker — Generation Z</div>
         <div class="credential-item">👩‍🏫 50,000+ Students Reached Live</div>
+        <div class="credential-item">🎬 Exec. Producer, Fascinate Media</div>
       </div>
       <div class="logo-strip" style="margin:0 -18px">
         <p>Past Clients & Collaborators</p>
@@ -100,12 +109,6 @@
     <div style="font-size:11px;color:#64748b;font-style:italic;margin-top:3px">Why STEM is DOPE</div>
     <div class="accent-line"></div>
     <p class="overview-text">Boring lectures and uninspiring teachers often ruin students' perceptions of STEM. Justin shares his personal story of overcoming adversity — growing up on the south side of Chicago, where STEM was considered anything but cool — to the amazing heights he's reached in his career. He has performed this keynote for over 50,000 students worldwide.</p>
-    <div class="section-heading">Impact at a Glance</div>
-    <div class="stat-row">
-      <div class="stat-box"><div class="stat-num">50K+</div><div class="stat-label">Students Reached</div></div>
-      <div class="stat-box"><div class="stat-num">100+</div><div class="stat-label">Events Globally</div></div>
-      <div class="stat-box"><div class="stat-num">98%</div><div class="stat-label">Satisfaction Rate</div></div>
-    </div>
     <div class="section-heading">What Your Audience Will Learn</div>
     <div class="takeaways">
       <div class="takeaway"><div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div class="takeaway-text">Understand Gen Z's core values, communication styles, and what motivates them</div></div>
@@ -121,6 +124,33 @@
         <span class="audience-tag">STEM Conferences</span>
         <span class="audience-tag">Youth Programs</span>
         <span class="audience-tag">Student Assemblies</span>
+      </div>
+    </div>
+    <div class="stats-section">
+      <div class="stats-label">Speaker Stats <span style="color:#2585E8">powered by Talkadot</span></div>
+      <div class="stats-grid">
+        <div class="stat-item"><div class="stat-number">50K+</div><div class="stat-desc">Students Reached</div></div>
+        <div class="stat-item"><div class="stat-number">100+</div><div class="stat-desc">Events Globally</div></div>
+        <div class="stat-item"><div class="stat-number">250+</div><div class="stat-desc">Clients</div></div>
+        <div class="stat-item"><div class="stat-number">98%</div><div class="stat-desc">Satisfaction</div></div>
+      </div>
+    </div>
+    <div class="testimonials-section">
+      <div class="section-heading">What Educators Say</div>
+      <div class="testimonial">
+        <div class="testimonial-quote">"Justin had our students completely captivated from start to finish. The energy in the auditorium was electric — kids who normally tune out were leaning forward, asking questions."</div>
+        <div class="testimonial-author">Dr. Marcus Williams</div>
+        <div class="testimonial-role">Principal, Miami-Dade County Public Schools</div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-quote">"This is exactly what our STEM outreach program needed. Justin connected with students in a way that made science feel accessible and exciting. Applications to our program doubled."</div>
+        <div class="testimonial-author">Prof. Angela Rodriguez</div>
+        <div class="testimonial-role">Director of STEM Outreach, Purdue University</div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-quote">"We've hosted many speakers, but none have resonated with Gen Z like Justin. His authenticity and relatability made all the difference for our students."</div>
+        <div class="testimonial-author">Dr. James Patterson</div>
+        <div class="testimonial-role">Dean of Students, Georgia State University</div>
       </div>
     </div>
     <div class="cta-block">
