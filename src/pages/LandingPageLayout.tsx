@@ -422,6 +422,16 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
               Book Justin to Speak
               <ArrowRight size={20} />
             </a>
+
+            <div className="mt-6">
+              <a
+                href="/ai-assessment.html"
+                className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors font-medium"
+              >
+                Or take the free AI Readiness Assessment
+                <ArrowRight size={18} />
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>

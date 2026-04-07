@@ -6,6 +6,7 @@ import App from './App.tsx'
 import AISpeakerCorporate from './pages/AISpeakerCorporate.tsx'
 import AISpeakerHigherEd from './pages/AISpeakerHigherEd.tsx'
 import AILiteracyWorkshop from './pages/AILiteracyWorkshop.tsx'
+import AIAssessmentLanding from './pages/AIAssessmentLanding.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/ai-keynote-speaker-corporate" element={<AISpeakerCorporate />} />
         <Route path="/ai-keynote-speaker-higher-education" element={<AISpeakerHigherEd />} />
         <Route path="/ai-literacy-workshop" element={<AILiteracyWorkshop />} />
+        <Route path="/free-ai-assessment" element={<AIAssessmentLanding />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
