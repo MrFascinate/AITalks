@@ -13,5 +13,10 @@
       "destination": "/",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    { "source": "/ai-keynote-speaker-corporate", "destination": "/index.html" },
+    { "source": "/ai-keynote-speaker-higher-education", "destination": "/index.html" },
+    { "source": "/ai-literacy-workshop", "destination": "/index.html" }
   ]
 }
