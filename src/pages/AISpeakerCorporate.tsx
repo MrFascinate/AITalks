@@ -31,7 +31,7 @@ const pageData = {
     'Justin "Mr. Fascinate" Shaifer is a Forbes 30 Under 30 science communicator and keynote speaker focused on closing the AI participation gap. His AI courses on LinkedIn Learning have reached over 50,000 learners, and he has spoken for corporate teams at Google, LinkedIn, NVIDIA, Allstate, and hundreds of enterprise organizations.',
     'As founder of Fascinate Media and host of the Curiosity Theory podcast, Justin brings both technical depth and the ability to make complex ideas click. His presentations consistently earn 98% satisfaction ratings from audiences worldwide.',
   ],
-  aboutImage: '/headshot8.jpg',
+  aboutImage: '/suit-transparent.webp',
 
   // Testimonials
   testimonials: [

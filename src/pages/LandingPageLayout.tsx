@@ -83,7 +83,7 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
       "alternateName": "Mr. Fascinate",
       "description": "Forbes 30 Under 30 AI literacy keynote speaker empowering corporate teams and educators with practical AI skills. Expert in closing the AI participation gap.",
       "url": "https://justinshaifer.com",
-      "image": "https://justinshaifer.com/headshot8.jpg",
+      "image": "https://justinshaifer.com/suit-transparent.webp",
       "sameAs": [
         "https://www.linkedin.com/in/justinshaifer/",
         "https://www.instagram.com/mrfascinate",

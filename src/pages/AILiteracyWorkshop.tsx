@@ -31,7 +31,7 @@ const pageData = {
     'Justin "Mr. Fascinate" Shaifer is a Forbes 30 Under 30 science communicator and enterprise AI trainer focused on closing the AI participation gap. His AI courses on LinkedIn Learning have reached over 50,000 learners, and he has delivered hands-on workshops for teams at Google, LinkedIn, NVIDIA, Intuit, and hundreds of organizations.',
     'Justin\'s workshop style comes from years of creating educational content for LinkedIn Learning and producing hands-on STEM programming. Every session is designed for people to leave with something they built themselves.',
   ],
-  aboutImage: '/headshot8.jpg',
+  aboutImage: '/suit-transparent.webp',
 
   // Testimonials
   testimonials: [
