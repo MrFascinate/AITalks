@@ -76,9 +76,10 @@ export default function AIAssessmentLanding() {
               </a>
               <a
                 href="/#contact"
-                className="btn-outline inline-flex items-center justify-center gap-2 text-lg"
+                className="btn-gradient-solid inline-flex items-center justify-center gap-2 text-lg"
               >
                 Book Justin to Speak
+                <ArrowRight size={20} />
               </a>
             </motion.div>
           </div>
@@ -197,11 +198,34 @@ export default function AIAssessmentLanding() {
       </section>
 
       {/* About Justin Section */}
-      <section className="py-24 bg-primary-950">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 bg-primary-950 overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
+        </div>
+
+        {/* Left side - Full height image */}
+        <motion.div
+          className="hidden lg:block absolute bottom-0 -left-[8%] w-[55%]"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <img
+            src="/suit-transparent.webp"
+            alt="Justin Shaifer"
+            className="w-full h-auto object-contain"
+            style={{ filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6))' }}
+            loading="lazy"
+          />
+        </motion.div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pl-[40%]">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -257,9 +281,10 @@ export default function AIAssessmentLanding() {
               </a>
               <a
                 href="/#contact"
-                className="btn-outline inline-flex items-center justify-center gap-2 text-lg"
+                className="btn-gradient-solid inline-flex items-center justify-center gap-2 text-lg"
               >
                 Book Justin to Speak
+                <ArrowRight size={20} />
               </a>
             </div>
           </motion.div>

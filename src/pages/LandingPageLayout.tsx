@@ -415,21 +415,20 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
               {data.ctaSubtext}
             </p>
 
-            <a
-              href="/#contact"
-              className="btn-gradient-solid inline-flex items-center gap-2 text-lg"
-            >
-              Book Justin to Speak
-              <ArrowRight size={20} />
-            </a>
-
-            <div className="mt-6">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/#contact"
+                className="btn-gradient-solid inline-flex items-center justify-center gap-2 text-lg"
+              >
+                Book Justin to Speak
+                <ArrowRight size={20} />
+              </a>
               <a
                 href="/ai-assessment.html"
-                className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors font-medium"
+                className="btn-gradient-solid inline-flex items-center justify-center gap-2 text-lg"
               >
-                Or take the free AI Readiness Assessment
-                <ArrowRight size={18} />
+                Take Free AI Assessment
+                <ArrowRight size={20} />
               </a>
             </div>
           </motion.div>
