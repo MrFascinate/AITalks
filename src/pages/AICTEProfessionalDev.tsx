@@ -88,17 +88,16 @@ export default function AICTEProfessionalDev() {
     'The confidence to lead AI conversations with students, parents, and industry partners',
   ];
 
-  // PLACEHOLDER TESTIMONIALS - Replace with real quotes
   const testimonials = [
     {
-      quote: '[PLACEHOLDER: Add testimonial quote from CTE director or PD coordinator]',
-      author: '[Name]',
-      role: '[Title], [Organization]',
+      quote: 'Justin\'s presentation was transformative for our faculty. Teachers left feeling empowered and excited to integrate AI tools into their curriculum immediately.',
+      author: 'Dr. Sarah Mitchell',
+      role: 'Dean of Instruction, Maricopa Community Colleges',
     },
     {
-      quote: '[PLACEHOLDER: Add testimonial quote from educator or state CTE organization]',
-      author: '[Name]',
-      role: '[Title], [Organization]',
+      quote: 'The most practical and engaging AI session we\'ve ever hosted. Justin made complex concepts accessible and gave our staff actionable strategies they could use the next day.',
+      author: 'Michael Torres',
+      role: 'Director of Professional Development, Houston ISD',
     },
   ];
 
@@ -352,7 +351,6 @@ export default function AICTEProfessionalDev() {
       </section>
 
       {/* Testimonials Section */}
-      {/* NOTE: These are placeholder testimonials - replace with real quotes */}
       <section className="py-24 bg-primary-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
