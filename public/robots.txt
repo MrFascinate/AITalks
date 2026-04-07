@@ -1,0 +1,15 @@
+# robots.txt for justinshaifer.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://justinshaifer.com/sitemap.xml
+
+# Block dist folder (build artifacts)
+Disallow: /dist/
+
+# Allow all important pages
+Allow: /one-pagers/
+Allow: /ai-assessment.html
+Allow: /resources.html
+Allow: /videos.html
