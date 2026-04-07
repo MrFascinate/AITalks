@@ -245,8 +245,8 @@ export default function AICTEProfessionalDev() {
               className="relative"
             >
               <img
-                src="/Motana-13.webp"
-                alt="Justin Shaifer speaking at a CTE conference"
+                src="/workshop session.jpg"
+                alt="Justin Shaifer leading a hands-on workshop"
                 className="rounded-lg shadow-2xl w-full"
               />
               <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-primary-950/50 to-transparent" />
