@@ -100,7 +100,7 @@ export default function About({ onBookClick }: AboutProps) {
                     {/* Thumbnail with Play Button */}
                     <div className="relative aspect-video rounded-lg overflow-hidden">
                       <img
-                        src="/suit-transparent.webp"
+                        src="/headshot8.jpg"
                         alt="Justin Shaifer - AI and Innovation Keynote Speaker"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"

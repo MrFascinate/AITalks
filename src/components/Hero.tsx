@@ -15,7 +15,7 @@ export default function Hero({ onBookClick, onVideoClick }: HeroProps) {
         {/* Static fallback image - shows immediately while video loads */}
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/suit-transparent.webp)' }}
+          style={{ backgroundImage: 'url(/headshot8.jpg)' }}
         />
         <div className="absolute inset-0 w-full h-full">
           <iframe
