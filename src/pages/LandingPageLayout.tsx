@@ -20,6 +20,8 @@ interface LandingPageData {
   h1: string;
   subheadline: string;
   heroImage: string;
+  heroImagePosition?: 'left' | 'center' | 'right';
+  heroOverlayStrength?: 'light' | 'medium' | 'heavy';
 
   // Problem Section
   problemH2: string;
@@ -142,10 +144,23 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
           <img
             src={data.heroImage}
             alt="Justin Shaifer speaking"
-            className="w-full h-full object-cover object-top"
+            className={`w-full h-full object-cover ${
+              data.heroImagePosition === 'left' ? 'object-left' :
+              data.heroImagePosition === 'right' ? 'object-right' : 'object-top'
+            }`}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-950 via-primary-950/80 to-primary-950/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary-950 via-transparent to-primary-950/50" />
+          <div className={`absolute inset-0 bg-gradient-to-r ${
+            data.heroOverlayStrength === 'light'
+              ? 'from-primary-950/80 via-primary-950/50 to-primary-950/20'
+              : data.heroOverlayStrength === 'heavy'
+              ? 'from-primary-950 via-primary-950/90 to-primary-950/60'
+              : 'from-primary-950 via-primary-950/80 to-primary-950/40'
+          }`} />
+          <div className={`absolute inset-0 bg-gradient-to-t ${
+            data.heroOverlayStrength === 'light'
+              ? 'from-primary-950/80 via-transparent to-primary-950/30'
+              : 'from-primary-950 via-transparent to-primary-950/50'
+          }`} />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

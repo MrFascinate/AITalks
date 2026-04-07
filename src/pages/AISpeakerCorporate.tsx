@@ -10,6 +10,7 @@ const pageData = {
   h1: 'AI Keynote Speaker for Corporate Events',
   subheadline: 'Your team knows AI is changing everything. They just don\'t know how to use it yet. Justin Shaifer delivers practical, hands-on AI keynotes that turn spectators into participants.',
   heroImage: '/AITeacherTraining_1.8.1.png',
+  heroOverlayStrength: 'light' as const,
 
   // Problem Section
   problemH2: 'Your Team Is Watching AI Pass Them By',

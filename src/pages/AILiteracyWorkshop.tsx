@@ -10,6 +10,8 @@ const pageData = {
   h1: 'AI Literacy Workshop for Enterprise Teams',
   subheadline: 'Reading about AI is not the same as using it. Justin Shaifer leads hands-on workshops that build real AI skills your team can apply the moment they get back to their desks.',
   heroImage: '/workshop session.jpg',
+  heroImagePosition: 'left' as const,
+  heroOverlayStrength: 'light' as const,
 
   // Problem Section
   problemH2: 'Your Team Needs Skills, Not Another Presentation',

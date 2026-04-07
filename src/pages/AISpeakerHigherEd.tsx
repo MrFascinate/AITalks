@@ -10,6 +10,8 @@ const pageData = {
   h1: 'AI Keynote Speaker for Higher Education',
   subheadline: 'Your students will graduate into an AI-driven economy. The question is whether they\'ll be ready to participate in it. Justin Shaifer helps faculty and students build the AI literacy that matters.',
   heroImage: '/AI Empowerment.jpg',
+  heroImagePosition: 'left' as const,
+  heroOverlayStrength: 'light' as const,
 
   // Problem Section
   problemH2: 'Students Are Graduating Without the Skills They Need',
