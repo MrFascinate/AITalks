@@ -66,7 +66,7 @@ Justin transforms complex topics into digestible concepts, sparking curiosity wh
       highlight: "Actionable Insights",
     },
     {
-      quote: "Justin has a unique system for not only engaging Gen Z but relating WITH them—deeper than relating to them. That's the conduit for science education to be poured into them. Students find their confidence in science and solve real problems in their communities. It's brilliant!",
+      quote: "Justin has a unique system for engaging Gen Z and relating WITH them, deeper than relating to them. That's the conduit for science education to be poured into them. Students find their confidence in science and solve real problems in their communities. It's brilliant!",
       author: "Anya Willoughby",
       role: "Educator",
       highlight: "Brilliant Approach",
@@ -78,7 +78,7 @@ Justin transforms complex topics into digestible concepts, sparking curiosity wh
       highlight: "Amazing Talk",
     },
     {
-      quote: "Informative, inspiring, and thought provoking. Justin did a great job explaining how AI is changing the world. He gave great examples of why incorporating AI in classrooms is not only needed but essential for students to be prepared for the future.",
+      quote: "Informative, inspiring, and thought provoking. Justin did a great job explaining how AI is changing the world. He gave great examples of why incorporating AI in classrooms is essential for students to be prepared for the future.",
       author: "K-12 Educator",
       role: "Talkadot Review",
       highlight: "Essential for the Future",
