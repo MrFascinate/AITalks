@@ -201,7 +201,7 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
                 href="/#contact"
                 className="btn-gradient-solid inline-flex items-center gap-2"
               >
-                Book Justin to Speak
+                Book Justin
                 <ArrowRight size={18} />
               </a>
             </motion.div>
@@ -418,17 +418,17 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/#contact"
-                className="btn-gradient-solid inline-flex items-center justify-center gap-2 text-lg"
+                className="btn-gradient-solid inline-flex items-center justify-center gap-2"
               >
-                Book Justin to Speak
-                <ArrowRight size={20} />
+                Book Justin
+                <ArrowRight size={18} />
               </a>
               <a
                 href="/ai-assessment.html"
-                className="btn-gradient-solid inline-flex items-center justify-center gap-2 text-lg"
+                className="btn-gradient-solid inline-flex items-center justify-center gap-2"
               >
                 Take Free AI Assessment
-                <ArrowRight size={20} />
+                <ArrowRight size={18} />
               </a>
             </div>
           </motion.div>

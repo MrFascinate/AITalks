@@ -76,10 +76,10 @@ export default function AIAssessmentLanding() {
               </a>
               <a
                 href="/#contact"
-                className="btn-gradient-solid inline-flex items-center justify-center gap-2 text-lg"
+                className="btn-gradient-solid inline-flex items-center justify-center gap-2"
               >
-                Book Justin to Speak
-                <ArrowRight size={20} />
+                Book Justin
+                <ArrowRight size={18} />
               </a>
             </motion.div>
           </div>
@@ -281,10 +281,10 @@ export default function AIAssessmentLanding() {
               </a>
               <a
                 href="/#contact"
-                className="btn-gradient-solid inline-flex items-center justify-center gap-2 text-lg"
+                className="btn-gradient-solid inline-flex items-center justify-center gap-2"
               >
-                Book Justin to Speak
-                <ArrowRight size={20} />
+                Book Justin
+                <ArrowRight size={18} />
               </a>
             </div>
           </motion.div>
