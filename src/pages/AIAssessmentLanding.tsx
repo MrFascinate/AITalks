@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Award, Linkedin, BookOpen, CheckCircle, BarChart3, Users, Target } from 'lucide-react';
+import { ArrowRight, Award, Linkedin, BookOpen, BarChart3, Users, Target } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
