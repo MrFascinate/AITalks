@@ -51,6 +51,21 @@ const pageData = {
 
   // Final CTA
   ctaSubtext: 'Let\'s talk about what your campus needs and how Justin can deliver it.',
+
+  // Logo Wall
+  logoWallLabel: 'Past Higher Education Clients Include:',
+  logoWall: [
+    { src: '/Higher Ed/purdue-university-logo-freelogovectors.net_.png', alt: 'Purdue University' },
+    { src: '/Higher Ed/NYU-Logo.png', alt: 'NYU' },
+    { src: '/Higher Ed/Fordham-University-Logo.png', alt: 'Fordham University' },
+    { src: '/Higher Ed/color-center-reverse-UWlogo-print-1024x675.webp', alt: 'University of Washington' },
+    { src: '/Higher Ed/Montana_tech_univ_logo.png', alt: 'Montana Tech' },
+    { src: '/Higher Ed/delaware-state-university-logo.png', alt: 'Delaware State University' },
+    { src: '/Higher Ed/bryant_bulldogs_logo_wordmark_20048058.png', alt: 'Bryant University' },
+    { src: '/Higher Ed/Antelope_Valley_College_logo.png', alt: 'Antelope Valley College' },
+    { src: '/Higher Ed/NYC_DOE_Logo.png', alt: 'NYC Department of Education' },
+    { src: '/Higher Ed/login-logo.png', alt: 'Institution' },
+  ],
 };
 
 export default function AISpeakerHigherEd() {

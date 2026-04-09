@@ -52,6 +52,7 @@ const pageData = {
   ctaSubtext: 'Let\'s talk about what your team needs and how Justin can deliver it.',
 
   // Logo Wall
+  logoWallLabel: 'Past Corporate Clients Include:',
   logoWall: [
     { src: '/corporate/Google_2015_logo.svg.webp', alt: 'Google' },
     { src: '/corporate/Samsung-emblem.png', alt: 'Samsung' },

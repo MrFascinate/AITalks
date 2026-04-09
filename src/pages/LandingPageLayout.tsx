@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Award, Linkedin, BookOpen, CheckCircle, Quote } from 'lucide-react';
-import Navbar from '../components/Navbar';
+import LandingNavbar from '../components/LandingNavbar';
+import BookingModal from '../components/BookingModal';
 import Footer from '../components/Footer';
 
 interface Testimonial {
@@ -45,6 +46,7 @@ interface LandingPageData {
     src: string;
     alt: string;
   }[];
+  logoWallLabel?: string;
 }
 
 interface LandingPageLayoutProps {
@@ -52,6 +54,8 @@ interface LandingPageLayoutProps {
 }
 
 export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
   // Set document title and meta tags
   useEffect(() => {
     document.title = data.title;
@@ -141,7 +145,8 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
 
   return (
     <div className="min-h-screen bg-primary-950">
-      <Navbar />
+      <LandingNavbar onBookClick={() => setIsBookingModalOpen(true)} />
+      <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
 
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden pt-24">
@@ -203,13 +208,13 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <a
-                href="/#contact"
+              <button
+                onClick={() => setIsBookingModalOpen(true)}
                 className="btn-gradient-solid inline-flex items-center gap-2"
               >
                 Book Justin
                 <ArrowRight size={18} />
-              </a>
+              </button>
             </motion.div>
           </div>
         </div>
@@ -237,7 +242,7 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
           {data.logoWall ? (
             <div className="mt-8">
               <p className="text-center text-gray-400 text-sm uppercase tracking-wider mb-6">
-                Past Corporate Clients Include:
+                {data.logoWallLabel || 'Past Clients Include:'}
               </p>
               <div className="relative overflow-hidden">
                 <motion.div
@@ -453,13 +458,13 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/#contact"
+              <button
+                onClick={() => setIsBookingModalOpen(true)}
                 className="btn-gradient-solid inline-flex items-center justify-center gap-2"
               >
                 Book Justin
                 <ArrowRight size={18} />
-              </a>
+              </button>
               <a
                 href="/ai-assessment.html"
                 className="btn-gradient-solid inline-flex items-center justify-center gap-2"
