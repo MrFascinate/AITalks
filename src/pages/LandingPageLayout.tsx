@@ -39,6 +39,12 @@ interface LandingPageData {
 
   // Final CTA
   ctaSubtext: string;
+
+  // Logo Wall (optional)
+  logoWall?: {
+    src: string;
+    alt: string;
+  }[];
 }
 
 interface LandingPageLayoutProps {
@@ -230,9 +236,20 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
           </div>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-gray-500 text-sm">
             <span className="uppercase tracking-wider">As seen in:</span>
-            {logoClients.map((client) => (
-              <span key={client} className="text-gray-400">{client}</span>
-            ))}
+            {data.logoWall ? (
+              data.logoWall.map((logo, index) => (
+                <img
+                  key={index}
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                />
+              ))
+            ) : (
+              logoClients.map((client) => (
+                <span key={client} className="text-gray-400">{client}</span>
+              ))
+            )}
           </div>
         </div>
       </section>

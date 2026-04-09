@@ -50,6 +50,17 @@ const pageData = {
 
   // Final CTA
   ctaSubtext: 'Let\'s talk about what your team needs and how Justin can deliver it.',
+
+  // Logo Wall
+  logoWall: [
+    { src: '/corporate/Google_2015_logo.svg.webp', alt: 'Google' },
+    { src: '/corporate/Samsung-emblem.png', alt: 'Samsung' },
+    { src: '/corporate/Capital_One_logo.svg.png', alt: 'Capital One' },
+    { src: '/corporate/Intuit-logo-super-blue_(1).png', alt: 'Intuit' },
+    { src: '/corporate/Toshiba_logo.svg.png', alt: 'Toshiba' },
+    { src: '/corporate/allstate-logo.png', alt: 'Allstate' },
+    { src: '/corporate/1361978.png', alt: 'Client Logo' },
+  ],
 };
 
 export default function AISpeakerCorporate() {
