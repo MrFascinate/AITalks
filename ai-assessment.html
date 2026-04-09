@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI Readiness Assessment — Justin Shaifer</title>
+<meta name="description" content="Take the free AI Readiness Assessment to discover how prepared your team is for the AI-powered future. Get personalized insights and recommendations."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://justinshaifer.com/ai-assessment.html"/>
+<link rel="icon" type="image/png" href="/Fascinate Media Logo.png"/>
+
+<!-- Open Graph -->
+<meta property="og:title" content="AI Readiness Assessment — Justin Shaifer"/>
+<meta property="og:description" content="Discover how prepared your team is for the AI-powered future with this free assessment."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://justinshaifer.com/ai-assessment"/>
+<meta property="og:image" content="https://justinshaifer.com/headshot8.jpg"/>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@600;700&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: #11111C;
+    color: #fff;
+  }
+
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(180deg, #0d1526 0%, #11111C 100%);
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(37, 133, 232, 0.2);
+    flex-shrink: 0;
+  }
+
+  .header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+    flex-shrink: 0;
+  }
+
+  .back-link:hover {
+    color: #2585E8;
+  }
+
+  .back-link svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .header-title span {
+    background: linear-gradient(135deg, #2585E8, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .book-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #2585E8, #1a6fd4);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 60px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex-shrink: 0;
+  }
+
+  .book-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 133, 232, 0.4);
+  }
+
+  /* Iframe Container */
+  .iframe-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #11111C;
+  }
+
+  .assessment-iframe {
+    flex: 1;
+    width: 100%;
+    border: none;
+    background: #11111C;
+  }
+
+  /* Loading State */
+  .loading-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #11111C;
+    z-index: 10;
+    transition: opacity 0.3s;
+  }
+
+  .loading-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .loading-spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid rgba(37, 133, 232, 0.2);
+    border-top-color: #2585E8;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* Footer */
+  .footer {
+    background: #0d1526;
+    padding: 16px 24px;
+    text-align: center;
+    border-top: 1px solid rgba(37, 133, 232, 0.2);
+    flex-shrink: 0;
+  }
+
+  .footer-text {
+    font-size: 13px;
+    color: #64748b;
+  }
+
+  .footer-text a {
+    color: #2585E8;
+    text-decoration: none;
+  }
+
+  .footer-text a:hover {
+    text-decoration: underline;
+  }
+
+  /* Mobile Adjustments */
+  @media (max-width: 640px) {
+    .header {
+      padding: 16px;
+    }
+
+    .header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .header-title {
+      font-size: 18px;
+      order: -1;
+    }
+
+    .header-nav {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .book-btn {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/>
+        </svg>
+        Back to Home
+      </a>
+      <h1 class="header-title">AI Readiness <span>Assessment</span></h1>
+      <a href="/#contact" class="book-btn">
+        Book Justin
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"/><path d="M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <div class="iframe-container">
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="loading-spinner"></div>
+    </div>
+    <iframe
+      src="https://ai-assessment-teal.vercel.app/"
+      class="assessment-iframe"
+      id="assessmentFrame"
+      title="AI Readiness Assessment"
+      allow="clipboard-write"
+      loading="eager"
+    ></iframe>
+  </div>
+
+</div>
+
+<script>
+  // Hide loading overlay when iframe loads
+  const iframe = document.getElementById('assessmentFrame');
+  const loadingOverlay = document.getElementById('loadingOverlay');
+
+  iframe.addEventListener('load', function() {
+    loadingOverlay.classList.add('hidden');
+  });
+
+  // Fallback: hide loading after 5 seconds regardless
+  setTimeout(function() {
+    loadingOverlay.classList.add('hidden');
+  }, 5000);
+</script>
+</body>
+</html>

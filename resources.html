@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Free Resources — Justin Shaifer</title>
+<meta name="description" content="Download free AI resources from Justin Shaifer: prompt engineering frameworks, AI learning guides, Gen Z engagement toolkits, and STEM activities for educators."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://justinshaifer.com/resources.html"/>
+<link rel="icon" type="image/png" href="/Fascinate Media Logo.png"/>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Oswald:wght@600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Montserrat',sans-serif;background:#11111C;color:#fff;min-height:100vh}
+
+  /* Header */
+  .header{background:linear-gradient(180deg,#0d1526 0%,#11111C 100%);padding:40px 24px 60px;text-align:center}
+  .back-link{display:inline-flex;align-items:center;gap:8px;color:#94a3b8;text-decoration:none;font-size:14px;margin-bottom:24px;transition:color 0.2s}
+  .back-link:hover{color:#2585E8}
+  .back-link svg{width:20px;height:20px}
+  .page-title{font-family:'Oswald',sans-serif;font-size:48px;font-weight:700;margin-bottom:12px}
+  .page-title span{background:linear-gradient(135deg,#2585E8,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .page-subtitle{font-size:18px;color:#94a3b8;max-width:640px;margin:0 auto}
+
+  /* Container */
+  .container{max-width:1200px;margin:0 auto;padding:0 24px 80px}
+
+  /* Category Heading */
+  .category-title{font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;color:#fff;margin:48px 0 24px;text-transform:uppercase;letter-spacing:2px;border-left:4px solid #2585E8;padding-left:16px}
+
+  /* Resource Grid */
+  .resource-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+
+  /* Resource Card */
+  .resource-card{background:#0f1623;border:1px solid rgba(37,133,232,0.15);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s}
+  .resource-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.3);border-color:rgba(37,133,232,0.4)}
+  .card-image{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center top;display:block}
+  .card-body{padding:20px;flex:1;display:flex;flex-direction:column}
+  .card-title{font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;line-height:1.4;text-transform:uppercase;letter-spacing:0.5px}
+  .card-desc{font-size:13px;color:#64748b;line-height:1.6;flex:1;margin-bottom:16px}
+  .download-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;border:1px solid rgba(37,133,232,0.4);color:#fff;padding:12px 24px;border-radius:60px;font-size:14px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;font-family:'Montserrat',sans-serif;position:relative;overflow:hidden}
+  .download-btn::before{content:"";position:absolute;inset:0;padding:1px;border-radius:60px;background:linear-gradient(90deg,#2585E8,rgba(4,150,255,0) 50%,#2585E8);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;pointer-events:none}
+  .download-btn:hover{background:#2585E8;border-color:#2585E8}
+
+  /* Modal */
+  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+  .modal-overlay.active{display:flex}
+  .modal{background:#11111C;border:1px solid rgba(37,133,232,0.4);border-radius:16px;padding:40px;max-width:480px;width:90%;position:relative}
+  .modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:#94a3b8;cursor:pointer;padding:4px;font-size:24px;line-height:1;transition:color 0.2s}
+  .modal-close:hover{color:#fff}
+  .modal h3{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;margin-bottom:8px}
+  .modal p{font-size:14px;color:#94a3b8;margin-bottom:24px}
+  .modal-resource-name{color:#38bdf8;font-weight:600;font-size:15px}
+  .form-group{margin-bottom:16px}
+  .form-group input{width:100%;background:#fff;border:none;color:#11111C;padding:14px 20px;border-radius:60px;font-size:16px;font-family:'Montserrat',sans-serif;outline:none}
+  .form-group input::placeholder{color:#64748b}
+  .form-submit{width:100%;background:linear-gradient(135deg,#2585E8,#1a6fd4);color:#fff;border:none;padding:16px;border-radius:60px;font-size:15px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;cursor:pointer;font-family:'Montserrat',sans-serif;transition:transform 0.2s,box-shadow 0.2s;margin-top:8px}
+  .form-submit:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(37,133,232,0.4)}
+  .form-submit:disabled{opacity:0.6;cursor:not-allowed;transform:none}
+  .form-note{font-size:12px;color:#475569;text-align:center;margin-top:12px}
+  .success-msg{display:none;text-align:center;padding:20px}
+  .success-msg svg{width:48px;height:48px;color:#2585E8;margin:0 auto 12px}
+  .success-msg h4{font-size:18px;font-weight:700;margin-bottom:8px}
+  .success-msg p{font-size:14px;color:#94a3b8}
+
+  /* CTA Footer */
+  .cta-section{text-align:center;padding:60px 24px 80px}
+  .cta-text{font-size:20px;color:#94a3b8;margin-bottom:24px}
+  .cta-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#2585E8,#1a6fd4);color:#fff;text-decoration:none;padding:16px 32px;border-radius:8px;font-size:16px;font-weight:600;transition:transform 0.2s,box-shadow 0.2s}
+  .cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,133,232,0.4)}
+
+  @media(max-width:768px){
+    .page-title{font-size:36px}
+    .resource-grid{grid-template-columns:1fr}
+    .latest-banner{flex-direction:column;align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+
+<!-- Modal -->
+<div class="modal-overlay" id="emailModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <h3>GET YOUR FREE RESOURCE</h3>
+    <p>Enter your email to instantly download: <span class="modal-resource-name" id="modalResourceName"></span></p>
+    <div id="formArea">
+      <form id="emailForm">
+        <div class="form-group">
+          <input type="email" id="emailInput" placeholder="Enter your email address" required/>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">Download Now</button>
+      </form>
+      <p class="form-note">No spam. Unsubscribe anytime.</p>
+    </div>
+    <div class="success-msg" id="successMsg">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      <h4>Your download is starting!</h4>
+      <p>Check your downloads folder. A confirmation has been sent to your email.</p>
+    </div>
+  </div>
+</div>
+
+<div class="header">
+  <a href="/" class="back-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+    Back to Home
+  </a>
+  <h1 class="page-title">FREE <span>RESOURCES</span></h1>
+  <p class="page-subtitle">Hands-on PDF worksheets, roadmaps, and guides for engaging teams, educators, and students with AI.</p>
+</div>
+
+<div class="container">
+  <div style="max-width:800px;margin:0 auto 40px;padding:0 24px;text-align:center">
+    <p style="font-size:15px;color:#94a3b8;line-height:1.8">
+      These resources come straight from Justin's keynotes and workshops. Whether you're a corporate team looking to get started with AI tools, or an educator searching for ways to connect with Gen Z students, you'll find something useful here. Each PDF is designed to be practical and easy to use right away. Download what you need, share it with your team, and start putting these ideas into action today. New resources are added regularly based on what audiences ask for most.
+    </p>
+  </div>
+
+  <!-- Corporate Teams -->
+  <div class="category-title">For Corporate Teams</div>
+  <div class="resource-grid" id="corporateGrid">
+    <div class="resource-card">
+      <img class="card-image" src="/thumbnails/Date AI Tools Effectively - Fascinate AI Resources_2_14_2026.jpg" alt="How to Date AI Tools Effectively"/>
+      <div class="card-body">
+        <div class="card-title">How to Date AI Tools Effectively</div>
+        <div class="card-desc">Justin's guide for quickly building expertise in the use of new AI tools — practical, actionable, and field-tested.</div>
+        <button class="download-btn" onclick="openModal('How to Date AI Tools Effectively')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Free
+        </button>
+      </div>
+    </div>
+
+    <div class="resource-card">
+      <img class="card-image" src="/thumbnails/FAST Prompt Engineering Framework - Fascinate AI Resources.jpg" alt="F.A.S.T. Prompt Engineering Framework"/>
+      <div class="card-body">
+        <div class="card-title">F.A.S.T. Prompt Engineering Framework</div>
+        <div class="card-desc">A breakdown of Justin's FAST Framework for prompting AI tools for optimal results in any business context.</div>
+        <button class="download-btn" onclick="openModal('F.A.S.T. Prompt Engineering Framework')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Free
+        </button>
+      </div>
+    </div>
+
+    <div class="resource-card">
+      <img class="card-image" src="/thumbnails/FREE AI Learning - Fascinate AI Resources.jpg" alt="Learn AI Free — Curated Resource List"/>
+      <div class="card-body">
+        <div class="card-title">Learn AI Free — Curated Resource List</div>
+        <div class="card-desc">Links to AI influencers, podcasts, and newsletters for staying current with the latest AI advancements.</div>
+        <button class="download-btn" onclick="openModal('Learn AI Free — Curated Resource List')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Free
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Educators -->
+  <div class="category-title">For Educators</div>
+  <div class="resource-grid">
+    <div class="resource-card">
+      <img class="card-image" src="/thumbnails/Engaging Gen Z Tool Kit.jpg" alt="Engaging Gen Z Tool Kit"/>
+      <div class="card-body">
+        <div class="card-title">Engaging Gen Z Tool Kit</div>
+        <div class="card-desc">Strategies and activities for connecting with Gen Z through technology, storytelling, and hands-on engagement.</div>
+        <button class="download-btn" onclick="openModal('Engaging Gen Z Tool Kit')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Free
+        </button>
+      </div>
+    </div>
+
+    <div class="resource-card">
+      <img class="card-image" src="/thumbnails/STEM Shark Tank - Fascinate AI Resources.jpg" alt="STEM Shark Tank"/>
+      <div class="card-body">
+        <div class="card-title">STEM Shark Tank</div>
+        <div class="card-desc">A competitive activity that incorporates AI, STEM literacy, soft skills, and entrepreneurship into one engaging session.</div>
+        <button class="download-btn" onclick="openModal('STEM Shark Tank')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Free
+        </button>
+      </div>
+    </div>
+
+    <div class="resource-card">
+      <img class="card-image" src="/thumbnails/Your STEM Hero - Fascinate AI Resources.jpg" alt="Your STEM Hero"/>
+      <div class="card-body">
+        <div class="card-title">Your STEM Hero</div>
+        <div class="card-desc">Student groups create a custom STEM Hero avatar with a unique path to STEM success using AI tools.</div>
+        <button class="download-btn" onclick="openModal('Your STEM Hero')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Free
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="cta-section">
+  <p class="cta-text">Want Justin to bring these workshops to your team?</p>
+  <a href="/#contact" class="cta-btn">
+    Book a Session
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+  </a>
+</div>
+
+<script>
+  // ─── CONFIGURATION ─────────────────────────────────────────────────────────
+  const SUBMIT_EMAIL = 'fascinatesci@gmail.com';
+
+  // PDF file mappings
+  const PDF_FILES = {
+    'How to Date AI Tools Effectively': '/pdfs/Date AI Tools Effectively - Fascinate AI Resources_2_14_2026.pdf',
+    'F.A.S.T. Prompt Engineering Framework': '/pdfs/FAST Prompt Engineering Framework - Fascinate AI Resources.pdf',
+    'Learn AI Free — Curated Resource List': '/pdfs/FREE AI Learning - Fascinate AI Resources.pdf',
+    'Engaging Gen Z Tool Kit': '/pdfs/Engaging Gen Z Tool Kit.pdf',
+    'STEM Shark Tank': '/pdfs/STEM Shark Tank - Fascinate AI Resources.pdf',
+    'Your STEM Hero': '/pdfs/Your STEM Hero - Fascinate AI Resources.pdf'
+  };
+  // ───────────────────────────────────────────────────────────────────────────
+
+  let currentResourceName = '';
+  let currentPdfUrl = '';
+
+  function openModal(name) {
+    currentResourceName = name;
+    currentPdfUrl = PDF_FILES[name] || '';
+    document.getElementById('modalResourceName').textContent = name;
+    document.getElementById('formArea').style.display = 'block';
+    document.getElementById('successMsg').style.display = 'none';
+    document.getElementById('emailInput').value = '';
+    document.getElementById('submitBtn').disabled = false;
+    document.getElementById('submitBtn').textContent = 'Download Now';
+    document.getElementById('emailModal').classList.add('active');
+  }
+
+  function closeModal() {
+    document.getElementById('emailModal').classList.remove('active');
+  }
+
+  document.getElementById('emailModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+
+  document.getElementById('emailForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.getElementById('emailInput').value;
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    try {
+      await fetch(`https://formsubmit.co/ajax/${SUBMIT_EMAIL}`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+        body: JSON.stringify({
+          email: email,
+          resource: currentResourceName,
+          _subject: `Free Resource Download: ${currentResourceName}`
+        })
+      });
+    } catch(err) {
+      console.log('Form submit error (non-blocking):', err);
+    }
+
+    // Trigger PDF download
+    if (currentPdfUrl) {
+      const link = document.createElement('a');
+      link.href = currentPdfUrl;
+      link.download = '';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Show success
+    document.getElementById('formArea').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+    setTimeout(closeModal, 3000);
+  });
+</script>
+</body>
+</html>
