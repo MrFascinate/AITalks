@@ -52,6 +52,22 @@ const pageData = {
   // Final CTA
   ctaSubtext: 'Let\'s talk about what your team needs and how Justin can deliver it.',
 
+  // FAQs
+  faqs: [
+    {
+      question: 'How many people can attend, and what does each participant need?',
+      answer: 'Workshops are most effective with groups of 10 to 150 participants. Each person needs a laptop or tablet and a Wi-Fi connection — Justin provides all tools, platforms, and guided prompts during the session. No prior AI experience is required.',
+    },
+    {
+      question: 'Is the workshop available virtually, and does it translate well online?',
+      answer: 'Yes. Justin runs virtual workshops with the same hands-on format — participants build real AI workflows live through shared screens and collaborative tools. His virtual setup is broadcast-quality, and every session includes the same interactive demos and personalized coaching as an in-person workshop.',
+    },
+    {
+      question: 'Can the workshop be customized for our team\'s specific tools and roles?',
+      answer: 'Yes, this is standard. Before the session, Justin\'s team will ask about your tech stack, team roles, and most time-consuming workflows. The workshop is built around your team\'s real use cases so participants leave with tools they\'ll actually use — not generic AI tips that don\'t apply to their day-to-day work.',
+    },
+  ],
+
   // Logo Wall
   logoWallLabel: 'Past Workshop Clients Include:',
   logoWall: [

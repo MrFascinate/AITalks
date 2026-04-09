@@ -52,6 +52,22 @@ const pageData = {
   // Final CTA
   ctaSubtext: 'Let\'s talk about what your campus needs and how Justin can deliver it.',
 
+  // FAQs
+  faqs: [
+    {
+      question: 'Does Justin address academic integrity and AI policy?',
+      answer: 'Yes, and it\'s one of the most requested topics at university engagements. Justin addresses how institutions can develop clear AI use frameworks that protect academic integrity while still preparing students for a workforce where AI is expected. It\'s a nuanced conversation, and he brings both practical guidance and space for honest dialogue among faculty.',
+    },
+    {
+      question: 'Can sessions be split between faculty and students?',
+      answer: 'Absolutely. Many campuses book Justin for a faculty professional development session in the morning and a student keynote in the afternoon. Each session is tailored differently — faculty sessions focus on curriculum integration and AI policy; student sessions focus on career readiness and practical AI skills.',
+    },
+    {
+      question: 'How far in advance should we book for a campus event or academic conference?',
+      answer: 'We recommend reaching out 3–4 months ahead for conferences and 6–8 weeks for individual campus engagements. Academic budget cycles matter too — we\'re happy to provide a quote letter for purchasing approvals well before your event date.',
+    },
+  ],
+
   // Logo Wall
   logoWallLabel: 'Past Higher Education Clients Include:',
   logoWall: [

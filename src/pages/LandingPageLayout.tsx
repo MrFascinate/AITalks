@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Award, Linkedin, BookOpen, CheckCircle, Quote, Play, Users, Star, Building2, MessageSquare } from 'lucide-react';
+import { ArrowRight, Award, Linkedin, BookOpen, CheckCircle, Quote, Play, Users, Star, Building2, MessageSquare, HelpCircle, ChevronDown } from 'lucide-react';
+import { AnimatePresence } from 'framer-motion';
 import LandingNavbar from '../components/LandingNavbar';
 import BookingModal from '../components/BookingModal';
 import VideoModal from '../components/VideoModal';
@@ -49,6 +50,12 @@ interface LandingPageData {
     alt: string;
   }[];
   logoWallLabel?: string;
+
+  // FAQs (optional)
+  faqs?: {
+    question: string;
+    answer: string;
+  }[];
 }
 
 interface LandingPageLayoutProps {
@@ -65,6 +72,7 @@ const landingStats = [
 export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   // Set document title and meta tags
   useEffect(() => {
@@ -127,7 +135,15 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
         "Corporate AI Training",
         "Higher Education Technology",
         "Closing the AI Participation Gap"
-      ]
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "10000",
+        "bestRating": "5",
+        "worstRating": "1",
+        "description": "Based on 10,000+ audience reviews tracked via Talkadot"
+      }
     };
 
     const script = document.createElement('script');
@@ -136,12 +152,36 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
     script.textContent = JSON.stringify(personSchema);
     document.head.appendChild(script);
 
+    // FAQ schema
+    const existingFaqSchema = document.querySelector('script[data-schema="faq-landing"]');
+    if (existingFaqSchema) existingFaqSchema.remove();
+
+    if (data.faqs && data.faqs.length > 0) {
+      const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": data.faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer,
+          },
+        })),
+      };
+      const faqScript = document.createElement('script');
+      faqScript.type = 'application/ld+json';
+      faqScript.setAttribute('data-schema', 'faq-landing');
+      faqScript.textContent = JSON.stringify(faqSchema);
+      document.head.appendChild(faqScript);
+    }
+
     // Cleanup on unmount
     return () => {
       const schemaToRemove = document.querySelector('script[data-schema="person-landing"]');
-      if (schemaToRemove) {
-        schemaToRemove.remove();
-      }
+      if (schemaToRemove) schemaToRemove.remove();
+      const faqSchemaToRemove = document.querySelector('script[data-schema="faq-landing"]');
+      if (faqSchemaToRemove) faqSchemaToRemove.remove();
     };
   }, [data]);
 
@@ -480,6 +520,80 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {data.faqs && data.faqs.length > 0 && (
+        <section className="py-24 bg-primary-900">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
+                <HelpCircle size={16} className="text-primary-500" />
+                <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">FAQ</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white font-display">
+                Common <span className="text-gradient">Questions</span>
+              </h2>
+            </motion.div>
+
+            <div className="flex flex-col gap-3">
+              {data.faqs.map((faq, index) => {
+                const isOpen = openFaqIndex === index;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.08 }}
+                    className="card-gradient-border"
+                  >
+                    <button
+                      className="relative z-10 w-full p-5 md:p-6 flex items-center justify-between gap-4 text-left group"
+                      onClick={() => setOpenFaqIndex(isOpen ? null : index)}
+                      aria-expanded={isOpen}
+                    >
+                      <h3 className={`text-lg font-semibold transition-colors ${isOpen ? 'text-gradient' : 'text-white group-hover:text-primary-400'}`}>
+                        {faq.question}
+                      </h3>
+                      <motion.div
+                        animate={{ rotate: isOpen ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                        className={`flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-colors ${isOpen ? 'border-primary-500 text-primary-400' : 'border-gray-600 text-gray-500 group-hover:border-primary-500/50'}`}
+                      >
+                        <ChevronDown size={18} />
+                      </motion.div>
+                    </button>
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          key="content"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: 'easeInOut' }}
+                          className="overflow-hidden"
+                        >
+                          <div className="relative z-10 px-5 md:px-6 pb-6 pt-0">
+                            <div className="border-t border-primary-500/20 pt-4">
+                              <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Final CTA Section */}
       <section className="py-24 bg-primary-950 relative overflow-hidden">

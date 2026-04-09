@@ -51,6 +51,22 @@ const pageData = {
   // Final CTA
   ctaSubtext: 'Let\'s talk about what your team needs and how Justin can deliver it.',
 
+  // FAQs
+  faqs: [
+    {
+      question: 'Can you customize the keynote for our specific industry or team?',
+      answer: 'Yes. Justin tailors every keynote to your industry, company culture, and team goals. Before your event, he does a discovery call to understand your specific AI challenges, team composition, and desired outcomes. Fortune 500 teams and small startups get very different sessions — both are built around what your people actually need.',
+    },
+    {
+      question: 'What\'s included in a corporate keynote booking?',
+      answer: 'A standard booking includes a pre-event discovery call, a customized 45–60 minute keynote, a live Q&A, and post-event AI resources for your team. Add-ons include breakout sessions, hands-on workshops, and half-day training formats. Justin handles his own A/V setup and connects with your tech team in advance so event day runs without friction.',
+    },
+    {
+      question: 'How far in advance do we need to book?',
+      answer: 'We recommend 2–3 months ahead, especially for peak conference seasons in spring and fall. Shorter timelines are sometimes possible — reach out with your dates and we\'ll check availability right away.',
+    },
+  ],
+
   // Logo Wall
   logoWallLabel: 'Past Corporate Clients Include:',
   logoWall: [
