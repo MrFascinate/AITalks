@@ -234,23 +234,43 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
               </motion.div>
             ))}
           </div>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-gray-500 text-sm">
-            <span className="uppercase tracking-wider">As seen in:</span>
-            {data.logoWall ? (
-              data.logoWall.map((logo, index) => (
-                <img
-                  key={index}
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
-                />
-              ))
-            ) : (
-              logoClients.map((client) => (
+          {data.logoWall ? (
+            <div className="mt-8">
+              <p className="text-center text-gray-400 text-sm uppercase tracking-wider mb-6">
+                Past Corporate Clients Include:
+              </p>
+              <div className="relative overflow-hidden">
+                <motion.div
+                  className="flex gap-12 items-center"
+                  animate={{ x: ['0%', '-50%'] }}
+                  transition={{
+                    x: {
+                      repeat: Infinity,
+                      repeatType: 'loop',
+                      duration: 20,
+                      ease: 'linear',
+                    },
+                  }}
+                >
+                  {[...data.logoWall, ...data.logoWall].map((logo, index) => (
+                    <img
+                      key={index}
+                      src={logo.src}
+                      alt={logo.alt}
+                      className="h-10 md:h-12 w-auto max-w-[120px] object-contain flex-shrink-0"
+                    />
+                  ))}
+                </motion.div>
+              </div>
+            </div>
+          ) : (
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-gray-500 text-sm">
+              <span className="uppercase tracking-wider">As seen in:</span>
+              {logoClients.map((client) => (
                 <span key={client} className="text-gray-400">{client}</span>
-              ))
-            )}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
