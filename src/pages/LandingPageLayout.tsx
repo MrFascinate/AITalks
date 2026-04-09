@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Award, Linkedin, BookOpen, CheckCircle, Quote } from 'lucide-react';
+import { ArrowRight, Award, Linkedin, BookOpen, CheckCircle, Quote, Play, Users, Star, Building2, MessageSquare } from 'lucide-react';
 import LandingNavbar from '../components/LandingNavbar';
 import BookingModal from '../components/BookingModal';
+import VideoModal from '../components/VideoModal';
+import StickyBookingButton from '../components/StickyBookingButton';
 import Footer from '../components/Footer';
 
 interface Testimonial {
@@ -53,8 +55,16 @@ interface LandingPageLayoutProps {
   data: LandingPageData;
 }
 
+const landingStats = [
+  { icon: MessageSquare, value: '10,000+', label: 'Audience Reviews' },
+  { icon: Users, value: '5M+', label: 'People Reached' },
+  { icon: Building2, value: '250+', label: 'Clients' },
+  { icon: Star, value: '98%', label: 'Satisfaction Rate' },
+];
+
 export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   // Set document title and meta tags
   useEffect(() => {
@@ -147,6 +157,8 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
     <div className="min-h-screen bg-primary-950">
       <LandingNavbar onBookClick={() => setIsBookingModalOpen(true)} />
       <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
+      <VideoModal isOpen={isVideoModalOpen} onClose={() => setIsVideoModalOpen(false)} videoUrl="https://vimeo.com/1082939720" />
+      <StickyBookingButton onBookClick={() => setIsBookingModalOpen(true)} />
 
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden pt-24">
@@ -207,6 +219,7 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex flex-wrap gap-4"
             >
               <button
                 onClick={() => setIsBookingModalOpen(true)}
@@ -214,6 +227,13 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
               >
                 Book Justin
                 <ArrowRight size={18} />
+              </button>
+              <button
+                onClick={() => setIsVideoModalOpen(true)}
+                className="btn-gradient-border inline-flex items-center gap-2"
+              >
+                <Play size={18} />
+                Watch the Reel
               </button>
             </motion.div>
           </div>
@@ -276,6 +296,32 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
               ))}
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Stats Strip */}
+      <section className="py-12 bg-primary-950 border-b border-primary-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {landingStats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+                className="text-center"
+              >
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-500/10 border border-primary-500/20 mb-3">
+                  <stat.icon className="w-5 h-5 text-primary-400" />
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-gradient font-display mb-1">
+                  {stat.value}
+                </div>
+                <p className="text-gray-400 text-xs uppercase tracking-wider">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

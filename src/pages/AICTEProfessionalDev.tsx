@@ -1,10 +1,23 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Award, Linkedin, CheckCircle, Quote } from 'lucide-react';
+import { ArrowRight, Award, Linkedin, CheckCircle, Quote, Play, Users, Star, Building2, MessageSquare } from 'lucide-react';
 import Navbar from '../components/Navbar';
+import BookingModal from '../components/BookingModal';
+import VideoModal from '../components/VideoModal';
+import StickyBookingButton from '../components/StickyBookingButton';
 import Footer from '../components/Footer';
 
+const cteStats = [
+  { icon: MessageSquare, value: '10,000+', label: 'Audience Reviews' },
+  { icon: Users, value: '5M+', label: 'People Reached' },
+  { icon: Building2, value: '250+', label: 'Clients' },
+  { icon: Star, value: '98%', label: 'Satisfaction Rate' },
+];
+
 export default function AICTEProfessionalDev() {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   useEffect(() => {
     document.title = 'AI Professional Development for CTE Programs | Justin Shaifer';
 
@@ -104,6 +117,9 @@ export default function AICTEProfessionalDev() {
   return (
     <div className="min-h-screen bg-primary-950">
       <Navbar />
+      <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
+      <VideoModal isOpen={isVideoModalOpen} onClose={() => setIsVideoModalOpen(false)} videoUrl="https://vimeo.com/1082939720" />
+      <StickyBookingButton onBookClick={() => setIsBookingModalOpen(true)} />
 
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden pt-24">
@@ -142,14 +158,22 @@ export default function AICTEProfessionalDev() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex flex-wrap gap-4"
             >
-              <a
-                href="/#contact"
+              <button
+                onClick={() => setIsBookingModalOpen(true)}
                 className="btn-gradient-solid inline-flex items-center gap-2"
               >
                 Book Justin
                 <ArrowRight size={18} />
-              </a>
+              </button>
+              <button
+                onClick={() => setIsVideoModalOpen(true)}
+                className="btn-gradient-border inline-flex items-center gap-2"
+              >
+                <Play size={18} />
+                Watch the Reel
+              </button>
             </motion.div>
           </div>
         </div>
@@ -206,6 +230,73 @@ export default function AICTEProfessionalDev() {
               </div>
               <span className="text-gray-300 font-medium">LinkedIn Learning Instructor</span>
             </motion.div>
+          </div>
+
+          <div className="mt-8">
+            <p className="text-center text-gray-400 text-sm uppercase tracking-wider mb-6">
+              Past Education Clients Include:
+            </p>
+            <div className="relative overflow-hidden">
+              <motion.div
+                className="flex gap-12 items-center"
+                animate={{ x: ['0%', '-50%'] }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: 'loop',
+                    duration: 20,
+                    ease: 'linear',
+                  },
+                }}
+              >
+                {(() => {
+                  const cteLogos = [
+                    { src: '/Higher Ed/NYC_DOE_Logo.png', alt: 'NYC Department of Education' },
+                    { src: '/Higher Ed/Antelope_Valley_College_logo.png', alt: 'Antelope Valley College' },
+                    { src: '/Higher Ed/Montana_tech_univ_logo.png', alt: 'Montana Tech' },
+                    { src: '/Higher Ed/delaware-state-university-logo.png', alt: 'Delaware State University' },
+                    { src: '/Higher Ed/color-center-reverse-UWlogo-print-1024x675.webp', alt: 'University of Washington' },
+                    { src: '/Higher Ed/purdue-university-logo-freelogovectors.net_.png', alt: 'Purdue University' },
+                    { src: '/Higher Ed/NYU-Logo.png', alt: 'NYU' },
+                    { src: '/Higher Ed/bryant_bulldogs_logo_wordmark_20048058.png', alt: 'Bryant University' },
+                  ];
+                  return [...cteLogos, ...cteLogos].map((logo, index) => (
+                    <img
+                      key={index}
+                      src={logo.src}
+                      alt={logo.alt}
+                      className="h-10 md:h-12 w-auto max-w-[120px] object-contain flex-shrink-0"
+                    />
+                  ));
+                })()}
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Strip */}
+      <section className="py-12 bg-primary-950 border-b border-primary-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {cteStats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+                className="text-center"
+              >
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-500/10 border border-primary-500/20 mb-3">
+                  <stat.icon className="w-5 h-5 text-primary-400" />
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-gradient font-display mb-1">
+                  {stat.value}
+                </div>
+                <p className="text-gray-400 text-xs uppercase tracking-wider">{stat.label}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -418,13 +509,13 @@ export default function AICTEProfessionalDev() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/#contact"
+              <button
+                onClick={() => setIsBookingModalOpen(true)}
                 className="btn-gradient-solid inline-flex items-center justify-center gap-2"
               >
                 Book Justin
                 <ArrowRight size={18} />
-              </a>
+              </button>
               <a
                 href="/ai-assessment.html"
                 className="btn-gradient-solid inline-flex items-center justify-center gap-2"
