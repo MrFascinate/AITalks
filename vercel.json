@@ -12,6 +12,21 @@
       "source": "/blog",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/speaking",
+      "destination": "/#topics",
+      "permanent": true
+    },
+    {
+      "source": "/bio",
+      "destination": "/#about",
+      "permanent": true
+    },
+    {
+      "source": "/why-stem-is-dope",
+      "destination": "/#topics",
+      "permanent": true
     }
   ],
   "rewrites": [
