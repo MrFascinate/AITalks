@@ -14,6 +14,21 @@
       "permanent": true
     },
     {
+      "source": "/productions",
+      "destination": "https://www.fascinate.media",
+      "permanent": true
+    },
+    {
+      "source": "/resources",
+      "destination": "/free-ai-assessment",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
       "source": "/speaking",
       "destination": "/#topics",
       "permanent": true
