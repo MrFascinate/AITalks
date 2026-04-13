@@ -444,7 +444,7 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
                     <img
                       src={`https://vumbnail.com/${data.videoEmbed.vimeoId}.jpg`}
                       alt={data.videoEmbed.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover"
                       loading="lazy"
                     />
                     {/* Gradient overlay */}
