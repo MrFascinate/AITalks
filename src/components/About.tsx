@@ -288,10 +288,7 @@ export default function About({ onBookClick }: AboutProps) {
                   <img src="/images/PBS Logo.png" alt="PBS" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
                 </div>
                 <div className="flex items-center justify-center h-12">
-                  <img src="/images/smithsonian logo white.png" alt="Smithsonian" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </div>
-                <div className="flex items-center justify-center h-12">
-                  <img src="/images/academy logo.svg" alt="The Academy" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
+                  <img src="/images/smithsonian logo white.png" alt="TEDx" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
                 </div>
               </div>
             </motion.div>

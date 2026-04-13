@@ -199,8 +199,7 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
     { src: '/images/Afrotech Logo.png', alt: 'AfroTech' },
     { src: '/images/yaahoo finance png.png', alt: 'Yahoo Finance' },
     { src: '/images/PBS Logo.png', alt: 'PBS' },
-    { src: '/images/smithsonian logo white.png', alt: 'Smithsonian' },
-    { src: '/images/academy logo.svg', alt: 'The Academy' },
+    { src: '/images/smithsonian logo white.png', alt: 'TEDx' },
   ];
 
   return (
