@@ -266,30 +266,30 @@ export default function About({ onBookClick }: AboutProps) {
                 As Seen In
               </p>
               <div className="grid grid-cols-3 gap-6">
-                <div className="flex items-center justify-center h-12">
+                <a href="https://www.forbes.com/sites/christophergray/2019/09/02/step-aside-bill-nye--neil-degrassi-justin-shaifer-is-the-emerging-stem-tv-personality-we-need-to-hear/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
                   <img src="/images/forbes logo.png" alt="Forbes" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </div>
-                <div className="flex items-center justify-center h-12">
+                </a>
+                <a href="https://www.facebook.com/watch/?v=539214044164028" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
                   <img src="/images/abc news png.png" alt="ABC News" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </div>
-                <div className="flex items-center justify-center h-12">
+                </a>
+                <a href="https://www.essence.com/education/leaders-of-the-new-school/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
                   <img src="/images/essence png.png" alt="Essence" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </div>
-                <div className="flex items-center justify-center h-12">
+                </a>
+                <a href="https://www.detpress.com/abcnews/pressrelease/soul-of-a-nation-next-3-9/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
                   <img src="/images/hulu png.png" alt="Hulu" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </div>
-                <div className="flex items-center justify-center h-12">
+                </a>
+                <a href="https://afrotech.com/afrotech-future-50-justin-shaifer" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
                   <img src="/images/Afrotech Logo.png" alt="AfroTech" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </div>
-                <div className="flex items-center justify-center h-12">
+                </a>
+                <a href="https://www.yahoo.com/news/salem-students-among-young-innovators-142919005.html" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
                   <img src="/images/yaahoo finance png.png" alt="Yahoo Finance" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </div>
-                <div className="flex items-center justify-center h-12">
+                </a>
+                <a href="https://www.pbs.org/video/climate-change-fctdyl/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
                   <img src="/images/PBS Logo.png" alt="PBS" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </div>
-                <div className="flex items-center justify-center h-12">
+                </a>
+                <a href="https://www.ted.com/talks/justin_shaifer_how_to_speak_generation_z" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
                   <img src="/images/smithsonian logo white.png" alt="TEDx" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </div>
+                </a>
               </div>
             </motion.div>
           </motion.div>

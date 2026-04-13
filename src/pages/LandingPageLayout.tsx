@@ -192,14 +192,14 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
   ];
 
   const asSeenInLogos = [
-    { src: '/images/forbes logo.png', alt: 'Forbes' },
-    { src: '/images/abc news png.png', alt: 'ABC News' },
-    { src: '/images/essence png.png', alt: 'Essence' },
-    { src: '/images/hulu png.png', alt: 'Hulu' },
-    { src: '/images/Afrotech Logo.png', alt: 'AfroTech' },
-    { src: '/images/yaahoo finance png.png', alt: 'Yahoo Finance' },
-    { src: '/images/PBS Logo.png', alt: 'PBS' },
-    { src: '/images/smithsonian logo white.png', alt: 'TEDx' },
+    { src: '/images/forbes logo.png', alt: 'Forbes', url: 'https://www.forbes.com/sites/christophergray/2019/09/02/step-aside-bill-nye--neil-degrassi-justin-shaifer-is-the-emerging-stem-tv-personality-we-need-to-hear/' },
+    { src: '/images/abc news png.png', alt: 'ABC News', url: 'https://www.facebook.com/watch/?v=539214044164028' },
+    { src: '/images/essence png.png', alt: 'Essence', url: 'https://www.essence.com/education/leaders-of-the-new-school/' },
+    { src: '/images/hulu png.png', alt: 'Hulu', url: 'https://www.detpress.com/abcnews/pressrelease/soul-of-a-nation-next-3-9/' },
+    { src: '/images/Afrotech Logo.png', alt: 'AfroTech', url: 'https://afrotech.com/afrotech-future-50-justin-shaifer' },
+    { src: '/images/yaahoo finance png.png', alt: 'Yahoo Finance', url: 'https://www.yahoo.com/news/salem-students-among-young-innovators-142919005.html' },
+    { src: '/images/PBS Logo.png', alt: 'PBS', url: 'https://www.pbs.org/video/climate-change-fctdyl/' },
+    { src: '/images/smithsonian logo white.png', alt: 'TEDx', url: 'https://www.ted.com/talks/justin_shaifer_how_to_speak_generation_z' },
   ];
 
   return (
@@ -342,13 +342,13 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
               <span className="uppercase tracking-wider block text-center mb-4">As seen in:</span>
               <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
                 {asSeenInLogos.map((logo) => (
-                  <div key={logo.alt} className="flex items-center justify-center h-12">
+                  <a key={logo.alt} href={logo.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
                     <img
                       src={logo.src}
                       alt={logo.alt}
                       className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert"
                     />
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
