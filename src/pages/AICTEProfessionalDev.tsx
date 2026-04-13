@@ -398,17 +398,17 @@ export default function AICTEProfessionalDev() {
         </div>
       </section>
 
-      {/* Video Showcase Section */}
+      {/* Video + Problem Section Combined */}
       <section className="py-16 bg-primary-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Video on the left */}
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
+            {/* Video on the left - 9:16 aspect ratio */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative aspect-video rounded-xl overflow-hidden shadow-2xl"
+              className="relative aspect-[9/16] w-full max-w-[360px] mx-auto lg:mx-0 rounded-xl overflow-hidden shadow-2xl flex-shrink-0"
             >
               <iframe
                 src="https://player.vimeo.com/video/1077747719?badge=0&autopause=0&player_id=0&app_id=58479"
@@ -416,41 +416,17 @@ export default function AICTEProfessionalDev() {
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                 allowFullScreen
-                title="See Justin in Action"
+                title="Justin Shaifer AI Professional Development"
               />
             </motion.div>
 
-            {/* Captions on the right */}
+            {/* Problem content on the right */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-                <Play size={16} className="text-primary-500" />
-                <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Watch</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-display">
-                See Justin in Action
-              </h2>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                Watch Justin deliver the practical, engaging AI professional development that has earned him a 98% satisfaction rate from educators nationwide. His sessions combine live demonstrations, curriculum-ready tools, and actionable strategies CTE educators can bring back to their classrooms immediately.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Problem Section */}
-      <section className="py-24 bg-primary-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              className="flex-1"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-display">
                 CTE Students Are Entering Industries Being{' '}
@@ -467,21 +443,6 @@ export default function AICTEProfessionalDev() {
                   Justin has delivered AI professional development at the state CTE level across Oregon, California, and Montana. He understands what CTE directors are facing and brings practical strategies that work in real classrooms with real time constraints.
                 </p>
               </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
-              <img
-                src="/workshop session.jpg"
-                alt="Justin Shaifer leading a hands-on workshop"
-                className="rounded-lg shadow-2xl w-full"
-              />
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-primary-950/50 to-transparent" />
             </motion.div>
           </div>
         </div>
