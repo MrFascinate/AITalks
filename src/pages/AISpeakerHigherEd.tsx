@@ -38,14 +38,24 @@ const pageData = {
   // Testimonials
   testimonials: [
     {
-      quote: 'Justin\'s presentation was transformative for our faculty. Teachers left feeling empowered and excited to integrate AI tools into their curriculum immediately.',
-      author: 'Dr. Sarah Mitchell',
-      role: 'Dean of Instruction, Maricopa Community Colleges',
+      quote: 'We LOVED Justin! His keynote address was EXACTLY what we had asked for. Judging from facial expressions and reactions of the audience, and the number of questions asked during the Q&A, it was very clear that the students truly enjoyed the presentation. Afterwards, Justin spent a very full hour talking with many students who had lined up to chat with him.',
+      author: 'Faculty Member',
+      role: 'Event Organizer, Sacred Heart University',
     },
     {
-      quote: 'The most practical and engaging AI session we\'ve ever hosted. Justin made complex concepts accessible and gave our staff actionable strategies they could use the next day.',
-      author: 'Michael Torres',
-      role: 'Director of Professional Development, Houston ISD',
+      quote: 'It was really a great success and he was super easy to work with. It wasn\'t an easy crowd for a Friday afternoon and high school students but he held their attention. The faculty were so impressed with how quiet they were - a true indication of how he kept them engaged. I think it was a homerun!',
+      author: 'Event Coordinator',
+      role: 'University Staff, Purdue University',
+    },
+    {
+      quote: 'You helped us kick off a project that will no doubt bring value and inspiration to not only A&T but also the broader public. You came through and really blessed it! Thank you for your contribution, we appreciate your thoughtfulness, professionalism, and dedication to the vision.',
+      author: 'Project Lead',
+      role: 'University Staff, North Carolina A&T State University',
+    },
+    {
+      quote: 'I want to express my gratitude to Justin for the amazing job he did today. The students and my colleagues enjoyed the discussions immensely. Justin masterfully managed the panelists, attended to audience questions and comments and still stayed within the theme of the discussion.',
+      author: 'Event Organizer',
+      role: 'Faculty, Albion College',
     },
   ],
 
