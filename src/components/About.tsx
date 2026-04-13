@@ -254,6 +254,45 @@ export default function About({ onBookClick }: AboutProps) {
                 Free Resources
               </a>
             </motion.div>
+
+            {/* Press Logos */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.7 }}
+              className="mt-10"
+            >
+              <p className="text-gray-500 text-sm uppercase tracking-wider mb-4">
+                As Seen In
+              </p>
+              <div className="flex flex-wrap items-center gap-6 lg:gap-8">
+                {/* Forbes */}
+                <svg className="h-6 w-auto text-white opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale" viewBox="0 0 200 50" fill="currentColor">
+                  <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" style={{ fontFamily: 'Georgia, serif', fontSize: '36px', fontWeight: 'normal', letterSpacing: '2px' }}>Forbes</text>
+                </svg>
+                {/* NBC News */}
+                <svg className="h-6 w-auto text-white opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale" viewBox="0 0 180 50" fill="currentColor">
+                  <g transform="translate(20, 5)">
+                    <ellipse cx="20" cy="15" rx="6" ry="12" fill="currentColor" />
+                    <ellipse cx="28" cy="12" rx="5" ry="10" fill="currentColor" />
+                    <ellipse cx="35" cy="11" rx="5" ry="9" fill="currentColor" />
+                    <ellipse cx="42" cy="12" rx="5" ry="10" fill="currentColor" />
+                    <ellipse cx="49" cy="15" rx="6" ry="12" fill="currentColor" />
+                    <ellipse cx="12" cy="18" rx="6" ry="10" fill="currentColor" />
+                    <ellipse cx="30" cy="26" rx="8" ry="5" fill="currentColor" />
+                  </g>
+                  <text x="115" y="32" dominantBaseline="middle" textAnchor="middle" style={{ fontFamily: 'Arial, sans-serif', fontSize: '22px', fontWeight: 'bold', letterSpacing: '1px' }}>NEWS</text>
+                </svg>
+                {/* Yahoo Finance */}
+                <svg className="h-5 w-auto text-white opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale" viewBox="0 0 200 50" fill="currentColor">
+                  <text x="50%" y="32" dominantBaseline="middle" textAnchor="middle" style={{ fontFamily: 'Helvetica Neue, Arial, sans-serif', fontSize: '20px', fontWeight: 'bold' }}>Yahoo! finance</text>
+                </svg>
+                {/* AfroTech */}
+                <svg className="h-5 w-auto text-white opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale" viewBox="0 0 180 50" fill="currentColor">
+                  <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" style={{ fontFamily: 'Arial Black, sans-serif', fontSize: '24px', fontWeight: '900', letterSpacing: '1px' }}>AFROTECH</text>
+                </svg>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

@@ -4,7 +4,6 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Stats from './components/Stats'
 import LogoWall from './components/LogoWall'
-import PressLogos from './components/PressLogos'
 import About from './components/About'
 import Topics from './components/Topics'
 import Videos from './components/Videos'
@@ -36,7 +35,6 @@ function App() {
         <Hero onBookClick={openBookingModal} onVideoClick={openVideoModal} />
         <Stats />
         <LogoWall />
-        <PressLogos />
         <About onBookClick={openBookingModal} />
         <Topics onVideoClick={openVideoModal} />
         <Testimonials />
