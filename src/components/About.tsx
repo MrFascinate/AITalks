@@ -265,13 +265,25 @@ export default function About({ onBookClick }: AboutProps) {
               <p className="text-gray-500 text-sm uppercase tracking-wider mb-4">
                 As Seen In
               </p>
-              <div className="flex flex-wrap items-center gap-6 lg:gap-8">
-                <img src="/images/forbes logo.png" alt="Forbes" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
-                <img src="/images/abc news png.png" alt="ABC News" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
-                <img src="/images/essence png.png" alt="Essence" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
-                <img src="/images/hulu png.png" alt="Hulu" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
-                <img src="/images/Afrotech Logo.png" alt="AfroTech" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
-                <img src="/images/yaahoo finance png.png" alt="Yahoo Finance" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
+              <div className="grid grid-cols-3 gap-6">
+                <div className="flex items-center justify-center h-12">
+                  <img src="/images/forbes logo.png" alt="Forbes" className="max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="flex items-center justify-center h-12">
+                  <img src="/images/abc news png.png" alt="ABC News" className="max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="flex items-center justify-center h-12">
+                  <img src="/images/essence png.png" alt="Essence" className="max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="flex items-center justify-center h-12">
+                  <img src="/images/hulu png.png" alt="Hulu" className="max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="flex items-center justify-center h-12">
+                  <img src="/images/Afrotech Logo.png" alt="AfroTech" className="max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="flex items-center justify-center h-12">
+                  <img src="/images/yaahoo finance png.png" alt="Yahoo Finance" className="max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                </div>
               </div>
             </motion.div>
           </motion.div>

@@ -336,11 +336,15 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
               </div>
             </div>
           ) : (
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-gray-500 text-sm">
-              <span className="uppercase tracking-wider">As seen in:</span>
-              {asSeenInLogos.map((logo) => (
-                <img key={logo.alt} src={logo.src} alt={logo.alt} className="h-6 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
-              ))}
+            <div className="mt-8 text-gray-500 text-sm">
+              <span className="uppercase tracking-wider block text-center mb-4">As seen in:</span>
+              <div className="grid grid-cols-3 gap-4 max-w-md mx-auto">
+                {asSeenInLogos.map((logo) => (
+                  <div key={logo.alt} className="flex items-center justify-center h-10">
+                    <img src={logo.src} alt={logo.alt} className="max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>
