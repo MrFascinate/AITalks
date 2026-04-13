@@ -11,11 +11,15 @@ export default function Testimonials() {
 
   const testimonials = speakerData.testimonials;
 
+  // Desktop shows 3 at a time, mobile shows 1
+  const desktopItemsPerPage = 3;
+  const totalPages = Math.ceil(testimonials.length / desktopItemsPerPage);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setDirection(1);
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
+    }, 8000);
     return () => clearInterval(timer);
   }, [testimonials.length]);
 
@@ -27,6 +31,15 @@ export default function Testimonials() {
       }
       return prev === 0 ? testimonials.length - 1 : prev - 1;
     });
+  };
+
+  // Get current page index for desktop (groups of 3)
+  const currentPageIndex = Math.floor(currentIndex / desktopItemsPerPage);
+
+  // Get testimonials for current desktop page
+  const getDesktopTestimonials = () => {
+    const startIndex = currentPageIndex * desktopItemsPerPage;
+    return testimonials.slice(startIndex, startIndex + desktopItemsPerPage);
   };
 
   const variants = {
@@ -45,6 +58,39 @@ export default function Testimonials() {
       opacity: 0,
     }),
   };
+
+  // Testimonial card component
+  const TestimonialCard = ({ testimonial, className = "" }: { testimonial: typeof testimonials[0], className?: string }) => (
+    <div className={`card-gradient-border h-full ${className}`}>
+      <div className="relative z-10 p-6 md:p-8 h-full flex flex-col">
+        <Quote className="w-6 h-6 text-primary-500/30 mb-4 flex-shrink-0" />
+        <blockquote className="text-lg text-white font-medium leading-relaxed mb-6 flex-grow">
+          "{testimonial.quote}"
+        </blockquote>
+        <div className="mt-auto">
+          {testimonial.organization ? (
+            <>
+              <p className="text-gradient font-bold text-xl">
+                {testimonial.organization}
+              </p>
+              <p className="text-gray-400 text-sm mt-1">
+                {testimonial.author}{testimonial.role ? `, ${testimonial.role}` : ''}
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="text-gradient font-bold text-lg">
+                {testimonial.author}
+              </p>
+              <p className="text-gray-400 text-sm">
+                {testimonial.role}
+              </p>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <section id="testimonials" className="py-24 bg-primary-950 overflow-hidden relative">
@@ -73,91 +119,136 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        {/* Testimonial Carousel */}
+        {/* Desktop: 3 testimonials in a row */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative max-w-4xl mx-auto"
+          className="hidden lg:block"
         >
-          <div className="card-gradient-border">
-            <div className="relative z-10 p-8 md:p-12">
-              {/* Quote Icon */}
-              <div className="absolute top-6 left-6 md:top-8 md:left-8">
-                <Quote className="w-6 h-6 text-primary-500/30" />
-              </div>
+          <AnimatePresence initial={false} custom={direction} mode="wait">
+            <motion.div
+              key={currentPageIndex}
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              className="grid grid-cols-3 gap-6"
+            >
+              {getDesktopTestimonials().map((testimonial, idx) => (
+                <TestimonialCard key={`${currentPageIndex}-${idx}`} testimonial={testimonial} />
+              ))}
+            </motion.div>
+          </AnimatePresence>
 
-              {/* Testimonial Content */}
-              <div className="relative min-h-[280px] flex items-center justify-center">
-                <AnimatePresence initial={false} custom={direction} mode="wait">
-                  <motion.div
-                    key={currentIndex}
-                    custom={direction}
-                    variants={variants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{
-                      x: { type: "spring", stiffness: 300, damping: 30 },
-                      opacity: { duration: 0.2 },
-                    }}
-                    className="text-center px-4"
-                  >
-                    {/* Quote */}
-                    <blockquote className="text-xl md:text-2xl text-white font-medium leading-relaxed mb-8">
-                      "{testimonials[currentIndex].quote}"
-                    </blockquote>
+          {/* Desktop Navigation */}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <button
+              onClick={() => {
+                setDirection(-1);
+                const newPageIndex = currentPageIndex === 0 ? totalPages - 1 : currentPageIndex - 1;
+                setCurrentIndex(newPageIndex * desktopItemsPerPage);
+              }}
+              className="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
+              aria-label="Previous testimonials"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
 
-                    {/* Author */}
-                    <div>
-                      <p className="text-gradient font-bold text-lg">
-                        {testimonials[currentIndex].author}
-                      </p>
-                      <p className="text-gray-400">
-                        {testimonials[currentIndex].role}
-                      </p>
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-
-              {/* Navigation */}
-              <div className="flex items-center justify-center gap-4 mt-8">
+            <div className="flex items-center gap-2">
+              {Array.from({ length: totalPages }).map((_, index) => (
                 <button
-                  onClick={() => paginate(-1)}
-                  className="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
-                  aria-label="Previous testimonial"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-
-                {/* Dots */}
-                <div className="flex items-center gap-2">
-                  {testimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => {
-                        setDirection(index > currentIndex ? 1 : -1);
-                        setCurrentIndex(index);
-                      }}
-                      className={`h-2.5 rounded-full transition-all duration-300 ${
-                        index === currentIndex
-                          ? 'w-8 bg-gradient-to-r from-primary-500 to-accent-400'
-                          : 'w-2.5 bg-primary-700 hover:bg-primary-600'
-                      }`}
-                    />
-                  ))}
-                </div>
-
-                <button
-                  onClick={() => paginate(1)}
-                  className="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
-                  aria-label="Next testimonial"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-              </div>
+                  key={index}
+                  onClick={() => {
+                    setDirection(index > currentPageIndex ? 1 : -1);
+                    setCurrentIndex(index * desktopItemsPerPage);
+                  }}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                    index === currentPageIndex
+                      ? 'w-8 bg-gradient-to-r from-primary-500 to-accent-400'
+                      : 'w-2.5 bg-primary-700 hover:bg-primary-600'
+                  }`}
+                />
+              ))}
             </div>
+
+            <button
+              onClick={() => {
+                setDirection(1);
+                const newPageIndex = currentPageIndex === totalPages - 1 ? 0 : currentPageIndex + 1;
+                setCurrentIndex(newPageIndex * desktopItemsPerPage);
+              }}
+              className="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
+              aria-label="Next testimonials"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </motion.div>
+
+        {/* Mobile: Single testimonial carousel */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="lg:hidden max-w-lg mx-auto"
+        >
+          <AnimatePresence initial={false} custom={direction} mode="wait">
+            <motion.div
+              key={currentIndex}
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+            >
+              <TestimonialCard testimonial={testimonials[currentIndex]} />
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Mobile Navigation */}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <button
+              onClick={() => paginate(-1)}
+              className="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            <div className="flex items-center gap-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    setDirection(index > currentIndex ? 1 : -1);
+                    setCurrentIndex(index);
+                  }}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                    index === currentIndex
+                      ? 'w-8 bg-gradient-to-r from-primary-500 to-accent-400'
+                      : 'w-2.5 bg-primary-700 hover:bg-primary-600'
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={() => paginate(1)}
+              className="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-500/50 transition-all"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
           </div>
         </motion.div>
       </div>

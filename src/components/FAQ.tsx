@@ -5,40 +5,24 @@ import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'What should I know about working with Justin?',
-    answer: `With over 200 keynotes delivered in the past 8 years, Justin is easy to work with and highly adaptable. He's tech-savvy, handles his own presentation setup, and always connects with the A/V team in advance to ensure everything runs smoothly on event day.`,
+    question: 'Will this resonate with my specific audience?',
+    answer: `Justin customizes every keynote to the event, industry, and audience. Before any engagement he researches the organization, the room, and the specific challenge they're navigating. His presentations have landed for audiences as different as Fortune 500 leadership teams, K-12 educators, HBCU students, and government agencies. If you're unsure, ask for references from a similar audience.`,
   },
   {
-    question: 'Is Justin available for virtual events?',
-    answer: `Yes! Justin is available for both in-person and virtual events worldwide. For virtual presentations, he brings the same energy and interactivity through engaging demos, live polls, and Q&A sessions. His virtual setup is broadcast-quality, ensuring a professional experience for your remote audience.`,
+    question: 'How do I justify the investment to my leadership?',
+    answer: `Justin's clients consistently report that his sessions generate more post-event conversation than any other speaker at their events. He provides post-event satisfaction data via Talkadot that you can share directly with stakeholders. Many clients book him for multiple events specifically because the ROI is easy to demonstrate internally.`,
   },
   {
-    question: 'How far in advance should we book?',
-    answer: `We recommend booking 2-3 months in advance to ensure availability, especially for peak conference seasons (spring and fall). However, we can sometimes accommodate shorter timelines depending on the schedule. Reach out as soon as you have your event dates confirmed.`,
+    question: 'What makes Justin different from other AI speakers?',
+    answer: `Most AI speakers explain the technology. Justin demonstrates it live, connects it to human stories your audience actually recognizes, and leaves them with tools they can use the same day. He is also one of the only speakers in this space whose credibility comes from building with AI rather than advising on it.`,
   },
   {
-    question: 'Can presentations be customized for our audience?',
-    answer: `Absolutely. Justin tailors every presentation to your specific audience, industry, and event objectives. Whether you're hosting a corporate leadership retreat, an education conference, or a student assembly, the content will be adapted to resonate with your attendees and deliver actionable takeaways.`,
+    question: 'What does the booking process actually look like?',
+    answer: `Reach out via the contact form with your event date, audience size, and goals. You will hear back within 48 hours. From there it is a short call to confirm fit, a straightforward contract, and Justin handles the rest including pre-event research and any custom content development.`,
   },
   {
-    question: 'What is included in a typical booking?',
-    answer: `A standard keynote booking includes a pre-event discovery call to understand your goals, a customized 45-60 minute presentation, Q&A session, and post-event resources for attendees. Additional options include breakout sessions, workshops, meet-and-greets, and extended working sessions.`,
-  },
-  {
-    question: 'Does Justin travel internationally?',
-    answer: `Yes, Justin has spoken at events worldwide, including Dubai's GITEX Future Stars Conference. International bookings are welcome, and travel arrangements can be coordinated based on your event location and requirements.`,
-  },
-  {
-    question: 'Do you offer extras (book signings, meet-and-greets)?',
-    answer: `Justin offers a variety of add-ons to enhance the attendee experience. These include signed posters, meet-and-greets, extended Q&A sessions, custom videos for attendees, and time to answer questions after the presentation. Let us know what would work best for your event!`,
-  },
-  {
-    question: 'What kind of promotional support does Justin offer to help market the event?',
-    answer: `Justin is happy to create custom promotional videos to help market your event. He also actively promotes events across his social platforms, which have a combined reach of over 80,000 followers. This helps drive awareness and excitement before your event.`,
-  },
-  {
-    question: 'How do we get started with booking?',
-    answer: `Simply click "Request a Quote" or "Book Now" on this page to fill out our inquiry form. Include your event date, audience size, and any specific topics of interest. Our team will respond within 24-48 hours with availability and next steps.`,
+    question: 'Does Justin travel for in-person events?',
+    answer: `Yes, nationally and internationally. Travel logistics are handled as part of the booking process.`,
   },
 ];
 

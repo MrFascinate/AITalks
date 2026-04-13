@@ -41,50 +41,60 @@ Justin transforms complex topics into digestible concepts, sparking curiosity wh
   ],
 
   testimonials: [
-    {
-      quote: "Justin's authenticity is clear to see in his content and his speaking. His expertise in content creation, his drive to communicate innovative ideas and technologies, and his ability to share complex ideas in a digestible manner are clear. My students will be better prepared because of my experience.",
-      author: "John Fisher",
-      role: "Hermiston School District",
-      highlight: "Authentic & Clear",
-    },
+    // Named organizations first (most enterprise-credible)
     {
       quote: "I loved learning about his background and his motivation to educate people about AI. I think many people in academia are a bit wary of the risks associated with AI and want to better understand best practices. I appreciate the work that he is doing to inform people and hope to attend another talk from him!",
+      organization: "Stanford Genetics",
       author: "Imani Porter",
-      role: "Stanford Genetics",
+      role: "Research Staff",
       highlight: "Informed & Inspiring",
     },
     {
       quote: "Just listened to Justin Shaifer's talk on being a better educator—absolutely incredible. His energy is infectious, and he blends real-world experience, humor, and cutting-edge insight in a way that makes you rethink how we teach and connect with students. Mr. Fascinate lives up to the name!",
+      organization: "Linn-Benton Community College",
       author: "Heather Peacock",
-      role: "Linn-Benton Community College",
+      role: "Faculty",
       highlight: "Infectious Energy",
     },
     {
       quote: "The session gave actionable recommendations for how to authentically support our students to engage in STEM education and to integrate AI as a way to deepen learning and to access tools and resources that might not otherwise be available.",
+      organization: "St. Michael's Prep",
       author: "Jacqueline Glenn",
-      role: "St. Michael's Prep",
+      role: "Administrator",
       highlight: "Actionable Insights",
     },
     {
+      quote: "Justin's authenticity is clear to see in his content and his speaking. His expertise in content creation, his drive to communicate innovative ideas and technologies, and his ability to share complex ideas in a digestible manner are clear. My students will be better prepared because of my experience.",
+      organization: "Hermiston School District",
+      author: "John Fisher",
+      role: "Educator",
+      highlight: "Authentic & Clear",
+    },
+    // Individual attendees
+    {
       quote: "Justin has a unique system for engaging Gen Z and relating WITH them, deeper than relating to them. That's the conduit for science education to be poured into them. Students find their confidence in science and solve real problems in their communities. It's brilliant!",
+      organization: "",
       author: "Anya Willoughby",
       role: "Educator",
       highlight: "Brilliant Approach",
     },
     {
-      quote: "Justin's talk was AMAZING! I came away much more excited and ready to begin dating AI. The resources shared gave me a better understanding on leveraging the correct AI for specific tasks. Great use of my time—look forward to diving deeper into the world of AI.",
+      quote: "Justin's talk was AMAZING! I came away much more excited and ready to begin leveraging AI. The resources shared gave me a better understanding on leveraging the correct AI for specific tasks. Great use of my time—look forward to diving deeper into the world of AI.",
+      organization: "",
       author: "Breanna Oropeza",
       role: "Conference Attendee",
       highlight: "Amazing Talk",
     },
     {
       quote: "Informative, inspiring, and thought provoking. Justin did a great job explaining how AI is changing the world. He gave great examples of why incorporating AI in classrooms is essential for students to be prepared for the future.",
+      organization: "",
       author: "K-12 Educator",
       role: "Talkadot Review",
       highlight: "Essential for the Future",
     },
     {
       quote: "Your keynote was absolutely perfect—it was funny, personal, motivating and educational. You hit all the right points and got the room absolutely buzzing.",
+      organization: "",
       author: "Event Organizer",
       role: "Corporate Conference",
       highlight: "Absolutely Perfect",
