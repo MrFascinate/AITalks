@@ -72,7 +72,7 @@ export default function About({ onBookClick }: AboutProps) {
       )}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={ref} className="grid lg:grid-cols-2 gap-16 items-center">
+        <div ref={ref} className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: Visual */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
