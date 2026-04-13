@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { speakerData } from '../data/speakerData';
 
 export default function Testimonials() {

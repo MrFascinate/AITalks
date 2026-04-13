@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Play, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 const videos = [
   {

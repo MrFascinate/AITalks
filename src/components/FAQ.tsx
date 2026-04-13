@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { HelpCircle, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {

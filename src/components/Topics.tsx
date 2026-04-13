@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Rocket, Briefcase, Laptop, Users, Mic, ChevronDown, FileText } from 'lucide-react';
+import { Rocket, Briefcase, Laptop, Users, ChevronDown, FileText } from 'lucide-react';
 import { audienceOutcomes } from '../data/speakerData';
 
 const topics = [

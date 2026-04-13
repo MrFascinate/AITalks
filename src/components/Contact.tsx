@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ArrowRight, Calendar, Instagram, Linkedin, ExternalLink, Send } from 'lucide-react';
+import { ArrowRight, Calendar, Instagram, Linkedin, ExternalLink } from 'lucide-react';
 import { speakerData } from '../data/speakerData';
 
 interface ContactProps {
