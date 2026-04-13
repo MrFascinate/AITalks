@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ArrowRight, Calendar, Instagram, Linkedin, ExternalLink } from 'lucide-react';
+import { ArrowRight, Calendar, Instagram, Linkedin } from 'lucide-react';
 import { speakerData } from '../data/speakerData';
 
 interface ContactProps {
@@ -60,17 +60,6 @@ export default function Contact({ onBookClick }: ContactProps) {
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
 
-                <motion.a
-                  href={speakerData.socialLinks.talkadot}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto btn-gradient-border inline-flex items-center justify-center gap-2"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  View Talkadot Profile
-                  <ExternalLink className="w-5 h-5" />
-                </motion.a>
               </div>
 
               {/* Social Links */}
