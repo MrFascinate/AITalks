@@ -426,7 +426,7 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
                 className="relative aspect-[9/16] w-full max-w-[360px] mx-auto lg:mx-0 rounded-xl overflow-hidden shadow-2xl flex-shrink-0"
               >
                 <iframe
-                  src={`https://player.vimeo.com/video/${data.videoEmbed.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
+                  src={`https://player.vimeo.com/video/${data.videoEmbed.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0`}
                   className="absolute inset-0 w-full h-full"
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
