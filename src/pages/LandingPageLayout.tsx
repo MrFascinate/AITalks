@@ -197,7 +197,7 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
     { src: '/images/essence png.png', alt: 'Essence', url: 'https://www.essence.com/education/leaders-of-the-new-school/' },
     { src: '/images/hulu png.png', alt: 'Hulu', url: 'https://www.detpress.com/abcnews/pressrelease/soul-of-a-nation-next-3-9/' },
     { src: '/images/Afrotech Logo.png', alt: 'AfroTech', url: 'https://afrotech.com/afrotech-future-50-justin-shaifer' },
-    { src: '/images/yaahoo finance png.png', alt: 'Yahoo Finance', url: 'https://www.yahoo.com/news/salem-students-among-young-innovators-142919005.html' },
+    { src: '/images/yahoo news logo white.png', alt: 'Yahoo News', url: 'https://www.yahoo.com/news/salem-students-among-young-innovators-142919005.html' },
     { src: '/images/Pbs logo white.png', alt: 'PBS', url: 'https://www.pbs.org/video/climate-change-fctdyl/' },
     { src: '/images/smithsonian logo white.png', alt: 'Smithsonian', url: 'https://nmaahc.si.edu/learn/students/through-window-and-mirror-narratives-african-american-stem-professionals' },
     { src: '/images/TEDx logo white.png', alt: 'TEDx', url: 'https://www.ted.com/talks/justin_shaifer_how_to_speak_generation_z' },
@@ -380,6 +380,27 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
               </motion.div>
             ))}
           </div>
+          {/* Talkadot Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            className="mt-8 text-center"
+          >
+            <a
+              href="https://www.talkadot.com/s/justinshaifer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gradient-border inline-flex items-center gap-2 py-2 px-6 text-sm"
+            >
+              <span>Data powered by</span>
+              <span className="font-semibold text-gradient">Talkadot</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </motion.div>
         </div>
       </section>
 

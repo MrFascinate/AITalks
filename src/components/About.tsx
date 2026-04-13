@@ -282,7 +282,7 @@ export default function About({ onBookClick }: AboutProps) {
                   <img src="/images/Afrotech Logo.png" alt="AfroTech" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
                 </a>
                 <a href="https://www.yahoo.com/news/salem-students-among-young-innovators-142919005.html" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
-                  <img src="/images/yaahoo finance png.png" alt="Yahoo Finance" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
+                  <img src="/images/yahoo news logo white.png" alt="Yahoo News" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
                 </a>
                 <a href="https://www.pbs.org/video/climate-change-fctdyl/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
                   <img src="/images/Pbs logo white.png" alt="PBS" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />

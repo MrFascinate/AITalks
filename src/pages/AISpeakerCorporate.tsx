@@ -54,16 +54,36 @@ const pageData = {
   // FAQs
   faqs: [
     {
-      question: 'Can you customize the keynote for our specific industry or team?',
-      answer: 'Yes. Justin tailors every keynote to your industry, company culture, and team goals. Before your event, he does a discovery call to understand your specific AI challenges, team composition, and desired outcomes. Fortune 500 teams and small startups get very different sessions — both are built around what your people actually need.',
+      question: 'Will this resonate with my specific audience?',
+      answer: `Justin customizes every keynote to the event, industry, and audience. Before any engagement he researches the organization, the room, and the specific challenge they're navigating. His presentations have landed for audiences as different as Fortune 500 leadership teams, K-12 educators, HBCU students, and government agencies. If you're unsure, ask for references from a similar audience.`,
     },
     {
-      question: 'What\'s included in a corporate keynote booking?',
-      answer: 'A standard booking includes a pre-event discovery call, a customized 45–60 minute keynote, a live Q&A, and post-event AI resources for your team. Add-ons include breakout sessions, hands-on workshops, and half-day training formats. Justin handles his own A/V setup and connects with your tech team in advance so event day runs without friction.',
+      question: 'How do I justify the investment to my leadership?',
+      answer: `Justin's clients consistently report that his sessions generate more post-event conversation than any other speaker at their events. He provides post-event satisfaction data via Talkadot that you can share directly with stakeholders. Many clients book him for multiple events specifically because the ROI is easy to demonstrate internally.`,
     },
     {
-      question: 'How far in advance do we need to book?',
-      answer: 'We recommend 2–3 months ahead, especially for peak conference seasons in spring and fall. Shorter timelines are sometimes possible — reach out with your dates and we\'ll check availability right away.',
+      question: 'What makes Justin different from other AI speakers?',
+      answer: `Most AI speakers explain the technology. Justin demonstrates it live, connects it to human stories your audience actually recognizes, and leaves them with tools they can use the same day. He is also one of the only speakers in this space whose credibility comes from building with AI rather than advising on it.`,
+    },
+    {
+      question: 'What does the booking process actually look like?',
+      answer: `Reach out via the contact form with your event date, audience size, and goals. You will hear back within 48 hours. From there it is a short call to confirm fit, a straightforward contract, and Justin handles the rest including pre-event research and any custom content development.`,
+    },
+    {
+      question: 'Does Justin travel for in-person events?',
+      answer: `Yes, nationally and internationally. Travel logistics are handled as part of the booking process.`,
+    },
+    {
+      question: 'What is included in a typical booking?',
+      answer: `A standard keynote booking includes a pre-event discovery call to understand your goals, a customized 45-60 minute presentation, Q&A session, and post-event resources for attendees. Additional options include breakout sessions, workshops, meet-and-greets, and extended working sessions.`,
+    },
+    {
+      question: 'Do you offer extras (book signings, meet-and-greets)?',
+      answer: `Justin offers a variety of add-ons to enhance the attendee experience. These include signed posters, meet-and-greets, extended Q&A sessions, custom videos for attendees, and time to answer questions after the presentation. Let us know what would work best for your event!`,
+    },
+    {
+      question: 'What kind of promotional support does Justin offer to help market the event?',
+      answer: `Justin is happy to create custom promotional videos to help market your event. He also actively promotes events across his social platforms, which have a combined reach of over 80,000 followers. This helps drive awareness and excitement before your event.`,
     },
   ],
 
@@ -76,6 +96,7 @@ const pageData = {
     { src: '/corporate/Intuit-logo-super-blue_(1).png', alt: 'Intuit' },
     { src: '/corporate/Toshiba_logo.svg.png', alt: 'Toshiba' },
     { src: '/corporate/allstate-logo.png', alt: 'Allstate' },
+    { src: '/images/morgan stanley logo.png', alt: 'Morgan Stanley' },
     { src: '/corporate/1361978.png', alt: 'Client Logo' },
   ],
 };

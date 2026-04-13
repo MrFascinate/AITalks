@@ -17,16 +17,36 @@ const cteStats = [
 
 const cteFaqs = [
   {
-    question: 'Can this professional development count toward educator certification or PD hours?',
-    answer: "Justin's PD sessions are designed to meet professional development standards, and many districts and state CTE coordinators have applied them toward required PD hours. We can provide a certificate of participation and session documentation to support your approval process. Check with your specific state's CTE coordinator for requirements.",
+    question: 'Will this resonate with my specific audience?',
+    answer: `Justin customizes every keynote to the event, industry, and audience. Before any engagement he researches the organization, the room, and the specific challenge they're navigating. His presentations have landed for audiences as different as Fortune 500 leadership teams, K-12 educators, HBCU students, and government agencies. If you're unsure, ask for references from a similar audience.`,
   },
   {
-    question: 'Can the session be customized for specific CTE pathways like healthcare, manufacturing, or IT?',
-    answer: "Yes. Justin has delivered AI PD across healthcare, manufacturing, IT, business services, and other CTE pathways. Each session can be tailored to the specific industries your program serves, with examples and tools relevant to those career tracks — not generic AI content that misses the mark for hands-on programs.",
+    question: 'How do I justify the investment to my leadership?',
+    answer: `Justin's clients consistently report that his sessions generate more post-event conversation than any other speaker at their events. He provides post-event satisfaction data via Talkadot that you can share directly with stakeholders. Many clients book him for multiple events specifically because the ROI is easy to demonstrate internally.`,
   },
   {
-    question: 'Is this available for virtual or hybrid PD days?',
-    answer: "Yes. Justin delivers both in-person and virtual professional development sessions. Virtual PD includes the same hands-on format with live demonstrations, guided activities, and real-time Q&A. Many state CTE conferences have hosted Justin virtually with strong feedback from educators across multiple districts.",
+    question: 'What makes Justin different from other AI speakers?',
+    answer: `Most AI speakers explain the technology. Justin demonstrates it live, connects it to human stories your audience actually recognizes, and leaves them with tools they can use the same day. He is also one of the only speakers in this space whose credibility comes from building with AI rather than advising on it.`,
+  },
+  {
+    question: 'What does the booking process actually look like?',
+    answer: `Reach out via the contact form with your event date, audience size, and goals. You will hear back within 48 hours. From there it is a short call to confirm fit, a straightforward contract, and Justin handles the rest including pre-event research and any custom content development.`,
+  },
+  {
+    question: 'Does Justin travel for in-person events?',
+    answer: `Yes, nationally and internationally. Travel logistics are handled as part of the booking process.`,
+  },
+  {
+    question: 'What is included in a typical booking?',
+    answer: `A standard keynote booking includes a pre-event discovery call to understand your goals, a customized 45-60 minute presentation, Q&A session, and post-event resources for attendees. Additional options include breakout sessions, workshops, meet-and-greets, and extended working sessions.`,
+  },
+  {
+    question: 'Do you offer extras (book signings, meet-and-greets)?',
+    answer: `Justin offers a variety of add-ons to enhance the attendee experience. These include signed posters, meet-and-greets, extended Q&A sessions, custom videos for attendees, and time to answer questions after the presentation. Let us know what would work best for your event!`,
+  },
+  {
+    question: 'What kind of promotional support does Justin offer to help market the event?',
+    answer: `Justin is happy to create custom promotional videos to help market your event. He also actively promotes events across his social platforms, which have a combined reach of over 80,000 followers. This helps drive awareness and excitement before your event.`,
   },
 ];
 
@@ -340,6 +360,27 @@ export default function AICTEProfessionalDev() {
               </motion.div>
             ))}
           </div>
+          {/* Talkadot Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            className="mt-8 text-center"
+          >
+            <a
+              href="https://www.talkadot.com/s/justinshaifer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gradient-border inline-flex items-center gap-2 py-2 px-6 text-sm"
+            >
+              <span>Data powered by</span>
+              <span className="font-semibold text-gradient">Talkadot</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </motion.div>
         </div>
       </section>
 
