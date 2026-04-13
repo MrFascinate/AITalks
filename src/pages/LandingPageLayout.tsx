@@ -198,6 +198,9 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
     { src: '/images/hulu png.png', alt: 'Hulu' },
     { src: '/images/Afrotech Logo.png', alt: 'AfroTech' },
     { src: '/images/yaahoo finance png.png', alt: 'Yahoo Finance' },
+    { src: '/images/PBS Logo.png', alt: 'PBS' },
+    { src: '/images/smithsonian logo white.png', alt: 'Smithsonian' },
+    { src: '/images/academy logo.svg', alt: 'The Academy' },
   ];
 
   return (
@@ -338,10 +341,14 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
           ) : (
             <div className="mt-8 text-gray-500 text-sm">
               <span className="uppercase tracking-wider block text-center mb-4">As seen in:</span>
-              <div className="grid grid-cols-3 gap-4 max-w-md mx-auto">
+              <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
                 {asSeenInLogos.map((logo) => (
-                  <div key={logo.alt} className="flex items-center justify-center h-10">
-                    <img src={logo.src} alt={logo.alt} className="max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                  <div key={logo.alt} className="flex items-center justify-center h-12">
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert"
+                    />
                   </div>
                 ))}
               </div>
