@@ -102,6 +102,13 @@ const pageData = {
     },
   ],
 
+  // Video Embed
+  videoEmbed: {
+    vimeoId: '1077747719',
+    title: 'See Justin in Action',
+    description: 'Watch Justin deliver the hands-on, practical AI training that has earned him a 98% satisfaction rate from audiences worldwide. His workshops combine live demonstrations, real-world use cases, and immediately actionable skills your team can apply the same day.',
+  },
+
   // Logo Wall
   logoWallLabel: 'Past Workshop Clients Include:',
   logoWall: [

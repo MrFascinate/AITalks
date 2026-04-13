@@ -87,6 +87,13 @@ const pageData = {
     },
   ],
 
+  // Video Embed
+  videoEmbed: {
+    vimeoId: '1072452030',
+    title: 'See Justin in Action',
+    description: 'Watch Justin deliver the practical, engaging AI training that has earned him a 98% satisfaction rate from corporate audiences worldwide. His keynotes combine live demonstrations, relatable stories, and actionable frameworks your team can implement immediately.',
+  },
+
   // Logo Wall
   logoWallLabel: 'Past Corporate Clients Include:',
   logoWall: [

@@ -102,6 +102,13 @@ const pageData = {
     },
   ],
 
+  // Video Embed
+  videoEmbed: {
+    vimeoId: '1077747719',
+    title: 'See Justin in Action',
+    description: 'Watch Justin deliver the practical, engaging AI literacy content that has earned him a 98% satisfaction rate from audiences worldwide. His keynotes combine real demonstrations, relatable stories, and actionable frameworks that your faculty and students can use immediately.',
+  },
+
   // Logo Wall
   logoWallLabel: 'Past Higher Education Clients Include:',
   logoWall: [

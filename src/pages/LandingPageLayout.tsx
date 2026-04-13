@@ -57,6 +57,13 @@ interface LandingPageData {
     question: string;
     answer: string;
   }[];
+
+  // Video Embed (optional)
+  videoEmbed?: {
+    vimeoId: string;
+    title: string;
+    description: string;
+  };
 }
 
 interface LandingPageLayoutProps {
@@ -404,6 +411,52 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
           </motion.div>
         </div>
       </section>
+
+      {/* Video Showcase Section */}
+      {data.videoEmbed && (
+        <section className="py-16 bg-primary-950">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Video on the left */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="relative aspect-video rounded-xl overflow-hidden shadow-2xl"
+              >
+                <iframe
+                  src={`https://player.vimeo.com/video/${data.videoEmbed.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
+                  className="absolute inset-0 w-full h-full"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  allowFullScreen
+                  title={data.videoEmbed.title}
+                />
+              </motion.div>
+
+              {/* Captions on the right */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
+                  <Play size={16} className="text-primary-500" />
+                  <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Watch</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-display">
+                  {data.videoEmbed.title}
+                </h2>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  {data.videoEmbed.description}
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Problem Section */}
       <section className="py-24 bg-primary-950">
