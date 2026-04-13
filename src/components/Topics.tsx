@@ -102,11 +102,6 @@ export default function Topics({ onVideoClick }: TopicsProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-            <Mic size={16} className="text-primary-500" />
-            <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Keynote Topics</span>
-          </div>
-
           {/* Title with Image */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
             <motion.div

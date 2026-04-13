@@ -69,11 +69,7 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-            <HelpCircle size={16} className="text-primary-500" />
-            <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">FAQ</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4 font-display">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-display">
             FREQUENTLY ASKED{' '}
             <span className="text-gradient">QUESTIONS</span>
           </h2>

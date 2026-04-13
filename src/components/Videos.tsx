@@ -49,16 +49,6 @@ export default function Videos() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.1 }}
-            className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6"
-          >
-            <Play size={16} className="text-primary-500" />
-            <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Featured Videos</span>
-          </motion.div>
-
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-display">
             EDUCATIONAL <span className="text-gradient">CONTENT</span>
           </h2>

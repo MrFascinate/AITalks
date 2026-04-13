@@ -108,11 +108,7 @@ export default function Stats() {
           transition={{ duration: 0.6 }}
           className="text-center lg:text-left mb-8"
         >
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-4">
-            <span className="w-2 h-2 bg-primary-500 rounded-full" />
-            <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Trusted by Leaders</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 font-display">
+          <h2 className="text-3xl md:text-4xl font-bold text-white font-display">
             IMPACT BY THE <span className="text-gradient">NUMBERS</span>
           </h2>
         </motion.div>

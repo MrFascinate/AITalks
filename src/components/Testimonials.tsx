@@ -64,11 +64,7 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-            <Star size={16} className="text-primary-500" />
-            <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Testimonials</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4 font-display">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-display">
             WHAT PEOPLE ARE{' '}
             <span className="text-gradient">SAYING</span>
           </h2>
@@ -107,14 +103,6 @@ export default function Testimonials() {
                     }}
                     className="text-center px-4"
                   >
-                    {/* Highlight Badge */}
-                    <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-                      <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
-                      <span className="text-primary-300 text-sm font-medium uppercase tracking-wider">
-                        {testimonials[currentIndex].highlight}
-                      </span>
-                    </div>
-
                     {/* Quote */}
                     <blockquote className="text-xl md:text-2xl text-white font-medium leading-relaxed mb-8">
                       "{testimonials[currentIndex].quote}"

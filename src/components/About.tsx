@@ -157,12 +157,7 @@ export default function About({ onBookClick }: AboutProps) {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-              <span className="w-2 h-2 bg-primary-500 rounded-full" />
-              <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">About Justin</span>
-            </div>
-
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 mb-6 font-display">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 font-display">
               EMPOWERING INNOVATION THROUGH{' '}
               <span className="text-gradient">ENGAGING EDUCATION</span>
             </h2>
