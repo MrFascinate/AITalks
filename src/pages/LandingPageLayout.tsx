@@ -199,7 +199,8 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
     { src: '/images/Afrotech Logo.png', alt: 'AfroTech', url: 'https://afrotech.com/afrotech-future-50-justin-shaifer' },
     { src: '/images/yaahoo finance png.png', alt: 'Yahoo Finance', url: 'https://www.yahoo.com/news/salem-students-among-young-innovators-142919005.html' },
     { src: '/images/PBS Logo.png', alt: 'PBS', url: 'https://www.pbs.org/video/climate-change-fctdyl/' },
-    { src: '/images/smithsonian logo white.png', alt: 'TEDx', url: 'https://www.ted.com/talks/justin_shaifer_how_to_speak_generation_z' },
+    { src: '/images/smithsonian logo white.png', alt: 'Smithsonian', url: 'https://nmaahc.si.edu/learn/students/through-window-and-mirror-narratives-african-american-stem-professionals' },
+    { src: '/images/TEDx logo white.png', alt: 'TEDx', url: 'https://www.ted.com/talks/justin_shaifer_how_to_speak_generation_z' },
   ];
 
   return (

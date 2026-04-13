@@ -287,8 +287,11 @@ export default function About({ onBookClick }: AboutProps) {
                 <a href="https://www.pbs.org/video/climate-change-fctdyl/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
                   <img src="/images/PBS Logo.png" alt="PBS" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
                 </a>
+                <a href="https://nmaahc.si.edu/learn/students/through-window-and-mirror-narratives-african-american-stem-professionals" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
+                  <img src="/images/smithsonian logo white.png" alt="Smithsonian" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
+                </a>
                 <a href="https://www.ted.com/talks/justin_shaifer_how_to_speak_generation_z" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
-                  <img src="/images/smithsonian logo white.png" alt="TEDx" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
+                  <img src="/images/TEDx logo white.png" alt="TEDx" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
                 </a>
               </div>
             </motion.div>
