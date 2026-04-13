@@ -167,22 +167,26 @@ export default function AICTEProfessionalDev() {
     {
       quote: 'It was an amazing day and I just don\'t think Justin\'s contribution/impact could have been better. His presentation was a home run and had real value for our participants and students.',
       author: 'Conference Organizer',
-      role: 'Oregon Science Teachers Association',
+      role: 'OSTA Leadership',
+      organization: 'Oregon Science Teachers Association',
     },
     {
       quote: 'Justin was wonderful. He had teachers and kids laughing and nodding their heads in agreement. It was the youthful, truthful jolt of energy we needed! Several administrators told me they had already booked Justin based on videos we circulated or were planning to book him after they saw him in action.',
       author: 'Administrator',
-      role: 'NYC Department of Education',
+      role: 'Education Leader',
+      organization: 'NYC Department of Education',
     },
     {
       quote: 'I wanted to extend a sincere thank you for all of your work. Justin was absolutely fantastic with our students and, as evidenced by the hundreds of selfies with students and all of the positive reviews in the building, he clearly resonated with our students and larger community.',
       author: 'School Administrator',
-      role: 'Watertown High School',
+      role: 'School Leadership',
+      organization: 'Watertown High School',
     },
     {
       quote: 'Justin is such an amazing speaker and his message really resonated with students. We really enjoyed his talk on "STEM is Cool". I highly recommend him as a keynote for any event!',
       author: 'Program Manager',
-      role: 'FIRST Robotics',
+      role: 'STEM Education',
+      organization: 'FIRST Robotics',
     },
   ];
 
@@ -569,8 +573,12 @@ export default function AICTEProfessionalDev() {
                     "{testimonial.quote}"
                   </p>
                   <div>
-                    <p className="text-white font-semibold">{testimonial.author}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                    {testimonial.organization && (
+                      <p className="text-white font-bold">{testimonial.organization}</p>
+                    )}
+                    <p className="text-gray-400 text-xs">
+                      {testimonial.author}{testimonial.role && `, ${testimonial.role}`}
+                    </p>
                   </div>
                 </div>
               </motion.div>

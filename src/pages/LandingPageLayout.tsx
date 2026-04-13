@@ -12,6 +12,7 @@ interface Testimonial {
   quote: string;
   author: string;
   role: string;
+  organization?: string;
 }
 
 interface LandingPageData {
@@ -550,8 +551,12 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
                     "{testimonial.quote}"
                   </p>
                   <div>
-                    <p className="text-white font-semibold">{testimonial.author}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                    {testimonial.organization && (
+                      <p className="text-white font-bold">{testimonial.organization}</p>
+                    )}
+                    <p className="text-gray-400 text-xs">
+                      {testimonial.author}{testimonial.role && `, ${testimonial.role}`}
+                    </p>
                   </div>
                 </div>
               </motion.div>

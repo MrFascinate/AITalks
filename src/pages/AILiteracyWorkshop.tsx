@@ -40,22 +40,26 @@ const pageData = {
     {
       quote: 'Your keynote was absolutely perfect - it was funny, personal, motivating and educational. You hit all the right points and got the room absolutely buzzing. What\'s more, I want to thank you for your hard work and preparation. You didn\'t miss a deadline and you took feedback into stride in a way that informed the overall presentation in the best way.',
       author: 'Event Producer',
-      role: 'WGBH (PBS Boston)',
+      role: 'PBS Boston',
+      organization: 'WGBH',
     },
     {
       quote: 'Justin was wonderful. He had teachers and kids laughing and nodding their heads in agreement. It was the youthful, truthful jolt of energy we needed! Several administrators told me they had already booked Justin based on videos we circulated or were planning to book him after they saw him in action.',
       author: 'Administrator',
-      role: 'NYC Department of Education',
+      role: 'Education Leader',
+      organization: 'NYC Department of Education',
     },
     {
       quote: 'The event was a success and Justin was the perfect person to launch this year\'s GSC. His personality, his work, and his engagement really embodied the spirit of the green schools movement. Audience feedback has been overwhelmingly positive.',
       author: 'Event Coordinator',
-      role: 'USGBC (US Green Building Council)',
+      role: 'Green Schools Conference',
+      organization: 'USGBC',
     },
     {
       quote: 'Justin was a big hit. His remarks really resonated with the audience and I\'m sure he gained many new fans. He was extremely cooperative and easy to work with.',
       author: 'Event Coordinator',
-      role: 'Corporation for Public Broadcasting',
+      role: 'CPB Staff',
+      organization: 'Corporation for Public Broadcasting',
     },
   ],
 
