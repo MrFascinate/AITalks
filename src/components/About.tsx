@@ -266,31 +266,12 @@ export default function About({ onBookClick }: AboutProps) {
                 As Seen In
               </p>
               <div className="flex flex-wrap items-center gap-6 lg:gap-8">
-                {/* Forbes */}
-                <svg className="h-6 w-auto text-white opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale" viewBox="0 0 200 50" fill="currentColor">
-                  <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" style={{ fontFamily: 'Georgia, serif', fontSize: '36px', fontWeight: 'normal', letterSpacing: '2px' }}>Forbes</text>
-                </svg>
-                {/* NBC News */}
-                <svg className="h-6 w-auto text-white opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale" viewBox="0 0 180 50" fill="currentColor">
-                  <g transform="translate(20, 5)">
-                    <ellipse cx="20" cy="15" rx="6" ry="12" fill="currentColor" />
-                    <ellipse cx="28" cy="12" rx="5" ry="10" fill="currentColor" />
-                    <ellipse cx="35" cy="11" rx="5" ry="9" fill="currentColor" />
-                    <ellipse cx="42" cy="12" rx="5" ry="10" fill="currentColor" />
-                    <ellipse cx="49" cy="15" rx="6" ry="12" fill="currentColor" />
-                    <ellipse cx="12" cy="18" rx="6" ry="10" fill="currentColor" />
-                    <ellipse cx="30" cy="26" rx="8" ry="5" fill="currentColor" />
-                  </g>
-                  <text x="115" y="32" dominantBaseline="middle" textAnchor="middle" style={{ fontFamily: 'Arial, sans-serif', fontSize: '22px', fontWeight: 'bold', letterSpacing: '1px' }}>NEWS</text>
-                </svg>
-                {/* Yahoo Finance */}
-                <svg className="h-5 w-auto text-white opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale" viewBox="0 0 200 50" fill="currentColor">
-                  <text x="50%" y="32" dominantBaseline="middle" textAnchor="middle" style={{ fontFamily: 'Helvetica Neue, Arial, sans-serif', fontSize: '20px', fontWeight: 'bold' }}>Yahoo! finance</text>
-                </svg>
-                {/* AfroTech */}
-                <svg className="h-5 w-auto text-white opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale" viewBox="0 0 180 50" fill="currentColor">
-                  <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" style={{ fontFamily: 'Arial Black, sans-serif', fontSize: '24px', fontWeight: '900', letterSpacing: '1px' }}>AFROTECH</text>
-                </svg>
+                <img src="/images/forbes logo.png" alt="Forbes" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                <img src="/images/abc news png.png" alt="ABC News" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                <img src="/images/essence png.png" alt="Essence" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                <img src="/images/hulu png.png" alt="Hulu" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                <img src="/images/Afrotech Logo.png" alt="AfroTech" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
+                <img src="/images/yaahoo finance png.png" alt="Yahoo Finance" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
               </div>
             </motion.div>
           </motion.div>

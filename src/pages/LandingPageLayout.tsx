@@ -191,7 +191,14 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
     { icon: BookOpen, text: '50,000+ Learners' },
   ];
 
-  const logoClients = ['ABC News', 'PBS', 'NVIDIA', 'Hulu', 'Google', 'LinkedIn'];
+  const asSeenInLogos = [
+    { src: '/images/forbes logo.png', alt: 'Forbes' },
+    { src: '/images/abc news png.png', alt: 'ABC News' },
+    { src: '/images/essence png.png', alt: 'Essence' },
+    { src: '/images/hulu png.png', alt: 'Hulu' },
+    { src: '/images/Afrotech Logo.png', alt: 'AfroTech' },
+    { src: '/images/yaahoo finance png.png', alt: 'Yahoo Finance' },
+  ];
 
   return (
     <div className="min-h-screen bg-primary-950">
@@ -331,8 +338,8 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
           ) : (
             <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-gray-500 text-sm">
               <span className="uppercase tracking-wider">As seen in:</span>
-              {logoClients.map((client) => (
-                <span key={client} className="text-gray-400">{client}</span>
+              {asSeenInLogos.map((logo) => (
+                <img key={logo.alt} src={logo.src} alt={logo.alt} className="h-6 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" />
               ))}
             </div>
           )}
