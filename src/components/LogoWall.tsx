@@ -8,6 +8,9 @@ const logosRow1 = [
   '/Logo-Wall-Horizontal-Youtube-Banner-1-1-8.png',
   '/Logo-Wall-Horizontal-Youtube-Banner-1-1-9.png',
   '/Logo-Wall-Horizontal-Youtube-Banner-1-1-10.png',
+  '/images/forbes logo.png',
+  '/images/abc news png.png',
+  '/images/essence png.png',
 ];
 
 const logosRow2 = [
@@ -19,6 +22,9 @@ const logosRow2 = [
   '/Logo-Wall-Horizontal-Youtube-Banner-1-2-5.png',
   '/Logo-Wall-Horizontal-Youtube-Banner-1-2-7.png',
   '/Logo-Wall-Horizontal-Youtube-Banner-1-2-8.png',
+  '/images/hulu png.png',
+  '/images/Afrotech Logo.png',
+  '/images/yaahoo finance png.png',
 ];
 
 export default function LogoWall() {
