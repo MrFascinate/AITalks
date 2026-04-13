@@ -81,6 +81,7 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   // Set document title and meta tags
   useEffect(() => {
@@ -425,14 +426,42 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
                 transition={{ duration: 0.6 }}
                 className="relative aspect-[9/16] w-full max-w-[360px] mx-auto lg:mx-0 rounded-xl overflow-hidden shadow-2xl flex-shrink-0"
               >
-                <iframe
-                  src={`https://player.vimeo.com/video/${data.videoEmbed.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0`}
-                  className="absolute inset-0 w-full h-full"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                  allowFullScreen
-                  title={data.videoEmbed.title}
-                />
+                {isVideoPlaying ? (
+                  <iframe
+                    src={`https://player.vimeo.com/video/${data.videoEmbed.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&autoplay=1`}
+                    className="absolute inset-0 w-full h-full"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    allowFullScreen
+                    title={data.videoEmbed.title}
+                  />
+                ) : (
+                  <div
+                    className="absolute inset-0 cursor-pointer group"
+                    onClick={() => setIsVideoPlaying(true)}
+                  >
+                    {/* Thumbnail */}
+                    <img
+                      src={`https://vumbnail.com/${data.videoEmbed.vimeoId}.jpg`}
+                      alt={data.videoEmbed.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-950/60 via-transparent to-primary-950/30" />
+                    {/* Play Button */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <motion.div
+                        className="w-20 h-20 rounded-full bg-primary-500/90 flex items-center justify-center group-hover:bg-primary-400 transition-colors"
+                        whileHover={{ scale: 1.1 }}
+                        animate={{ boxShadow: ['0 0 0 0 rgba(37, 133, 232, 0.4)', '0 0 0 20px rgba(37, 133, 232, 0)', '0 0 0 0 rgba(37, 133, 232, 0.4)'] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      >
+                        <Play className="w-8 h-8 text-white ml-1" fill="white" />
+                      </motion.div>
+                    </div>
+                  </div>
+                )}
               </motion.div>
             )}
 
@@ -465,27 +494,10 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
         </div>
 
-        {/* Left side - Full height image */}
-        <motion.div
-          className="hidden lg:block absolute bottom-0 -left-[8%] w-[55%]"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <img
-            src={data.aboutImage}
-            alt="Justin Shaifer"
-            className="w-full h-auto object-contain"
-            style={{ filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6))' }}
-            loading="lazy"
-          />
-        </motion.div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pl-[40%]">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -521,11 +533,34 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
       </section>
 
       {/* About Justin Section */}
-      <section className="py-24 bg-primary-950">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 bg-primary-950 overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
+        </div>
+
+        {/* Left side - Full height image */}
+        <motion.div
+          className="hidden lg:block absolute bottom-0 -left-[8%] w-[55%]"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <img
+            src={data.aboutImage}
+            alt="Justin Shaifer"
+            className="w-full h-auto object-contain"
+            style={{ filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6))' }}
+            loading="lazy"
+          />
+        </motion.div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pl-[40%]">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >

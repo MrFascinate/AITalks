@@ -54,6 +54,7 @@ export default function AICTEProfessionalDev() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   useEffect(() => {
     document.title = 'AI Professional Development for CTE Programs | Justin Shaifer';
@@ -410,14 +411,42 @@ export default function AICTEProfessionalDev() {
               transition={{ duration: 0.6 }}
               className="relative aspect-[9/16] w-full max-w-[360px] mx-auto lg:mx-0 rounded-xl overflow-hidden shadow-2xl flex-shrink-0"
             >
-              <iframe
-                src="https://player.vimeo.com/video/1077747719?badge=0&autopause=0&player_id=0&app_id=58479"
-                className="absolute inset-0 w-full h-full"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                allowFullScreen
-                title="Justin Shaifer AI Professional Development"
-              />
+              {isVideoPlaying ? (
+                <iframe
+                  src="https://player.vimeo.com/video/1077747719?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
+                  className="absolute inset-0 w-full h-full"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  allowFullScreen
+                  title="Justin Shaifer AI Professional Development"
+                />
+              ) : (
+                <div
+                  className="absolute inset-0 cursor-pointer group"
+                  onClick={() => setIsVideoPlaying(true)}
+                >
+                  {/* Thumbnail */}
+                  <img
+                    src="https://vumbnail.com/1077747719.jpg"
+                    alt="Justin Shaifer AI Professional Development"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-950/60 via-transparent to-primary-950/30" />
+                  {/* Play Button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <motion.div
+                      className="w-20 h-20 rounded-full bg-primary-500/90 flex items-center justify-center group-hover:bg-primary-400 transition-colors"
+                      whileHover={{ scale: 1.1 }}
+                      animate={{ boxShadow: ['0 0 0 0 rgba(37, 133, 232, 0.4)', '0 0 0 20px rgba(37, 133, 232, 0)', '0 0 0 0 rgba(37, 133, 232, 0.4)'] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    >
+                      <Play className="w-8 h-8 text-white ml-1" fill="white" />
+                    </motion.div>
+                  </div>
+                </div>
+              )}
             </motion.div>
 
             {/* Problem content on the right */}
@@ -455,26 +484,10 @@ export default function AICTEProfessionalDev() {
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
         </div>
 
-        <motion.div
-          className="hidden lg:block absolute bottom-0 -left-[8%] w-[55%]"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <img
-            src="/suit-transparent.webp"
-            alt="Justin Shaifer"
-            className="w-full h-auto object-contain"
-            style={{ filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6))' }}
-            loading="lazy"
-          />
-        </motion.div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pl-[40%]">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -543,8 +556,61 @@ export default function AICTEProfessionalDev() {
         </div>
       </section>
 
+      {/* About Justin Section */}
+      <section className="relative py-24 bg-primary-900 overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
+        </div>
+
+        {/* Left side - Full height image */}
+        <motion.div
+          className="hidden lg:block absolute bottom-0 -left-[8%] w-[55%]"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <img
+            src="/suit-transparent.webp"
+            alt="Justin Shaifer"
+            className="w-full h-auto object-contain"
+            style={{ filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6))' }}
+            loading="lazy"
+          />
+        </motion.div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pl-[40%]">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
+              <span className="w-2 h-2 bg-primary-500 rounded-full" />
+              <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">About Justin</span>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-display">
+              Meet <span className="text-gradient">Mr. Fascinate</span>
+            </h2>
+
+            <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
+              <p>
+                Justin "Mr. Fascinate" Shaifer is a Forbes 30 Under 30 science communicator and keynote speaker focused on closing the AI participation gap. His AI courses on LinkedIn Learning have reached over 50,000 learners, and he has delivered professional development for CTE programs at the state level across Oregon, California, and Montana.
+              </p>
+              <p>
+                Growing up on the south side of Chicago shaped Justin's commitment to making STEM accessible to everyone. As founder of Fascinate Media and host of the Curiosity Theory podcast, he brings that same energy to helping CTE educators prepare students for workforce realities in an AI-driven economy.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
-      <section className="py-24 bg-primary-900">
+      <section className="py-24 bg-primary-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
