@@ -24,6 +24,18 @@ const faqs = [
     question: 'Does Justin travel for in-person events?',
     answer: `Yes, nationally and internationally. Travel logistics are handled as part of the booking process.`,
   },
+  {
+    question: 'What is included in a typical booking?',
+    answer: `A standard keynote booking includes a pre-event discovery call to understand your goals, a customized 45-60 minute presentation, Q&A session, and post-event resources for attendees. Additional options include breakout sessions, workshops, meet-and-greets, and extended working sessions.`,
+  },
+  {
+    question: 'Do you offer extras (book signings, meet-and-greets)?',
+    answer: `Justin offers a variety of add-ons to enhance the attendee experience. These include signed posters, meet-and-greets, extended Q&A sessions, custom videos for attendees, and time to answer questions after the presentation. Let us know what would work best for your event!`,
+  },
+  {
+    question: 'What kind of promotional support does Justin offer to help market the event?',
+    answer: `Justin is happy to create custom promotional videos to help market your event. He also actively promotes events across his social platforms, which have a combined reach of over 80,000 followers. This helps drive awareness and excitement before your event.`,
+  },
 ];
 
 export default function FAQ() {
