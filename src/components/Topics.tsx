@@ -1,8 +1,17 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Rocket, Briefcase, Laptop, Users, ChevronDown, FileText } from 'lucide-react';
 import { audienceOutcomes } from '../data/speakerData';
+
+const audienceLinks: Record<string, string> = {
+  'Corporate Leadership Teams': '/ai-keynote-speaker-corporate',
+  'STEM & Technology Conferences': '/ai-literacy-workshop',
+  'K-12 Educators': '/ai-professional-development',
+  'College Students & Faculty': '/ai-keynote-speaker-higher-education',
+  'Professional Development Events': '/ai-professional-development',
+};
 
 const topics = [
   {
@@ -274,12 +283,13 @@ export default function Topics({ onVideoClick }: TopicsProps) {
           <p className="text-gray-400 mb-4 uppercase tracking-wider text-sm">Perfect for</p>
           <div className="flex flex-wrap justify-center gap-3">
             {['Corporate Leadership Teams', 'STEM & Technology Conferences', 'K-12 Educators', 'College Students & Faculty', 'Professional Development Events'].map((audience) => (
-              <span
+              <Link
                 key={audience}
-                className="btn-gradient-border py-2 px-4 text-sm cursor-default"
+                to={audienceLinks[audience]}
+                className="btn-gradient-border py-2 px-4 text-sm cursor-pointer hover:scale-105 transition-transform"
               >
                 {audience}
-              </span>
+              </Link>
             ))}
           </div>
         </motion.div>
