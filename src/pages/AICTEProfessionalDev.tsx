@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Award, Linkedin, CheckCircle, Quote, Play, Users, Star, Building2, MessageSquare, HelpCircle, ChevronDown } from 'lucide-react';
+import { ArrowRight, Award, Linkedin, CheckCircle, Quote, Play, Users, Star, Building2, MessageSquare, ChevronDown } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import BookingModal from '../components/BookingModal';
