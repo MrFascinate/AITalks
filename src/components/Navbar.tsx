@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-const navLinks = [
+const defaultNavLinks = [
   { name: 'About', href: '#about' },
   { name: 'Topics', href: '#topics' },
   { name: 'Testimonials', href: '#testimonials' },
@@ -10,7 +10,14 @@ const navLinks = [
   { name: 'Contact', href: '#contact' },
 ];
 
-export default function Navbar() {
+interface NavbarProps {
+  links?: { name: string; href: string }[];
+  hideBookNow?: boolean;
+  onBookClick?: () => void;
+}
+
+export default function Navbar({ links, hideBookNow, onBookClick }: NavbarProps = {}) {
+  const navLinks = links || defaultNavLinks;
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -59,14 +66,27 @@ export default function Navbar() {
                   {link.name}
                 </motion.a>
               ))}
-              <motion.a
-                href="#contact"
-                className="btn-gradient-border text-sm py-2 px-6"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Book Now
-              </motion.a>
+              {!hideBookNow && (
+                onBookClick ? (
+                  <motion.button
+                    onClick={onBookClick}
+                    className="btn-gradient-border text-sm py-2 px-6"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Book Now
+                  </motion.button>
+                ) : (
+                  <motion.a
+                    href="#contact"
+                    className="btn-gradient-border text-sm py-2 px-6"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Book Now
+                  </motion.a>
+                )
+              )}
             </div>
 
             {/* Mobile Menu Button */}
@@ -103,13 +123,24 @@ export default function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <a
-                href="#contact"
-                className="block btn-gradient-solid text-center mt-4"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Book Now
-              </a>
+              {!hideBookNow && (
+                onBookClick ? (
+                  <button
+                    className="block w-full btn-gradient-solid text-center mt-4"
+                    onClick={() => { onBookClick(); setIsMobileMenuOpen(false); }}
+                  >
+                    Book Now
+                  </button>
+                ) : (
+                  <a
+                    href="#contact"
+                    className="block btn-gradient-solid text-center mt-4"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Book Now
+                  </a>
+                )
+              )}
             </div>
           </motion.div>
         )}

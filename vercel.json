@@ -49,6 +49,7 @@
     { "source": "/ai-keynote-speaker-higher-education", "destination": "/index.html" },
     { "source": "/ai-literacy-workshop", "destination": "/index.html" },
     { "source": "/free-ai-assessment", "destination": "/index.html" },
-    { "source": "/ai-professional-development", "destination": "/index.html" }
+    { "source": "/ai-professional-development", "destination": "/index.html" },
+    { "source": "/courses", "destination": "/index.html" }
   ]
 }
