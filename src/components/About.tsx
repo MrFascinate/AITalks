@@ -64,7 +64,7 @@ export default function About({ onBookClick }: AboutProps) {
             <iframe
               src="https://player.vimeo.com/video/1082939720?autoplay=1&badge=0&autopause=0&player_id=0&app_id=58479"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="AI and Innovation Keynote Speaker Reel"
+              title="AI and STEM Keynote Speaker Reel"
               className="w-full h-full rounded-lg"
             />
           </div>
@@ -101,7 +101,7 @@ export default function About({ onBookClick }: AboutProps) {
                     <div className="relative aspect-video rounded-lg overflow-hidden">
                       <img
                         src="/speaker action photo.png"
-                        alt="Justin Shaifer - AI and Innovation Keynote Speaker"
+                        alt="Justin Shaifer - AI and STEM Keynote Speaker"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
@@ -121,7 +121,7 @@ export default function About({ onBookClick }: AboutProps) {
                     </div>
                     <div className="p-3 text-center">
                       <p className="text-primary-400 text-sm font-medium uppercase tracking-wider">
-                        AI and Innovation Keynote Speaker Reel
+                        AI and STEM Keynote Speaker Reel
                       </p>
                     </div>
                   </div>

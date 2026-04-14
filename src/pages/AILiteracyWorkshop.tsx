@@ -14,18 +14,18 @@ const pageData = {
   heroOverlayStrength: 'light' as const,
 
   // Problem Section
-  problemH2: 'Your Team Needs Skills, Not Another Presentation',
+  problemH2: 'Your Team Needs Skills, and They Need Them Yesterday',
   problemParagraphs: [
-    'Most AI training fails because it stops at awareness. People leave knowing that AI exists but having no idea how to actually use it. That\'s not training. That\'s a missed opportunity.',
-    'The AI participation gap is the distance between understanding AI and being able to work with it. Closing that gap requires hands-on practice with real tools, real use cases, and real guidance.',
-    'Justin\'s workshops are built for teams who want to leave with working knowledge, not just inspiration.',
+    'Most AI training stops at awareness. People leave knowing AI is important but having zero idea what to do with it. That\'s a presentation, and presentations fade.',
+    'The distance between understanding AI and being able to work with it only closes when people get their hands on the tools. Slides can only take you so far.',
+    'Justin\'s workshops are built for teams who want to walk out with something they built, something they own.',
   ],
 
   // What Justin Delivers
   deliverablesBullets: [
-    'Working AI agents and automated workflows they build during the session',
-    'Prompt engineering frameworks they can reuse across any AI tool',
-    'A personalized AI toolkit matched to their specific roles and responsibilities',
+    'Working AI agents and automated workflows they build themselves during the session',
+    'Prompt techniques they can reuse across any AI tool, beyond just the one shown in class',
+    'A personalized toolkit matched to what they actually do at work',
   ],
 
   // About
@@ -69,42 +69,43 @@ const pageData = {
   // FAQs
   faqs: [
     {
-      question: 'Will this resonate with my specific audience?',
-      answer: `Justin customizes every keynote to the event, industry, and audience. Before any engagement he researches the organization, the room, and the specific challenge they're navigating. His presentations have landed for audiences as different as Fortune 500 leadership teams, K-12 educators, HBCU students, and government agencies. If you're unsure, ask for references from a similar audience.`,
+      question: 'Will this work for my team\'s skill level?',
+      answer: `Justin designs every workshop around the room. Before any session he learns about your team's roles, tools, and comfort level with AI. He's led workshops for groups ranging from complete beginners to technical teams already experimenting with AI. If you're unsure about fit, ask for references from a similar group.`,
     },
     {
       question: 'How do I justify the investment to my leadership?',
-      answer: `Justin's clients consistently report that his sessions generate more post-event conversation than any other speaker at their events. He provides post-event satisfaction data via Talkadot that you can share directly with stakeholders. Many clients book him for multiple events specifically because the ROI is easy to demonstrate internally.`,
+      answer: `The easiest way: participants leave with working AI tools they built themselves during the session. Justin also provides post-event satisfaction data via Talkadot that you can share directly with stakeholders. Many clients book follow-up workshops because the results are visible immediately.`,
     },
     {
-      question: 'What makes Justin different from other AI speakers?',
-      answer: `Most AI speakers explain the technology. Justin demonstrates it live, connects it to human stories your audience actually recognizes, and leaves them with tools they can use the same day. He is also one of the only speakers in this space whose credibility comes from building with AI rather than advising on it.`,
+      question: 'How is this different from a typical AI presentation?',
+      answer: `Most AI training is someone talking at a room with slides. Justin's workshops are hands-on from the start. Participants build their own AI agents, write prompts, and walk out with workflows they can use at work the next morning. He builds with AI daily, so the examples come from real experience.`,
     },
     {
-      question: 'What does the booking process actually look like?',
-      answer: `Reach out via the contact form with your event date, audience size, and goals. You will hear back within 48 hours. From there it is a short call to confirm fit, a straightforward contract, and Justin handles the rest including pre-event research and any custom content development.`,
+      question: 'What does the booking process look like?',
+      answer: `Reach out via the contact form with your event date, team size, and goals. You'll hear back within 48 hours. From there it's a short call to understand your team's needs, a straightforward contract, and Justin handles the rest including pre-workshop research and custom content development.`,
     },
     {
-      question: 'Does Justin travel for in-person events?',
-      answer: `Yes, nationally and internationally. Travel logistics are handled as part of the booking process.`,
+      question: 'Does Justin travel for in-person workshops?',
+      answer: `Yes, nationally and internationally. Travel logistics are handled as part of the booking process. Virtual workshops are also available.`,
     },
     {
-      question: 'What is included in a typical booking?',
-      answer: `A standard keynote booking includes a pre-event discovery call to understand your goals, a customized 45-60 minute presentation, Q&A session, and post-event resources for attendees. Additional options include breakout sessions, workshops, meet-and-greets, and extended working sessions.`,
+      question: 'What is included in a typical workshop?',
+      answer: `A standard workshop includes a pre-session discovery call, a customized 2-4 hour hands-on training, all participant materials and prompt templates, and post-workshop resources your team can reference afterward. Half-day and full-day formats are also available.`,
     },
     {
-      question: 'Do you offer extras (book signings, meet-and-greets)?',
-      answer: `Justin offers a variety of add-ons to enhance the attendee experience. These include signed posters, meet-and-greets, extended Q&A sessions, custom videos for attendees, and time to answer questions after the presentation. Let us know what would work best for your event!`,
+      question: 'Can the workshop be tailored to our industry?',
+      answer: `Every workshop is tailored. Justin researches your industry, your team's daily workflows, and the AI tools most relevant to what they actually do. Past workshops have been customized for teams in finance, healthcare, education, media, and government.`,
     },
     {
       question: 'What kind of promotional support does Justin offer to help market the event?',
-      answer: `Justin is happy to create custom promotional videos to help market your event. He also actively promotes events across his social platforms, which have a combined reach of over 80,000 followers. This helps drive awareness and excitement before your event.`,
+      answer: `Justin is happy to create custom promotional videos to help market your workshop internally or externally. He also promotes events across his social platforms, which have a combined reach of over 80,000 followers.`,
     },
   ],
 
   // Video Embed
   videoEmbed: {
     vimeoId: '1077747719',
+    thumbnailUrl: 'https://i.vimeocdn.com/video/2007841923-b518e3a81d79209c29f56ad8abac7909bc919a8e3029f10d93613cc2de61667d-d_640',
     title: 'See Justin in Action',
     description: 'Watch Justin deliver the hands-on, practical AI training that has earned him a 98% satisfaction rate from audiences worldwide. His workshops combine live demonstrations, real-world use cases, and immediately actionable skills your team can apply the same day.',
   },

@@ -9,22 +9,24 @@ const pageData = {
   // Hero
   h1: 'AI Keynote Speaker for Corporate Events',
   subheadline: 'Your team knows AI is changing everything. They just don\'t know how to use it yet. Justin Shaifer delivers practical, hands-on AI keynotes that turn spectators into participants.',
-  heroImage: '/AITeacherTraining_1.8.1.png',
+  heroImage: '/corporate/concept schools3.JPG',
+  heroImagePosition: 'left' as const,
+  heroImageStyle: {},
   heroOverlayStrength: 'light' as const,
 
   // Problem Section
   problemH2: 'Your Team Is Watching AI Pass Them By',
   problemParagraphs: [
-    'Most corporate teams are stuck in one of two places: overwhelmed by AI hype, or waiting for someone to tell them what to do. Meanwhile, competitors are already using AI to move faster, think sharper, and get more done with less.',
-    'The gap between knowing about AI and actually using it is called the AI participation gap. And it\'s growing every day your team sits on the sidelines.',
-    'Justin\'s keynotes don\'t just explain AI. They show your people exactly how to start using it before they leave the room.',
+    'Most teams are in one of two places with AI: overwhelmed by the hype, or waiting for permission to start. Either way, they\'re sitting it out while the teams that figured it out already have a real advantage.',
+    'The problem is deeper than awareness. Everyone knows AI is a big deal. But knowing about AI and knowing how to use it are completely different things.',
+    'Justin\'s keynotes close that gap. People leave with tools open on their laptops, ready to go.',
   ],
 
   // What Justin Delivers
   deliverablesBullets: [
-    'A clear understanding of which AI tools actually matter for their roles, not the hype, the practical stuff',
-    'Hands-on frameworks they can apply to their daily work starting the same day',
-    'The confidence to experiment with AI instead of fearing it',
+    'Which AI tools are worth their time, cutting through the noise to focus on what\'s useful for their specific roles',
+    'Workflows they can take back to their desks and use the same week',
+    'The confidence to try things with AI instead of waiting for someone else to figure it out',
   ],
 
   // About
@@ -37,14 +39,34 @@ const pageData = {
   // Testimonials
   testimonials: [
     {
-      quote: 'Your keynote was absolutely perfect. It was funny, personal, motivating and educational. You hit all the right points and got the room absolutely buzzing.',
-      author: 'Event Organizer',
-      role: 'Corporate Conference',
+      quote: 'It\'s great to have an overview of the AI landscape from someone you trust, since Justin demos most of the AI tools he shows us. He makes sure to give us a use-case walkthrough which is really nice. I think he should be the first introduction to AI for beginners!',
+      author: 'Bjoern Jensen',
+      role: '',
+      organization: 'Allstate Insurance',
     },
     {
-      quote: 'Justin\'s talk was AMAZING! I came away much more excited and ready to begin leveraging AI. The resources shared gave me a better understanding on leveraging the correct AI for specific tasks.',
+      quote: 'Justin\'s talk was AMAZING! I came away much more excited and ready to begin working with AI. The resources shared gave me a better understanding of leveraging the correct AI for specific tasks. Great use of my time — I look forward to following Justin\'s journey and diving deeper into the world of AI.',
       author: 'Breanna Oropeza',
-      role: 'Conference Attendee',
+      role: '',
+      organization: 'Allstate Insurance',
+    },
+    {
+      quote: 'Enlightening, engaging and energizing!!! Made me think of the young people in my life and what is most important.',
+      author: 'Allison Fonseca',
+      role: 'Strategic Account Executive / Customer Success',
+      organization: 'Workflow Services',
+    },
+    {
+      quote: 'Dynamic and necessary messaging for our future. Impressive life path — keep doing fascinating things!',
+      author: 'Jen Yakimicki Guimond',
+      role: 'V.P. of Commercial Services',
+      organization: 'NCG Hospitality',
+    },
+    {
+      quote: 'Loved your session. Great information and future-proofing — congratulations on making such an incredible impact.',
+      author: 'Bryan Mendelson',
+      role: '',
+      organization: 'Assurant',
     },
   ],
 
@@ -90,6 +112,7 @@ const pageData = {
   // Video Embed
   videoEmbed: {
     vimeoId: '1072452030',
+    thumbnailUrl: 'https://i.vimeocdn.com/video/2001368940-4d371ea53f4cdcbb4bd46a309e1a1ba95594690c7fc9a2640121e91a339fa47d-d_640',
     title: 'See Justin in Action',
     description: 'Watch Justin deliver the practical, engaging AI training that has earned him a 98% satisfaction rate from corporate audiences worldwide. His keynotes combine live demonstrations, relatable stories, and actionable frameworks your team can implement immediately.',
   },

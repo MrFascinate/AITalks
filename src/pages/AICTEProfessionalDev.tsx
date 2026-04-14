@@ -159,9 +159,9 @@ export default function AICTEProfessionalDev() {
   ];
 
   const deliverables = [
-    'A clear framework for integrating AI literacy into existing CTE curriculum without overhauling what already works',
-    'Practical tools educators can use in the classroom the next day',
-    'The confidence to lead AI conversations with students, parents, and industry partners',
+    'A framework for weaving AI literacy into existing CTE curriculum while keeping what already works',
+    'Tools educators can actually use in the classroom tomorrow',
+    'Enough confidence with AI to lead conversations with students, parents, and industry partners',
   ];
 
   const testimonials = [
@@ -427,7 +427,7 @@ export default function AICTEProfessionalDev() {
                 >
                   {/* Thumbnail */}
                   <img
-                    src="https://vumbnail.com/1077747719.jpg"
+                    src="https://i.vimeocdn.com/video/2007841923-b518e3a81d79209c29f56ad8abac7909bc919a8e3029f10d93613cc2de61667d-d_640"
                     alt="Justin Shaifer AI Professional Development"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
@@ -463,13 +463,13 @@ export default function AICTEProfessionalDev() {
               </h2>
               <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
                 <p>
-                  Healthcare, manufacturing, IT, business services. Every industry CTE programs prepare students for is changing because of AI. But most professional development still treats AI as a future topic instead of a present reality.
+                  Healthcare, manufacturing, IT, business services. Every industry CTE prepares students for is already being changed by AI. But most PD still treats AI like something that's coming instead of something that's here.
                 </p>
                 <p>
-                  That leaves educators uncertain about how to integrate AI into their curriculum and students graduating without the AI literacy their employers expect.
+                  That leaves teachers unsure how to bring AI into their curriculum and students graduating before they've picked up the AI skills their employers already expect.
                 </p>
                 <p>
-                  Justin has delivered AI professional development at the state CTE level across Oregon, California, and Montana. He understands what CTE directors are facing and brings practical strategies that work in real classrooms with real time constraints.
+                  Justin has delivered AI professional development for state CTE programs in Oregon, California, and Montana. He knows what CTE directors are dealing with and brings strategies that work in real classrooms on real schedules.
                 </p>
               </div>
             </motion.div>
@@ -491,10 +491,6 @@ export default function AICTEProfessionalDev() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-              <span className="w-2 h-2 bg-primary-500 rounded-full" />
-              <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Key Takeaways</span>
-            </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-display">
               What Your Educators Will{' '}
@@ -531,10 +527,6 @@ export default function AICTEProfessionalDev() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-              <span className="w-2 h-2 bg-primary-500 rounded-full" />
-              <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Free Assessment</span>
-            </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-display">
               Where Does Your Program{' '}
@@ -588,10 +580,6 @@ export default function AICTEProfessionalDev() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-              <span className="w-2 h-2 bg-primary-500 rounded-full" />
-              <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">About Justin</span>
-            </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-display">
               Meet <span className="text-gradient">Mr. Fascinate</span>
@@ -619,10 +607,6 @@ export default function AICTEProfessionalDev() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-              <span className="w-2 h-2 bg-primary-500 rounded-full" />
-              <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Testimonials</span>
-            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white font-display">
               What <span className="text-gradient">Educators Say</span>
             </h2>
@@ -668,10 +652,6 @@ export default function AICTEProfessionalDev() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-              <HelpCircle size={16} className="text-primary-500" />
-              <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">FAQ</span>
-            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white font-display">
               Common <span className="text-gradient">Questions</span>
             </h2>

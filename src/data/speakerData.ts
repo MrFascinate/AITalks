@@ -41,13 +41,26 @@ Justin transforms complex topics into digestible concepts, sparking curiosity wh
   ],
 
   testimonials: [
-    // Named organizations first (most enterprise-credible)
+    {
+      quote: "It's great to have an overview of the AI landscape from someone you trust, since Justin demos most of the AI tools he shows us. He makes sure to give us a use-case walkthrough which is really nice. I think he should be the first introduction to AI for beginners!",
+      organization: "Allstate Insurance",
+      author: "Bjoern Jensen",
+      role: "",
+      highlight: "Trusted AI Overview",
+    },
     {
       quote: "I loved learning about his background and his motivation to educate people about AI. I think many people in academia are a bit wary of the risks associated with AI and want to better understand best practices. I appreciate the work that he is doing to inform people and hope to attend another talk from him!",
       organization: "Stanford Genetics",
       author: "Imani Porter",
       role: "Research Staff",
       highlight: "Informed & Inspiring",
+    },
+    {
+      quote: "Dynamic and necessary messaging for our future. Impressive life path — keep doing fascinating things!",
+      organization: "NCG Hospitality",
+      author: "Jen Yakimicki Guimond",
+      role: "V.P. of Commercial Services",
+      highlight: "Dynamic & Necessary",
     },
     {
       quote: "Just listened to Justin Shaifer's talk on being a better educator—absolutely incredible. His energy is infectious, and he blends real-world experience, humor, and cutting-edge insight in a way that makes you rethink how we teach and connect with students. Mr. Fascinate lives up to the name!",
@@ -57,11 +70,25 @@ Justin transforms complex topics into digestible concepts, sparking curiosity wh
       highlight: "Infectious Energy",
     },
     {
+      quote: "Justin's talk was AMAZING! I came away much more excited and ready to begin working with AI. The resources shared gave me a better understanding of leveraging the correct AI for specific tasks. Great use of my time — I look forward to following Justin's journey and diving deeper into the world of AI.",
+      organization: "Allstate Insurance",
+      author: "Breanna Oropeza",
+      role: "",
+      highlight: "Amazing Talk",
+    },
+    {
       quote: "The session gave actionable recommendations for how to authentically support our students to engage in STEM education and to integrate AI as a way to deepen learning and to access tools and resources that might not otherwise be available.",
       organization: "St. Michael's Prep",
       author: "Jacqueline Glenn",
       role: "Administrator",
       highlight: "Actionable Insights",
+    },
+    {
+      quote: "Loved your session. Great information and future-proofing — congratulations on making such an incredible impact.",
+      organization: "Assurant",
+      author: "Bryan Mendelson",
+      role: "",
+      highlight: "Incredible Impact",
     },
     {
       quote: "Justin's authenticity is clear to see in his content and his speaking. His expertise in content creation, his drive to communicate innovative ideas and technologies, and his ability to share complex ideas in a digestible manner are clear. My students will be better prepared because of my experience.",
@@ -70,7 +97,13 @@ Justin transforms complex topics into digestible concepts, sparking curiosity wh
       role: "Educator",
       highlight: "Authentic & Clear",
     },
-    // Named organizations (continued)
+    {
+      quote: "Enlightening, engaging and energizing!!! Made me think of the young people in my life and what is most important.",
+      organization: "Workflow Services",
+      author: "Allison Fonseca",
+      role: "Strategic Account Executive / Customer Success",
+      highlight: "Enlightening & Energizing",
+    },
     {
       quote: "We LOVED Justin! His keynote address was EXACTLY what we had asked for. Judging from facial expressions and reactions of the audience, and the number of questions asked during the Q&A, it was very clear that the students truly enjoyed the presentation. Afterwards, Justin spent a very full hour talking with many students who had lined up to chat with him. He was affable and very easy to work with.",
       organization: "Sacred Heart University",

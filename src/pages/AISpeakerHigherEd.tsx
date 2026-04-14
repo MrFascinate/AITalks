@@ -14,18 +14,18 @@ const pageData = {
   heroOverlayStrength: 'light' as const,
 
   // Problem Section
-  problemH2: 'Students Are Graduating Without the Skills They Need',
+  problemH2: 'Students Are Graduating Before They\'re Ready for AI',
   problemParagraphs: [
-    'AI is already reshaping every industry your students will enter. But most academic programs are still catching up. Faculty are uncertain how to teach AI, and students are left experimenting on their own with no guidance.',
-    'This is the AI participation gap in higher education. And it\'s leaving graduates unprepared for the workforce they\'re about to enter.',
-    'Justin\'s keynotes give faculty practical tools they can use immediately and show students what AI literacy actually looks like in practice.',
+    'AI is already reshaping every industry your students will enter. But most academic programs are still catching up. Faculty are unsure how to teach AI, and students are left experimenting on their own.',
+    'There\'s a growing disconnect between what students are learning on campus and what employers assume they already know. That gap gets wider every semester.',
+    'Justin helps campuses move past the "should we use AI?" debate and into the "here\'s how we actually do this" conversation.',
   ],
 
   // What Justin Delivers
   deliverablesBullets: [
-    'A practical framework for integrating AI into coursework without compromising academic integrity',
-    'Real examples of how AI is already being used in the industries students will enter',
-    'The confidence to engage with AI as a tool, not a threat to critical thinking',
+    'Which AI tools actually matter for their discipline, with specific applications they can picture using',
+    'Approaches faculty can bring into their courses this semester, instead of waiting until next year',
+    'Enough confidence with AI to lead the conversation instead of avoiding it',
   ],
 
   // About
@@ -105,6 +105,7 @@ const pageData = {
   // Video Embed
   videoEmbed: {
     vimeoId: '1077747719',
+    thumbnailUrl: 'https://i.vimeocdn.com/video/2007841923-b518e3a81d79209c29f56ad8abac7909bc919a8e3029f10d93613cc2de61667d-d_640',
     title: 'See Justin in Action',
     description: 'Watch Justin deliver the practical, engaging AI literacy content that has earned him a 98% satisfaction rate from audiences worldwide. His keynotes combine real demonstrations, relatable stories, and actionable frameworks that your faculty and students can use immediately.',
   },

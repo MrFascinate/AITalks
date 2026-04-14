@@ -26,6 +26,7 @@ interface LandingPageData {
   subheadline: string;
   heroImage: string;
   heroImagePosition?: 'left' | 'center' | 'right';
+  heroImageStyle?: React.CSSProperties;
   heroOverlayStrength?: 'light' | 'medium' | 'heavy';
 
   // Problem Section
@@ -63,6 +64,7 @@ interface LandingPageData {
     vimeoId: string;
     title: string;
     description: string;
+    thumbnailUrl?: string;
   };
 }
 
@@ -228,8 +230,10 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
             alt="Justin Shaifer speaking"
             className={`w-full h-full object-cover ${
               data.heroImagePosition === 'left' ? 'object-left' :
-              data.heroImagePosition === 'right' ? 'object-right' : 'object-top'
+              data.heroImagePosition === 'right' ? 'object-right' :
+              data.heroImagePosition === 'center' ? 'object-center' : 'object-top'
             }`}
+            style={data.heroImageStyle}
           />
           <div className={`absolute inset-0 bg-gradient-to-r ${
             data.heroOverlayStrength === 'light'
@@ -442,7 +446,7 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
                   >
                     {/* Thumbnail */}
                     <img
-                      src={`https://vumbnail.com/${data.videoEmbed.vimeoId}.jpg`}
+                      src={data.videoEmbed.thumbnailUrl || `https://vumbnail.com/${data.videoEmbed.vimeoId}.jpg`}
                       alt={data.videoEmbed.title}
                       className="w-full h-full object-cover"
                       loading="lazy"
@@ -501,11 +505,6 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-              <span className="w-2 h-2 bg-primary-500 rounded-full" />
-              <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Key Takeaways</span>
-            </div>
-
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-display">
               What Your Audience Will{' '}
               <span className="text-gradient">Walk Away With</span>
@@ -564,11 +563,6 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-              <span className="w-2 h-2 bg-primary-500 rounded-full" />
-              <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">About Justin</span>
-            </div>
-
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-display">
               Meet <span className="text-gradient">Mr. Fascinate</span>
             </h2>
@@ -592,10 +586,6 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-              <span className="w-2 h-2 bg-primary-500 rounded-full" />
-              <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">Testimonials</span>
-            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white font-display">
               What <span className="text-gradient">Audiences Say</span>
             </h2>
@@ -618,7 +608,7 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
                   </p>
                   <div>
                     {testimonial.organization && (
-                      <p className="text-white font-bold">{testimonial.organization}</p>
+                      <p className="text-gradient font-bold text-xl">{testimonial.organization}</p>
                     )}
                     <p className="text-gray-400 text-xs">
                       {testimonial.author}{testimonial.role && `, ${testimonial.role}`}
@@ -642,10 +632,6 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
               transition={{ duration: 0.6 }}
               className="text-center mb-12"
             >
-              <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-                <HelpCircle size={16} className="text-primary-500" />
-                <span className="text-primary-400 text-sm font-medium uppercase tracking-wider">FAQ</span>
-              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-white font-display">
                 Common <span className="text-gradient">Questions</span>
               </h2>
