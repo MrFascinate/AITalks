@@ -27,6 +27,7 @@ interface LandingPageData {
   heroImage: string;
   heroImagePosition?: 'left' | 'center' | 'right';
   heroImageStyle?: React.CSSProperties;
+  heroImageMobileStyle?: React.CSSProperties;
   heroOverlayStrength?: 'light' | 'medium' | 'heavy';
 
   // Problem Section
@@ -84,6 +85,15 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== 'undefined' ? window.innerWidth < 640 : false
+  );
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 640);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Set document title and meta tags
   useEffect(() => {
@@ -233,7 +243,11 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
               data.heroImagePosition === 'right' ? 'object-right' :
               data.heroImagePosition === 'center' ? 'object-center' : 'object-top'
             }`}
-            style={data.heroImageStyle}
+            style={
+              isMobile && data.heroImageMobileStyle
+                ? data.heroImageMobileStyle
+                : data.heroImageStyle
+            }
           />
           <div className={`absolute inset-0 bg-gradient-to-r ${
             data.heroOverlayStrength === 'light'

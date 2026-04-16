@@ -12,6 +12,7 @@ const pageData = {
   heroImage: '/corporate/concept schools3.JPG',
   heroImagePosition: 'left' as const,
   heroImageStyle: {},
+  heroImageMobileStyle: { objectPosition: '20% center' },
   heroOverlayStrength: 'light' as const,
 
   // Problem Section
