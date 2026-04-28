@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Award, Linkedin, CheckCircle, Quote, Play, Users, Star, Building2, MessageSquare, ChevronDown } from 'lucide-react';
+import { ArrowRight, Award, Linkedin, CheckCircle, Quote, Play, ChevronDown } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import BookingModal from '../components/BookingModal';
@@ -9,10 +9,10 @@ import StickyBookingButton from '../components/StickyBookingButton';
 import Footer from '../components/Footer';
 
 const cteStats = [
-  { icon: MessageSquare, value: '10,000+', label: 'Audience Reviews' },
-  { icon: Users, value: '5M+', label: 'People Reached' },
-  { icon: Building2, value: '250+', label: 'Clients' },
-  { icon: Star, value: '98%', label: 'Satisfaction Rate' },
+  { value: '10,000+', label: 'Audience Reviews' },
+  { value: '5M+', label: 'People Reached' },
+  { value: '250+', label: 'Clients' },
+  { value: '98%', label: 'Satisfaction Rate' },
 ];
 
 const cteFaqs = [
@@ -146,18 +146,6 @@ export default function AICTEProfessionalDev() {
     };
   }, []);
 
-  const clientOrgs = [
-    'Oregon CTE',
-    'California CTE',
-    'Montana CTE',
-    'NSTA',
-    'WSTA',
-    'California Community College Association',
-    'NCMPR',
-    'NYC Department of Education',
-    'Smithsonian',
-  ];
-
   const deliverables = [
     'A framework for weaving AI literacy into existing CTE curriculum while keeping what already works',
     'Tools educators can actually use in the classroom tomorrow',
@@ -193,7 +181,10 @@ export default function AICTEProfessionalDev() {
 
   return (
     <div className="min-h-screen bg-primary-950">
-      <Navbar />
+      <Navbar
+        links={[{ name: 'Main Site', href: '/' }]}
+        onBookClick={() => setIsBookingModalOpen(true)}
+      />
       <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
       <VideoModal isOpen={isVideoModalOpen} onClose={() => setIsVideoModalOpen(false)} videoUrl="https://vimeo.com/1082939720" />
       <StickyBookingButton onBookClick={() => setIsBookingModalOpen(true)} />
@@ -259,32 +250,7 @@ export default function AICTEProfessionalDev() {
       {/* Credibility Bar - Organizations */}
       <section className="py-12 bg-primary-900 border-y border-primary-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-8"
-          >
-            <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wider">
-              Organizations Justin Has Worked With
-            </h2>
-          </motion.div>
-
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-8">
-            {clientOrgs.map((org, index) => (
-              <motion.span
-                key={org}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="text-gray-300 font-medium text-sm md:text-base"
-              >
-                {org}
-              </motion.span>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-8 pt-6 border-t border-primary-800/50">
+          <div className="flex flex-wrap items-center justify-center gap-8">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -365,9 +331,6 @@ export default function AICTEProfessionalDev() {
                 transition={{ duration: 0.4, delay: index * 0.08 }}
                 className="text-center"
               >
-                <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-500/10 border border-primary-500/20 mb-3">
-                  <stat.icon className="w-5 h-5 text-primary-400" />
-                </div>
                 <div className="text-2xl md:text-3xl font-bold text-gradient font-display mb-1">
                   {stat.value}
                 </div>

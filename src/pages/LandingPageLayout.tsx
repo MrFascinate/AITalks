@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Award, Linkedin, BookOpen, CheckCircle, Quote, Play, Users, Star, Building2, MessageSquare, ChevronDown } from 'lucide-react';
+import { ArrowRight, Award, Linkedin, BookOpen, CheckCircle, Quote, Play, ChevronDown } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 import LandingNavbar from '../components/LandingNavbar';
 import BookingModal from '../components/BookingModal';
@@ -74,10 +74,10 @@ interface LandingPageLayoutProps {
 }
 
 const landingStats = [
-  { icon: MessageSquare, value: '10,000+', label: 'Audience Reviews' },
-  { icon: Users, value: '5M+', label: 'People Reached' },
-  { icon: Building2, value: '250+', label: 'Clients' },
-  { icon: Star, value: '98%', label: 'Satisfaction Rate' },
+  { value: '10,000+', label: 'Audience Reviews' },
+  { value: '5M+', label: 'People Reached' },
+  { value: '250+', label: 'Clients' },
+  { value: '98%', label: 'Satisfaction Rate' },
 ];
 
 export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
@@ -397,9 +397,6 @@ export default function LandingPageLayout({ data }: LandingPageLayoutProps) {
                 transition={{ duration: 0.4, delay: index * 0.08 }}
                 className="text-center"
               >
-                <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-500/10 border border-primary-500/20 mb-3">
-                  <stat.icon className="w-5 h-5 text-primary-400" />
-                </div>
                 <div className="text-2xl md:text-3xl font-bold text-gradient font-display mb-1">
                   {stat.value}
                 </div>
