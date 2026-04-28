@@ -4,12 +4,12 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Award, Linkedin, BookOpen, Video, ArrowRight, Play, X, ChevronDown, Mic, Headphones } from 'lucide-react';
 
-const accomplishments: { icon: typeof Award; lead?: string; title: string; description?: string }[] = [
-  { icon: Award, title: "Forbes 30 Under 30", description: "in Education" },
-  { icon: Mic, title: "TEDx Speaker", description: "with hundreds of keynotes delivered worldwide" },
+const accomplishments: { icon: typeof Award; lead?: string; title: string; href?: string; description?: string }[] = [
+  { icon: Award, title: "Forbes 30 Under 30", href: "https://www.forbes.com/profile/justin-shaifer/", description: "in Education" },
+  { icon: Mic, title: "TEDx Speaker", href: "https://youtu.be/9Ad00XQ3JD0?si=0MG7_-WN0UlSrIE5", description: "with hundreds of keynotes delivered worldwide" },
   { icon: Linkedin, title: "LinkedIn Top Voice in Technology", description: "& LinkedIn Learning Instructor" },
-  { icon: Video, title: "Executive Producer", description: "at Fascinate Media" },
-  { icon: Headphones, lead: "Co-Host & Producer", title: "Curiosity Theory Podcast" },
+  { icon: Video, lead: "Executive Producer at", title: "Fascinate Media", href: "https://fascinate.media" },
+  { icon: Headphones, lead: "Co-Host & Producer", title: "Curiosity Theory Podcast", href: "https://www.instagram.com/curiositytheorypod" },
 ];
 
 interface AboutProps {
@@ -124,7 +124,18 @@ export default function About({ onBookClick }: AboutProps) {
                     className="text-gray-200 leading-snug"
                   >
                     {item.lead && <span className="font-normal">{item.lead} </span>}
-                    <span className="font-bold">{item.title}</span>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold hover:text-primary-300 transition-colors"
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      <span className="font-bold">{item.title}</span>
+                    )}
                     {item.description && <span className="font-normal"> {item.description}</span>}
                   </motion.li>
                 ))}
