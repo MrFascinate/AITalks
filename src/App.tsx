@@ -33,9 +33,9 @@ function App() {
       <VideoModal isOpen={!!videoModalUrl} onClose={closeVideoModal} videoUrl={videoModalUrl || ''} />
       <main>
         <Hero onBookClick={openBookingModal} onVideoClick={openVideoModal} />
-        <Stats />
         <LogoWall />
         <About onBookClick={openBookingModal} />
+        <Stats />
         <Topics onVideoClick={openVideoModal} />
         <Testimonials />
         <Videos />

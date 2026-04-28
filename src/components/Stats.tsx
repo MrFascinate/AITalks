@@ -1,33 +1,28 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
-import { Users, Star, Building2, MessageSquare } from 'lucide-react';
 import { speakerData } from '../data/speakerData';
 
 const stats = [
   {
-    icon: MessageSquare,
     value: 10000,
     label: "Audience Reviews",
     suffix: "+",
     displayValue: "10,000+",
   },
   {
-    icon: Users,
     value: 5000000,
     label: "Reached",
     suffix: "+",
     displayValue: "5M+",
   },
   {
-    icon: Building2,
     value: 250,
     label: "Corporate & Educator Clients",
     suffix: "+",
     displayValue: "250+",
   },
   {
-    icon: Star,
     value: 98,
     label: "Satisfaction Rate",
     suffix: "%",
@@ -122,15 +117,10 @@ export default function Stats() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="stat-item"
             >
-              <div className="card-gradient-border p-4 text-center h-full">
-                <div className="relative z-10">
-                  {/* Icon */}
-                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-500/10 border border-primary-500/20 mb-3">
-                    <stat.icon className="w-5 h-5 text-primary-400" />
-                  </div>
-
+              <div className="card-gradient-border p-4 text-center h-full min-h-[150px] flex items-center justify-center">
+                <div className="relative z-10 w-full">
                   {/* Value */}
-                  <div className="text-2xl md:text-3xl font-bold text-gradient font-display mb-1">
+                  <div className="text-3xl md:text-4xl font-bold text-gradient font-display mb-2">
                     <AnimatedCounter
                       value={stat.value}
                       suffix={stat.suffix}
