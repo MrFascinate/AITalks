@@ -2,29 +2,14 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Award, Linkedin, BookOpen, Video, ArrowRight, Play, X, ChevronDown } from 'lucide-react';
+import { Award, Linkedin, BookOpen, Video, ArrowRight, Play, X, ChevronDown, Mic, Headphones } from 'lucide-react';
 
-const highlights = [
-  {
-    icon: Award,
-    title: "Forbes 30 Under 30",
-    description: "Recognized as a leading innovator in science and technology",
-  },
-  {
-    icon: Linkedin,
-    title: "LinkedIn Top Voice in Technology",
-    description: "Instructor on LinkedIn Learning Platform",
-  },
-  {
-    icon: BookOpen,
-    title: "STEM & AI Educator",
-    description: "Creating educational programming around STEM and AI for professionals, educators and students",
-  },
-  {
-    icon: Video,
-    title: "Media Producer",
-    description: "Executive producer at Fascinate Media",
-  },
+const accomplishments: { icon: typeof Award; lead?: string; title: string; description?: string }[] = [
+  { icon: Award, title: "Forbes 30 Under 30", description: "in Education" },
+  { icon: Mic, title: "TEDx Speaker", description: "with hundreds of keynotes delivered worldwide" },
+  { icon: Linkedin, title: "LinkedIn Top Voice in Technology", description: "& LinkedIn Learning Instructor" },
+  { icon: Video, title: "Executive Producer", description: "at Fascinate Media" },
+  { icon: Headphones, lead: "Co-Host & Producer", title: "Curiosity Theory Podcast" },
 ];
 
 interface AboutProps {
@@ -128,26 +113,22 @@ export default function About({ onBookClick }: AboutProps) {
                 </div>
               </motion.div>
 
-              {/* Highlights grid */}
-              <div className="relative grid grid-cols-2 gap-4">
-                {highlights.map((item, index) => (
-                  <motion.div
+              {/* Accomplishments list */}
+              <ul className="relative space-y-2 list-disc list-outside pl-5 marker:text-primary-400">
+                {accomplishments.map((item, index) => (
+                  <motion.li
                     key={item.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                    className="card-gradient-border group"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.2 + index * 0.08 }}
+                    className="text-gray-200 leading-snug"
                   >
-                    <div className="relative z-10 p-5">
-                      <div className="w-12 h-12 rounded-lg bg-primary-500/10 border border-primary-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                        <item.icon className="w-6 h-6 text-primary-400" />
-                      </div>
-                      <h3 className="text-white font-semibold mb-1 group-hover:text-gradient transition-all">{item.title}</h3>
-                      <p className="text-gray-400 text-sm">{item.description}</p>
-                    </div>
-                  </motion.div>
+                    {item.lead && <span className="font-normal">{item.lead} </span>}
+                    <span className="font-bold">{item.title}</span>
+                    {item.description && <span className="font-normal"> {item.description}</span>}
+                  </motion.li>
                 ))}
-              </div>
+              </ul>
             </div>
           </motion.div>
 
@@ -255,48 +236,49 @@ export default function About({ onBookClick }: AboutProps) {
               </a>
             </motion.div>
 
-            {/* Press Logos */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.7 }}
-              className="mt-10"
-            >
-              <p className="text-gray-500 text-sm uppercase tracking-wider mb-4">
-                As Seen In
-              </p>
-              <div className="grid grid-cols-3 gap-6">
-                <a href="https://www.forbes.com/sites/christophergray/2019/09/02/step-aside-bill-nye--neil-degrassi-justin-shaifer-is-the-emerging-stem-tv-personality-we-need-to-hear/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
-                  <img src="/images/forbes logo.png" alt="Forbes" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </a>
-                <a href="https://www.facebook.com/watch/?v=539214044164028" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
-                  <img src="/images/abc news png.png" alt="ABC News" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </a>
-                <a href="https://www.essence.com/education/leaders-of-the-new-school/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
-                  <img src="/images/essence png.png" alt="Essence" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </a>
-                <a href="https://www.detpress.com/abcnews/pressrelease/soul-of-a-nation-next-3-9/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
-                  <img src="/images/hulu png.png" alt="Hulu" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </a>
-                <a href="https://afrotech.com/afrotech-future-50-justin-shaifer" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
-                  <img src="/images/Afrotech Logo.png" alt="AfroTech" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </a>
-                <a href="https://www.yahoo.com/news/salem-students-among-young-innovators-142919005.html" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
-                  <img src="/images/yahoo news logo white.png" alt="Yahoo News" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </a>
-                <a href="https://www.pbs.org/video/climate-change-fctdyl/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
-                  <img src="/images/Pbs logo white.png" alt="PBS" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </a>
-                <a href="https://nmaahc.si.edu/learn/students/through-window-and-mirror-narratives-african-american-stem-professionals" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
-                  <img src="/images/smithsonian logo white.png" alt="Smithsonian" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </a>
-                <a href="https://www.ted.com/talks/justin_shaifer_how_to_speak_generation_z" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
-                  <img src="/images/TEDx logo white.png" alt="TEDx" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
-                </a>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
+
+        {/* Press Logos - full width */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.7 }}
+          className="mt-16 text-center"
+        >
+          <p className="text-gray-500 text-sm uppercase tracking-wider mb-6">
+            As Seen In
+          </p>
+          <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-6 items-center">
+            <a href="https://www.forbes.com/sites/christophergray/2019/09/02/step-aside-bill-nye--neil-degrassi-justin-shaifer-is-the-emerging-stem-tv-personality-we-need-to-hear/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
+              <img src="/images/forbes logo.png" alt="Forbes" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
+            </a>
+            <a href="https://www.facebook.com/watch/?v=539214044164028" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
+              <img src="/images/abc news png.png" alt="ABC News" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
+            </a>
+            <a href="https://www.essence.com/education/leaders-of-the-new-school/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
+              <img src="/images/essence png.png" alt="Essence" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
+            </a>
+            <a href="https://www.detpress.com/abcnews/pressrelease/soul-of-a-nation-next-3-9/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
+              <img src="/images/hulu png.png" alt="Hulu" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
+            </a>
+            <a href="https://afrotech.com/afrotech-future-50-justin-shaifer" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
+              <img src="/images/Afrotech Logo.png" alt="AfroTech" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
+            </a>
+            <a href="https://www.yahoo.com/news/salem-students-among-young-innovators-142919005.html" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
+              <img src="/images/yahoo news logo white.png" alt="Yahoo News" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
+            </a>
+            <a href="https://www.pbs.org/video/climate-change-fctdyl/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
+              <img src="/images/Pbs logo white.png" alt="PBS" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
+            </a>
+            <a href="https://nmaahc.si.edu/learn/students/through-window-and-mirror-narratives-african-american-stem-professionals" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
+              <img src="/images/smithsonian logo white.png" alt="Smithsonian" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
+            </a>
+            <a href="https://www.ted.com/talks/justin_shaifer_how_to_speak_generation_z" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
+              <img src="/images/TEDx logo white.png" alt="TEDx" className="max-h-full max-w-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert" />
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
