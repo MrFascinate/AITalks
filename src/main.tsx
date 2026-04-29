@@ -9,6 +9,7 @@ import AILiteracyWorkshop from './pages/AILiteracyWorkshop.tsx'
 import AIAssessmentLanding from './pages/AIAssessmentLanding.tsx'
 import AICTEProfessionalDev from './pages/AICTEProfessionalDev.tsx'
 import CoursesPage from './pages/CoursesPage.tsx'
+import TheUniverseGame from './pages/TheUniverseGame.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/free-ai-assessment" element={<AIAssessmentLanding />} />
         <Route path="/ai-professional-development" element={<AICTEProfessionalDev />} />
         <Route path="/courses" element={<CoursesPage />} />
+        <Route path="/TheUniverseGame" element={<TheUniverseGame />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
