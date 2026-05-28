@@ -121,7 +121,7 @@ export default function Topics({ onVideoClick }: TopicsProps) {
             >
               <img
                 src="/Group-165-1.png"
-                alt="AI & STEM Talks"
+                alt="AI & STEM Training"
                 className="w-48 md:w-56 h-auto rounded-lg"
                 loading="lazy"
               />
@@ -130,7 +130,7 @@ export default function Topics({ onVideoClick }: TopicsProps) {
             <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-display">
                 AI & STEM{' '}
-                <span className="text-gradient">TALKS</span>
+                <span className="text-gradient">TRAINING</span>
               </h2>
               <p className="text-gray-400 max-w-xl text-lg">
                 Keynotes and hands-on workshops that help educators bring AI into the classroom and enterprise teams put it to work. Every session is customized for each client.

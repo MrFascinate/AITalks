@@ -5,10 +5,10 @@ import { speakerData } from '../data/speakerData';
 
 const stats = [
   {
-    value: 10000,
-    label: "Audience Reviews",
+    value: 70000,
+    label: "Professionals Trained",
     suffix: "+",
-    displayValue: "10,000+",
+    displayValue: "70,000+",
   },
   {
     value: 5000000,
