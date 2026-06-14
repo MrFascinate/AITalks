@@ -133,7 +133,7 @@ export default function Topics({ onVideoClick }: TopicsProps) {
                 <span className="text-gradient">TRAINING</span>
               </h2>
               <p className="text-gray-400 max-w-xl text-lg">
-                Keynotes and hands-on workshops that help educators bring AI into the classroom and enterprise teams put it to work. Every session is customized for each client.
+                <span className="font-bold text-white">Keynotes</span> and hands-on <span className="font-bold text-white">workshops</span> that help educators bring AI into the classroom and enterprise teams put it to work. Every session is customized for each client.
               </p>
             </div>
           </div>
