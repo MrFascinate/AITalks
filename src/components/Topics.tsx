@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Rocket, Briefcase, Laptop, Users, ChevronDown, FileText } from 'lucide-react';
+import { ChevronDown, FileText } from 'lucide-react';
 import { audienceOutcomes } from '../data/speakerData';
 
 const audienceLinks: Record<string, string> = {
@@ -15,7 +15,7 @@ const audienceLinks: Record<string, string> = {
 
 const topics = [
   {
-    icon: Rocket,
+    image: '/AITeacherTraining_1.8.1.png',
     title: 'Your Workday Streamlined with AI',
     description: 'Practical AI tools and techniques to help corporate professionals transform daily workflows and boost productivity.',
     details: `Are you sure you need to be working so hard? Having direct "conversations" with your data, receiving expert-level consulting and research, and getting a head-start on creative work can all be achieved by leveraging AI. Justin will show you how to become an AI power-user by integrating cutting-edge tools into your daily workflow.`,
@@ -30,7 +30,7 @@ const topics = [
     ],
   },
   {
-    icon: Briefcase,
+    image: '/AI Empowerment.jpg',
     title: 'AI Empowerment & Future of Work',
     description: 'Preparing educators, leaders, and teams to thrive in an AI-driven world.',
     details: `Dive into the nuanced world of Artificial Intelligence with Justin Shaifer. He demystifies the crucial role AI plays in today's educational landscape and beyond — introducing practical AI tools to revolutionize teaching practices, boost student engagement, and future-proof careers. Customized for Higher Education and K-12 audiences.`,
@@ -45,7 +45,7 @@ const topics = [
     ],
   },
   {
-    icon: Users,
+    image: '/engage gen z.webp',
     title: 'How to Engage Gen Z in STEM',
     description: 'Bridge traditional teaching with modern demands to inspire the next generation.',
     details: `Boring lectures and uninspiring teachers often ruin students' perceptions of STEM. Justin shares his personal story of overcoming adversity — growing up on the south side of Chicago, where STEM was considered anything but cool — to the amazing heights he's reached in his career. He has performed this keynote for over 50,000 students worldwide.`,
@@ -60,7 +60,7 @@ const topics = [
     ],
   },
   {
-    icon: Laptop,
+    image: '/workshop session.jpg',
     title: 'Hands-on AI Working Sessions',
     description: 'Interactive workshops where participants build real AI skills with applied examples.',
     details: `Justin uses his experience creating hands-on educational courses to walk professionals through how to use AI tools such as AI Agents, AI Browsers, and automated workflows — with hands-on experience and applied examples tailored to your industry.`,
@@ -142,7 +142,6 @@ export default function Topics({ onVideoClick }: TopicsProps) {
         {/* Topics Accordion */}
         <div className="flex flex-col gap-4 mb-16">
           {topics.map((topic, index) => {
-            const IconComponent = topic.icon;
             const isOpen = openIndex === index;
             return (
               <motion.div
@@ -159,8 +158,12 @@ export default function Topics({ onVideoClick }: TopicsProps) {
                   aria-expanded={isOpen}
                 >
                   <div className="flex-shrink-0">
-                    <div className={`w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-accent-400 flex items-center justify-center transition-transform duration-300 ${isOpen ? 'scale-110' : 'group-hover:scale-110'}`}>
-                      <IconComponent className="w-7 h-7 text-white" />
+                    <div className={`w-14 h-14 rounded-xl overflow-hidden transition-transform duration-300 ${isOpen ? 'scale-110' : 'group-hover:scale-110'}`}>
+                      <img
+                        src={topic.image}
+                        alt={topic.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
