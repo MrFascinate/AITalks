@@ -157,7 +157,7 @@ export default function About({ onBookClick }: AboutProps) {
             <div className="space-y-4 text-gray-300 leading-relaxed">
               {/* Initial bio - always visible */}
               <p>Justin "Mr. Fascinate" Shaifer is an award-winning STEM thought leader, enterprise AI trainer, and keynote speaker on a mission to empower the world with innovation.</p>
-              <p>At <a href="https://fascinate.media" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 underline underline-offset-2">Fascinate Media</a>, he serves as both executive producer and on-camera talent, creating educational content about innovation, AI & STEM literacy, and the Future of Work. His roster of past clients and collaborators include LinkedIn, Intuit, NVIDIA, Google, PBS, Discovery, Bill Nye the Science Guy, and Al Roker.</p>
+              <p>Named <a href="https://www.forbes.com/profile/justin-shaifer/" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 underline underline-offset-2">Forbes 30 under 30</a> in education and a LinkedIn Top Voice in Technology, Justin serves as a featured instructor for <a href="https://www.linkedin.com/learning/" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 underline underline-offset-2">LinkedIn Learning</a>, where his AI courses have trained more than 100,000 professionals on the platform.</p>
 
               {/* Expanded bio */}
               <AnimatePresence>
@@ -169,18 +169,9 @@ export default function About({ onBookClick }: AboutProps) {
                     transition={{ duration: 0.35, ease: 'easeInOut' }}
                     className="overflow-hidden space-y-4"
                   >
-                    <p>His team continues ongoing research and development by producing experimental media projects using AI tools; such as AI Agents, Unreal Engine and Virtual Reality.</p>
+                    <p>At <a href="https://fascinate.media" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 underline underline-offset-2">Fascinate Media</a>, he serves as both executive producer and on-camera talent, creating educational content about innovation, AI & STEM literacy, and the Future of Work. His roster of past clients and collaborators include LinkedIn, Intuit, NVIDIA, Google, PBS, Discovery, Bill Nye the Science Guy, and Al Roker.</p>
                     <p>
-                      Named{' '}
-                      <a
-                        href="https://www.forbes.com/profile/justin-shaifer/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary-400 hover:text-primary-300 underline underline-offset-2"
-                      >
-                        Forbes 30 under 30
-                      </a>{' '}
-                      in education and a LinkedIn Top Voice in Technology, Justin serves as a featured instructor for LinkedIn Learning, creating educational AI content for enterprise and individual learners on their global platform. Justin's active speaking career, which exploded after a popular{' '}
+                      Justin's active speaking career, which exploded after a popular{' '}
                       <a
                         href="https://youtu.be/9Ad00XQ3JD0?si=0MG7_-WN0UlSrIE5"
                         target="_blank"
@@ -189,9 +180,8 @@ export default function About({ onBookClick }: AboutProps) {
                       >
                         TEDx talk about Generation Z
                       </a>
-                      , has earned him hundreds of keynote opportunities around the world.
+                      , has earned him hundreds of keynote opportunities around the world. Ranging from "Your Workday Streamlined with AI" and "How to Win the War on Information with Science" to "How to Lead Gen Z," Justin's presentations receive raving reviews from tens of thousands of audience members for dynamic technical showcases, and fresh perspectives on Media, STEM, AI and innovation.
                     </p>
-                    <p>Ranging from "Your Workday Streamlined with AI" and "How to Win the War on Information with Science" to "How to Lead Gen Z," Justin's presentations receive raving reviews from tens of thousands of audience members for dynamic technical showcases, and fresh perspectives on Media, STEM, AI and innovation.</p>
                     <p>
                       Shaped by his experiences growing up on the south side of Chicago, Justin is committed to democratizing STEM education. As co-host and producer of{' '}
                       <a
