@@ -157,7 +157,7 @@ export default function About({ onBookClick }: AboutProps) {
             <div className="space-y-4 text-gray-300 leading-relaxed">
               {/* Initial bio - always visible */}
               <p>Justin "Mr. Fascinate" Shaifer is an award-winning STEM thought leader, enterprise AI trainer, and keynote speaker on a mission to empower the world with innovation.</p>
-              <p>Named <a href="https://www.forbes.com/profile/justin-shaifer/" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 underline underline-offset-2">Forbes 30 under 30</a> in education and a LinkedIn Top Voice in Technology, Justin serves as a featured instructor for <a href="https://www.linkedin.com/learning/" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 underline underline-offset-2">LinkedIn Learning</a>, where his AI courses have trained more than 100,000 professionals on the platform.</p>
+              <p>Named <a href="https://www.forbes.com/profile/justin-shaifer/" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 underline underline-offset-2">Forbes 30 under 30</a> in education and a LinkedIn Top Voice in Technology, Justin serves as a featured instructor for <a href="https://www.linkedin.com/learning/ai-agents-for-everyday-professionals-simple-automations-to-speed-up-your-work-no-code-required/when-to-use-and-not-use-an-ai-agent" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 underline underline-offset-2">LinkedIn Learning</a>, where his AI courses have trained more than 100,000 professionals on the platform.</p>
 
               {/* Expanded bio */}
               <AnimatePresence>
