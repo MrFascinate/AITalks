@@ -104,7 +104,7 @@ export default function Stats() {
           className="text-center lg:text-left mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white font-display">
-            IMPACT BY THE <span className="text-gradient">NUMBERS</span>
+            JUSTIN'S <span className="text-gradient">IMPACT</span>
           </h2>
         </motion.div>
 

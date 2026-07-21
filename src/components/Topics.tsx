@@ -250,7 +250,7 @@ export default function Topics({ onVideoClick }: TopicsProps) {
         >
           <div className="relative z-10 p-8 md:p-10">
             <h3 className="text-xl md:text-2xl font-bold text-white mb-6 text-center font-display">
-              WHAT YOUR AUDIENCE <span className="text-gradient">WILL GAIN</span>
+              YOUR AUDIENCE <span className="text-gradient">WILL GAIN</span>
             </h3>
             <div className="grid sm:grid-cols-2 gap-4">
               {audienceOutcomes.map((outcome, index) => (

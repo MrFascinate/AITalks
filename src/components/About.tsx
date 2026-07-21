@@ -150,8 +150,8 @@ export default function About({ onBookClick }: AboutProps) {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 font-display">
-              EMPOWERING INNOVATION THROUGH{' '}
-              <span className="text-gradient">ENGAGING EDUCATION</span>
+              MEET{' '}
+              <span className="text-gradient">JUSTIN</span>
             </h2>
 
             <div className="space-y-4 text-gray-300 leading-relaxed">

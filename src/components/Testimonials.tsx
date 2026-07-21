@@ -111,8 +111,8 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-display">
-            WHAT PEOPLE ARE{' '}
-            <span className="text-gradient">SAYING</span>
+            RAVING{' '}
+            <span className="text-gradient">REVIEWS</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Feedback from {speakerData.stats.audienceFeedback.toLocaleString()}+ audience members across conferences and events worldwide.
