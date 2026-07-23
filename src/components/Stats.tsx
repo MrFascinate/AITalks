@@ -24,7 +24,7 @@ const stats = [
   },
   {
     value: 98,
-    label: "Satisfaction Rate",
+    label: "Would See Justin Speak Again",
     suffix: "%",
   },
 ];
