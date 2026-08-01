@@ -116,7 +116,7 @@ export default function Stats() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="text-6xl md:text-7xl font-bold text-gradient font-display leading-none mb-3">
+              <div className="text-4xl md:text-5xl font-bold text-gradient font-display leading-none mb-3">
                 <AnimatedCounter
                   value={stat.value}
                   suffix={stat.suffix}
