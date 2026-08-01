@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Rocket, Briefcase, Laptop, Users, ChevronDown, FileText } from 'lucide-react';
+import { Plus, Minus, FileText } from 'lucide-react';
 import { audienceOutcomes } from '../data/speakerData';
 
 const audienceLinks: Record<string, string> = {
@@ -15,7 +15,7 @@ const audienceLinks: Record<string, string> = {
 
 const topics = [
   {
-    icon: Rocket,
+    image: '/AITeacherTraining_1.8.1.png',
     title: 'Your Workday Streamlined with AI',
     description: 'Practical AI tools and techniques to help corporate professionals transform daily workflows and boost productivity.',
     details: `Are you sure you need to be working so hard? Having direct "conversations" with your data, receiving expert-level consulting and research, and getting a head-start on creative work can all be achieved by leveraging AI. Justin will show you how to become an AI power-user by integrating cutting-edge tools into your daily workflow.`,
@@ -30,7 +30,7 @@ const topics = [
     ],
   },
   {
-    icon: Briefcase,
+    image: '/DSC03201.webp',
     title: 'AI Empowerment & Future of Work',
     description: 'Preparing educators, leaders, and teams to thrive in an AI-driven world.',
     details: `Dive into the nuanced world of Artificial Intelligence with Justin Shaifer. He demystifies the crucial role AI plays in today's educational landscape and beyond — introducing practical AI tools to revolutionize teaching practices, boost student engagement, and future-proof careers. Customized for Higher Education and K-12 audiences.`,
@@ -45,7 +45,7 @@ const topics = [
     ],
   },
   {
-    icon: Users,
+    image: '/purdue gen z.webp',
     title: 'How to Engage Gen Z in STEM',
     description: 'Bridge traditional teaching with modern demands to inspire the next generation.',
     details: `Boring lectures and uninspiring teachers often ruin students' perceptions of STEM. Justin shares his personal story of overcoming adversity — growing up on the south side of Chicago, where STEM was considered anything but cool — to the amazing heights he's reached in his career. He has performed this keynote for over 50,000 students worldwide.`,
@@ -60,7 +60,7 @@ const topics = [
     ],
   },
   {
-    icon: Laptop,
+    image: '/workshop session.jpg',
     title: 'Hands-on AI Working Sessions',
     description: 'Interactive workshops where participants build real AI skills with applied examples.',
     details: `Justin uses his experience creating hands-on educational courses to walk professionals through how to use AI tools such as AI Agents, AI Browsers, and automated workflows — with hands-on experience and applied examples tailored to your industry.`,
@@ -103,80 +103,76 @@ export default function Topics({ onVideoClick }: TopicsProps) {
 
       <div className="section-divider absolute top-0 left-0 right-0" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Header: title left, description right */}
         <motion.div
-          ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16"
         >
-          {/* Title with Image */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex-shrink-0"
-            >
-              <img
-                src="/Group-165-1.png"
-                alt="AI & STEM Training"
-                className="w-48 md:w-56 h-auto rounded-lg"
-                loading="lazy"
-              />
-            </motion.div>
-
-            <div className="text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-display">
-                AI & STEM{' '}
-                <span className="text-gradient">TRAINING</span>
-              </h2>
-              <p className="text-gray-400 max-w-xl text-lg">
-                <span className="font-bold text-white">Keynotes</span> and hands-on <span className="font-bold text-white">workshops</span> that help educators bring AI into the classroom and enterprise teams put it to work. Every session is customized for each client.
-              </p>
-            </div>
-          </div>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white font-display leading-none flex-shrink-0">
+            AI & STEM<br />
+            <span className="text-gradient">TRAINING</span>
+          </h2>
+          <p className="text-gray-300 max-w-md text-lg md:text-xl md:pb-2">
+            <span className="font-bold text-white">Keynotes</span> and hands-on{' '}
+            <span className="font-bold text-white">workshops</span> that help educators
+            bring AI into the classroom and enterprise teams put it to work. Every session
+            is customized for each client.
+          </p>
         </motion.div>
 
-        {/* Topics Accordion */}
-        <div className="flex flex-col gap-4 mb-16">
+        {/* Topic rows */}
+        <div className="mb-16">
           {topics.map((topic, index) => {
-            const IconComponent = topic.icon;
             const isOpen = openIndex === index;
+            const num = String(index + 1).padStart(2, '0');
             return (
               <motion.div
                 key={topic.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="card-gradient-border"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                {/* Header row - always visible, clickable */}
+                {/* Divider */}
+                <div className="border-t border-white/10" />
+
+                {/* Row */}
                 <button
-                  className="relative z-10 w-full p-6 md:p-8 flex items-center gap-5 text-left group"
+                  className="w-full py-8 flex items-center gap-6 text-left group"
                   onClick={() => toggle(index)}
                   aria-expanded={isOpen}
                 >
-                  <div className="flex-shrink-0">
-                    <div className={`w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-accent-400 flex items-center justify-center transition-transform duration-300 ${isOpen ? 'scale-110' : 'group-hover:scale-110'}`}>
-                      <IconComponent className="w-7 h-7 text-white" />
-                    </div>
-                  </div>
+                  {/* Number */}
+                  <span className="text-primary-400 font-bold text-sm tracking-widest w-8 flex-shrink-0 font-display">
+                    {num}
+                  </span>
+
+                  {/* Title + Description */}
                   <div className="flex-1 min-w-0">
-                    <h3 className={`text-xl font-bold mb-1 font-display transition-all ${isOpen ? 'text-gradient' : 'text-white group-hover:text-gradient'}`}>
+                    <h3 className={`text-xl md:text-2xl font-bold font-display transition-colors duration-200 ${isOpen ? 'text-gradient' : 'text-white group-hover:text-primary-300'}`}>
                       {topic.title.toUpperCase()}
                     </h3>
-                    <p className="text-gray-400 text-sm">{topic.description}</p>
+                    <p className="text-gray-400 text-sm mt-1">{topic.description}</p>
                   </div>
-                  <div className="flex-shrink-0 ml-4">
-                    <motion.div
-                      animate={{ rotate: isOpen ? 180 : 0 }}
-                      transition={{ duration: 0.3 }}
-                      className={`w-8 h-8 rounded-full border flex items-center justify-center transition-colors ${isOpen ? 'border-primary-500 text-primary-400' : 'border-gray-600 text-gray-500 group-hover:border-primary-500/50'}`}
-                    >
-                      <ChevronDown size={18} />
-                    </motion.div>
+
+                  {/* Photo */}
+                  <div className="flex-shrink-0 hidden sm:block">
+                    <div className="w-28 h-20 md:w-36 md:h-24 rounded-lg overflow-hidden">
+                      <img
+                        src={topic.image}
+                        alt={topic.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Plus/Minus button */}
+                  <div className={`flex-shrink-0 w-9 h-9 rounded-full border flex items-center justify-center transition-colors duration-200 ${isOpen ? 'border-primary-500 text-primary-400 bg-primary-500/10' : 'border-white/20 text-white/50 group-hover:border-primary-500/50 group-hover:text-primary-400'}`}>
+                    {isOpen ? <Minus size={16} /> : <Plus size={16} />}
                   </div>
                 </button>
 
@@ -191,47 +187,46 @@ export default function Topics({ onVideoClick }: TopicsProps) {
                       transition={{ duration: 0.35, ease: 'easeInOut' }}
                       className="overflow-hidden"
                     >
-                      <div className="relative z-10 px-6 md:px-8 pb-8 pt-0">
-                        <div className="border-t border-primary-500/20 pt-6">
-                          <p className="text-gray-300 mb-3 leading-relaxed">{topic.details}</p>
-                          <div className="flex flex-wrap items-center gap-4 mb-5">
-                            {topic.learnMoreUrl && (
-                              <button
-                                onClick={() => onVideoClick(topic.learnMoreUrl!)}
-                                className="inline-flex items-center gap-1 text-primary-400 hover:text-primary-300 font-medium transition-colors"
-                              >
-                                Watch video
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                              </button>
-                            )}
-                            {topic.onePagerUrl && (
-                              <a
-                                href={topic.onePagerUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1.5 text-sm font-semibold text-white bg-primary-500/20 hover:bg-primary-500/30 border border-primary-500/40 hover:border-primary-500/70 px-3 py-1.5 rounded-lg transition-all"
-                              >
-                                <FileText size={14} />
-                                View One-Pager
-                              </a>
-                            )}
-                          </div>
-                          <ul className="space-y-3">
-                            {topic.bullets.map((bullet) => (
-                              <li key={bullet} className="flex items-start gap-3">
-                                <div className="w-5 h-5 rounded-full bg-gradient-to-br from-primary-500 to-accent-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                  <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                                  </svg>
-                                </div>
-                                <span className="text-gray-300">{bullet}</span>
-                              </li>
-                            ))}
-                          </ul>
+                      <div className="pl-14 pb-8">
+                        <p className="text-gray-300 mb-4 leading-relaxed max-w-3xl">{topic.details}</p>
+                        <div className="flex flex-wrap items-center gap-4 mb-5">
+                          {topic.learnMoreUrl && (
+                            <button
+                              onClick={(e) => { e.stopPropagation(); onVideoClick(topic.learnMoreUrl!); }}
+                              className="inline-flex items-center gap-1.5 text-primary-400 hover:text-primary-300 font-medium transition-colors text-sm"
+                            >
+                              Watch video
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                              </svg>
+                            </button>
+                          )}
+                          {topic.onePagerUrl && (
+                            <a
+                              href={topic.onePagerUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              className="inline-flex items-center gap-1.5 text-sm font-semibold text-white bg-primary-500/20 hover:bg-primary-500/30 border border-primary-500/40 hover:border-primary-500/70 px-3 py-1.5 rounded-lg transition-all"
+                            >
+                              <FileText size={14} />
+                              View One-Pager
+                            </a>
+                          )}
                         </div>
+                        <ul className="space-y-2 max-w-3xl">
+                          {topic.bullets.map((bullet) => (
+                            <li key={bullet} className="flex items-start gap-3">
+                              <div className="w-5 h-5 rounded-full bg-gradient-to-br from-primary-500 to-accent-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                                </svg>
+                              </div>
+                              <span className="text-gray-300 text-sm">{bullet}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </motion.div>
                   )}
@@ -239,6 +234,8 @@ export default function Topics({ onVideoClick }: TopicsProps) {
               </motion.div>
             );
           })}
+          {/* Final divider */}
+          <div className="border-t border-white/10" />
         </div>
 
         {/* Audience Outcomes */}
