@@ -108,30 +108,22 @@ export default function Stats() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 gap-4 md:gap-5">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-12">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="stat-item"
             >
-              <div className="card-gradient-border p-4 text-center h-full min-h-[150px] flex items-center justify-center">
-                <div className="relative z-10 w-full">
-                  {/* Value */}
-                  <div className="text-3xl md:text-4xl font-bold text-gradient font-display mb-2">
-                    <AnimatedCounter
-                      value={stat.value}
-                      suffix={stat.suffix}
-                      displayValue={stat.displayValue}
-                    />
-                  </div>
-
-                  {/* Label */}
-                  <p className="text-gray-400 text-xs uppercase tracking-wider">{stat.label}</p>
-                </div>
+              <div className="text-6xl md:text-7xl font-bold text-gradient font-display leading-none mb-3">
+                <AnimatedCounter
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  displayValue={stat.displayValue}
+                />
               </div>
+              <p className="text-gray-400 text-xs uppercase tracking-widest">{stat.label}</p>
             </motion.div>
           ))}
         </div>
