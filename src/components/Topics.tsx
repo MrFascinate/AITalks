@@ -15,7 +15,7 @@ const audienceLinks: Record<string, string> = {
 
 const topics = [
   {
-    image: '/AITeacherTraining_1.8.1.png',
+    image: '/DSC03201.webp',
     title: 'Your Workday Streamlined with AI',
     description: 'Practical AI tools and techniques to help corporate professionals transform daily workflows and boost productivity.',
     details: `Are you sure you need to be working so hard? Having direct "conversations" with your data, receiving expert-level consulting and research, and getting a head-start on creative work can all be achieved by leveraging AI. Justin will show you how to become an AI power-user by integrating cutting-edge tools into your daily workflow.`,
@@ -30,7 +30,7 @@ const topics = [
     ],
   },
   {
-    image: '/DSC03201.webp',
+    image: '/AITeacherTraining_1.8.1.png',
     title: 'AI Empowerment & Future of Work',
     description: 'Preparing educators, leaders, and teams to thrive in an AI-driven world.',
     details: `Dive into the nuanced world of Artificial Intelligence with Justin Shaifer. He demystifies the crucial role AI plays in today's educational landscape and beyond — introducing practical AI tools to revolutionize teaching practices, boost student engagement, and future-proof careers. Customized for Higher Education and K-12 audiences.`,
