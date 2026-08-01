@@ -15,7 +15,7 @@ const audienceLinks: Record<string, string> = {
 
 const topics = [
   {
-    image: '/DSC03201.webp',
+    image: '/P1122594.00_08_35_24.Still010.webp',
     title: 'Your Workday Streamlined with AI',
     description: 'Practical AI tools and techniques to help corporate professionals transform daily workflows and boost productivity.',
     details: `Are you sure you need to be working so hard? Having direct "conversations" with your data, receiving expert-level consulting and research, and getting a head-start on creative work can all be achieved by leveraging AI. Justin will show you how to become an AI power-user by integrating cutting-edge tools into your daily workflow.`,
@@ -45,7 +45,7 @@ const topics = [
     ],
   },
   {
-    image: '/purdue gen z.webp',
+    image: '/DSC03201.webp',
     title: 'How to Engage Gen Z in STEM',
     description: 'Bridge traditional teaching with modern demands to inspire the next generation.',
     details: `Boring lectures and uninspiring teachers often ruin students' perceptions of STEM. Justin shares his personal story of overcoming adversity — growing up on the south side of Chicago, where STEM was considered anything but cool — to the amazing heights he's reached in his career. He has performed this keynote for over 50,000 students worldwide.`,
