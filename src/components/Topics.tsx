@@ -277,7 +277,7 @@ export default function Topics({ onVideoClick }: TopicsProps) {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-12 text-center"
         >
-          <p className="text-gray-400 mb-4 uppercase tracking-wider text-sm">Perfect for</p>
+          <p className="text-gray-400 mb-4 uppercase tracking-wider text-sm">Explore more</p>
           <div className="flex flex-wrap justify-center gap-3">
             {['Corporate Leadership Teams', 'STEM & Technology Conferences', 'K-12 Educators', 'College Students & Faculty', 'Professional Development Events'].map((audience) => (
               <Link
