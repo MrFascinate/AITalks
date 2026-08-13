@@ -145,11 +145,6 @@ export default function Topics({ onVideoClick }: TopicsProps) {
                   onClick={() => toggle(index)}
                   aria-expanded={isOpen}
                 >
-                  {/* Number */}
-                  <span className="text-primary-400 font-bold text-sm tracking-widest w-8 flex-shrink-0 font-display">
-                    {num}
-                  </span>
-
                   {/* Title + Description */}
                   <div className="flex-1 min-w-0">
                     <h3 className={`text-xl md:text-2xl font-bold font-display transition-colors duration-200 ${isOpen ? 'text-gradient' : 'text-white group-hover:text-primary-300'}`}>
