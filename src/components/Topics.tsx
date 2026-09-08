@@ -156,8 +156,8 @@ export default function Topics({ onVideoClick }: TopicsProps) {
                   <motion.div
                     className="flex-shrink-0 hidden sm:block rounded-lg overflow-hidden"
                     animate={{
-                      width: isOpen ? 220 : 144,
-                      height: isOpen ? 148 : 96,
+                      width: isOpen ? 280 : 144,
+                      height: isOpen ? 188 : 96,
                     }}
                     transition={{ duration: 0.35, ease: 'easeInOut' }}
                   >
