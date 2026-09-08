@@ -128,7 +128,6 @@ export default function Topics({ onVideoClick }: TopicsProps) {
         <div className="mb-16">
           {topics.map((topic, index) => {
             const isOpen = openIndex === index;
-            const num = String(index + 1).padStart(2, '0');
             return (
               <motion.div
                 key={topic.title}
