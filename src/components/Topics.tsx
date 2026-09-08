@@ -154,16 +154,21 @@ export default function Topics({ onVideoClick }: TopicsProps) {
                   </div>
 
                   {/* Photo */}
-                  <div className="flex-shrink-0 hidden sm:block">
-                    <div className="w-28 h-20 md:w-36 md:h-24 rounded-lg overflow-hidden">
-                      <img
-                        src={topic.image}
-                        alt={topic.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
+                  <motion.div
+                    className="flex-shrink-0 hidden sm:block rounded-lg overflow-hidden"
+                    animate={{
+                      width: isOpen ? 220 : 144,
+                      height: isOpen ? 148 : 96,
+                    }}
+                    transition={{ duration: 0.35, ease: 'easeInOut' }}
+                  >
+                    <img
+                      src={topic.image}
+                      alt={topic.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </motion.div>
 
                   {/* Plus/Minus button */}
                   <div className={`flex-shrink-0 w-9 h-9 rounded-full border flex items-center justify-center transition-colors duration-200 ${isOpen ? 'border-primary-500 text-primary-400 bg-primary-500/10' : 'border-white/20 text-white/50 group-hover:border-primary-500/50 group-hover:text-primary-400'}`}>
