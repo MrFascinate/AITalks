@@ -117,10 +117,9 @@ export default function Topics({ onVideoClick }: TopicsProps) {
             <span className="text-gradient">TRAINING</span>
           </h2>
           <p className="text-gray-300 max-w-md text-lg md:text-xl md:pb-2">
-            <span className="font-bold text-white">Keynotes</span> and hands-on{' '}
+            Customized <span className="font-bold text-white">keynotes</span> and hands-on{' '}
             <span className="font-bold text-white">workshops</span> that help educators
-            bring AI into the classroom and enterprise teams put it to work. Every session
-            is customized for each client.
+            bring AI into the classroom and enterprise teams put it to work.
           </p>
         </motion.div>
 
@@ -272,7 +271,7 @@ export default function Topics({ onVideoClick }: TopicsProps) {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-12 text-center"
         >
-          <p className="text-gray-400 mb-4 uppercase tracking-wider text-sm">Explore more</p>
+          <p className="text-gray-400 mb-4 uppercase tracking-wider text-sm">Find your session</p>
           <div className="flex flex-wrap justify-center gap-3">
             {['Corporate Leadership Teams', 'STEM & Technology Conferences', 'K-12 Educators', 'College Students & Faculty', 'Professional Development Events'].map((audience) => (
               <Link

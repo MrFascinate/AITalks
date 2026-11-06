@@ -45,8 +45,6 @@ export default function Contact({ onBookClick }: ContactProps) {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-3xl mx-auto"
         >
-          <div className="card-gradient-border">
-            <div className="relative z-10 p-8 md:p-12">
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                 <motion.button
@@ -83,8 +81,6 @@ export default function Contact({ onBookClick }: ContactProps) {
                   <Instagram className="w-5 h-5" />
                 </motion.a>
               </div>
-            </div>
-          </div>
         </motion.div>
 
         {/* Quick Info */}

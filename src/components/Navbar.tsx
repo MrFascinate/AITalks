@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 const defaultNavLinks = [
-  { name: 'About', href: '#about' },
   { name: 'Topics', href: '#topics' },
   { name: 'Testimonials', href: '#testimonials' },
   { name: 'Videos', href: '#videos' },

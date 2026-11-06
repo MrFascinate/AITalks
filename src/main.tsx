@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop.tsx'
 import './index.css'
 import App from './App.tsx'
 import AISpeakerCorporate from './pages/AISpeakerCorporate.tsx'
@@ -14,6 +15,7 @@ import TheUniverseGame from './pages/TheUniverseGame.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/ai-keynote-speaker-corporate" element={<AISpeakerCorporate />} />

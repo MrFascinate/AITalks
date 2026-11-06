@@ -248,7 +248,7 @@ export default function About({ onBookClick }: AboutProps) {
           className="mt-16 text-center"
         >
           <p className="text-gray-500 text-sm uppercase tracking-wider mb-6">
-            As Seen In
+            Press
           </p>
           <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-6 items-center">
             <a href="https://www.forbes.com/sites/christophergray/2019/09/02/step-aside-bill-nye--neil-degrassi-justin-shaifer-is-the-emerging-stem-tv-personality-we-need-to-hear/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">

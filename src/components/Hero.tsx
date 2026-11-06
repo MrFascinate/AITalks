@@ -109,20 +109,6 @@ export default function Hero({ onBookClick, onVideoClick }: HeroProps) {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="w-6 h-10 border-2 border-primary-500/50 rounded-full flex items-start justify-center p-1">
-          <motion.div
-            className="w-2 h-2 bg-primary-500 rounded-full"
-            animate={{ y: [0, 16, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-        </div>
-      </motion.div>
     </section>
   );
 }
