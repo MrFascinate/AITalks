@@ -1,200 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>AI Keynote Speaker for Higher Education | Justin Shaifer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Empowerment &amp; Future of Work | Justin Shaifer</title>
 <meta name="description" content="Book Justin Shaifer, Forbes 30 Under 30 AI keynote speaker for higher education. Empowering faculty and students with practical AI literacy for the future of work."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://justinshaifer.com/one-pagers/ai-empowerment.html"/>
 <link rel="icon" type="image/png" href="/Fascinate Media Logo.png"/>
-
 <!-- Open Graph -->
 <meta property="og:title" content="AI Keynote Speaker for Higher Education | Justin Shaifer"/>
 <meta property="og:description" content="Book Justin Shaifer for your higher education conference. Empowering faculty and students with practical AI literacy."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://justinshaifer.com/one-pagers/ai-empowerment.html"/>
 <meta property="og:image" content="https://justinshaifer.com/headshot8.jpg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@600;700&display=swap');
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Montserrat',sans-serif;background:#11111C;color:#fff;width:8.5in;min-height:11in;margin:0 auto}
-  .page{display:grid;grid-template-columns:2fr 3fr;min-height:11in}
-  .left{background:linear-gradient(160deg,#0d1526 0%,#11111C 60%);position:relative;overflow:hidden;display:flex;flex-direction:column;padding:0}
-  .left-photo{width:100%;height:280px;object-fit:cover;object-position:center top;filter:grayscale(20%)}
-  .left-content{padding:20px 18px;flex:1;display:flex;flex-direction:column;gap:14px}
-  .badge{background:linear-gradient(135deg,#2585E8,#1a6fd4);padding:5px 12px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;width:fit-content}
-  .speaker-name{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;line-height:1.1;color:#fff}
-  .speaker-name span{color:#2585E8}
-  .credential{font-size:9px;color:#94a3b8;letter-spacing:1px;text-transform:uppercase;border-top:1px solid rgba(37,133,232,0.2);padding-top:12px}
-  .credential-item{margin-bottom:5px;font-size:9px;color:#cbd5e1;white-space:nowrap}
-  .divider{width:40px;height:3px;background:linear-gradient(90deg,#2585E8,#38bdf8);border-radius:2px}
-  .contact-block{margin-top:auto;border-top:1px solid rgba(255,255,255,0.08);padding-top:12px}
-  .contact-label{font-size:8px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
-  .contact-item{font-size:9px;color:#94a3b8;margin-bottom:3px}
-  .contact-item span{color:#2585E8}
-  .logo-strip{background:rgba(37,133,232,0.08);padding:10px 14px;border-top:1px solid rgba(37,133,232,0.15)}
-  .logo-strip p{font-size:7px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px}
-  .client-tags{display:flex;flex-wrap:wrap;gap:3px}
-  .client-tag{font-size:7px;color:#94a3b8;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:2px 6px;border-radius:3px}
-  .about-section{margin-top:10px}
-  .about-label{font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
-  .about-text{font-size:12px;color:#94a3b8;line-height:1.5}
-  .right{background:#0f1623;padding:20px 24px 16px;display:flex;flex-direction:column;gap:0}
-  .topic-label{font-size:8px;color:#2585E8;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:6px}
-  .topic-title{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;line-height:1.15;color:#fff;margin-bottom:3px}
-  .topic-title span{background:linear-gradient(135deg,#2585E8,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-  .accent-line{width:50px;height:3px;background:linear-gradient(90deg,#2585E8,#38bdf8);border-radius:2px;margin:8px 0}
-  .overview-text{font-size:10px;line-height:1.6;color:#94a3b8;margin-bottom:12px}
-  .section-heading{font-size:8px;color:#2585E8;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:6px}
-  .takeaways{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
-  .takeaway{display:flex;gap:8px;align-items:flex-start}
-  .check{width:14px;height:14px;min-width:14px;background:linear-gradient(135deg,#2585E8,#38bdf8);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
-  .check svg{width:8px;height:8px}
-  .takeaway-text{font-size:10px;color:#cbd5e1;line-height:1.4}
-  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
-  .track-box{background:rgba(37,133,232,0.06);border:1px solid rgba(37,133,232,0.2);border-radius:6px;padding:8px 10px}
-  .track-title{font-size:8px;color:#2585E8;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
-  .track-item{font-size:8px;color:#94a3b8;line-height:1.4;margin-bottom:1px}
-  .audience-box{background:rgba(37,133,232,0.06);border:1px solid rgba(37,133,232,0.2);border-radius:6px;padding:8px 12px;margin-bottom:8px}
-  .audience-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
-  .audience-tag{font-size:8px;color:#2585E8;border:1px solid rgba(37,133,232,0.35);padding:3px 8px;border-radius:12px}
-  .cta-block{margin-top:auto;background:linear-gradient(135deg,#2585E8,#1a6fd4);border-radius:6px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between}
-  .cta-text{font-size:9px;font-weight:600;color:#fff}
-  .cta-url{font-size:9px;color:rgba(255,255,255,0.8);font-weight:500}
-  .stats-section{margin-top:8px;margin-bottom:8px}
-  .stats-label{font-size:7px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
-  .stats-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px}
-  .stat-item{background:rgba(37,133,232,0.08);border:1px solid rgba(37,133,232,0.2);border-radius:6px;padding:8px 6px;text-align:center}
-  .stat-number{font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;color:#2585E8}
-  .stat-desc{font-size:6px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;margin-top:1px}
-  .testimonials-section{margin-top:8px;flex:1}
-  .testimonial{background:rgba(37,133,232,0.04);border-left:3px solid #2585E8;padding:6px 10px;margin-bottom:6px;border-radius:0 6px 6px 0}
-  .testimonial-quote{font-size:9px;color:#cbd5e1;line-height:1.4;font-style:italic;margin-bottom:3px}
-  .testimonial-author{font-size:8px;color:#2585E8;font-weight:600}
-  .testimonial-role{font-size:7px;color:#64748b}
-  @media print{
-    @page{margin:0;size:8.5in 11in}
-    body{-webkit-print-color-adjust:exact;print-color-adjust:exact;margin:0}
-    .page{min-height:11in}
-    .no-print{display:none!important}
-  }
+html,body{margin:0;background:#e9edf3}
+.toolbar{max-width:816px;margin:0 auto;padding:16px 16px 0;display:flex;justify-content:space-between;align-items:center;font-family:'Montserrat',system-ui,sans-serif;font-size:14px}
+.toolbar a{color:#1769c2;text-decoration:none;font-weight:600}
+.toolbar button{font:600 14px 'Montserrat',system-ui,sans-serif;background:#0d1323;color:#fff;border:0;border-radius:6px;padding:10px 16px;cursor:pointer}
+.sheet-wrap{display:flex;justify-content:center;padding:16px 0 32px;overflow:hidden}
+.sheet{width:816px;height:1056px;box-shadow:0 2px 18px rgba(13,19,35,.18);transform-origin:top center}
+@media print{
+  @page{size:letter;margin:0}
+  html,body{background:#fff}
+  .toolbar{display:none}
+  .sheet-wrap{padding:0}
+  .sheet{box-shadow:none;transform:none!important}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
 </style>
 </head>
 <body>
-<div class="no-print" style="background:#1e293b;padding:12px 24px;display:flex;justify-content:flex-end;align-items:center;font-family:Montserrat,sans-serif;font-size:13px;color:#94a3b8">
-  <button onclick="window.print()" style="background:#2585E8;color:#fff;border:none;padding:8px 20px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer">Download PDF</button>
+<div class="toolbar"><a href="/">&larr; Back to justinshaifer.com</a><button type="button" onclick="window.print()">Download PDF</button></div>
+<div class="sheet-wrap"><div class="sheet" id="sheet">
+<div style="width: 816px; height: 1056px; box-sizing: border-box; background: #ffffff; color: #0d1323; font-family: 'Montserrat', system-ui, sans-serif; font-size: 12px; line-height: 1.45; display: flex; flex-direction: column; overflow: hidden">
+
+<header style="background: #0d1323; padding: 16px 40px; display: flex; justify-content: space-between; align-items: center">
+<img src="img/mr-fascinate-logo.png" alt="Mr. Fascinate" style="height: 30px; width: auto; display: block">
+</header>
+
+<main style="flex-grow: 1; padding: 24px 40px 18px 40px; display: flex; flex-direction: column; gap: 16px">
+
+<section style="display: flex; gap: 24px; align-items: stretch">
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<div style="font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.16em; color: #1769c2">EDUCATION &amp; FUTURE OF WORK</div>
+<h1 style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 36px; line-height: 1.04; text-transform: uppercase; text-wrap: balance">AI Empowerment &amp; <span style="color: #1f8eea">Future of Work</span></h1>
+<div style="font-weight: 600; font-size: 14px; color: #3a4459">Tools to empower the next generation</div>
+<p style="margin: 0; text-wrap: pretty">Justin demystifies the role AI plays in education and beyond, with practical AI tools that change how teachers teach, raise student engagement and future-proof careers. Customized for higher education and K-12 audiences.</p>
 </div>
-<div class="page">
-  <div class="left">
-    <img class="left-photo" src="/AI Empowerment.jpg" alt="Justin Shaifer speaking"/>
-    <div class="left-content">
-      <div>
-        <div style="margin-top:10px">
-          <div class="speaker-name">JUSTIN <span>"MR. FASCINATE"</span> SHAIFER</div>
-        </div>
-        <div class="divider" style="margin-top:10px"></div>
-      </div>
-      <div>
-        <div class="credential">Credentials</div>
-        <div class="credential-item">📋 Forbes 30 Under 30  - Education</div>
-        <div class="credential-item">💼 LinkedIn Top Voice in Technology</div>
-        <div class="credential-item">🎓 LinkedIn Learning Instructor</div>
-        <div class="credential-item">🎤 TEDx Speaker</div>
-        <div class="credential-item">🎬 Exec. Producer, Fascinate Media</div>
-      </div>
-      <div class="logo-strip" style="margin:0 -18px">
-        <p>Past Clients & Collaborators</p>
-        <div class="client-tags">
-          <span class="client-tag">NCTIES</span>
-          <span class="client-tag">Smithsonian</span>
-          <span class="client-tag">Antelope Valley</span>
-          <span class="client-tag">AZ School Boards</span>
-          <span class="client-tag">Concept Schools</span>
-          <span class="client-tag">PBS</span>
-        </div>
-      </div>
-      <div class="about-section">
-        <div class="about-label">About Justin</div>
-        <div class="about-text">Justin "Mr. Fascinate" Shaifer is an award-winning STEM thought leader, enterprise AI trainer, and keynote speaker on a mission to empower the world with innovation.<br><br>At Fascinate Media, he serves as both executive producer and on-camera talent, creating educational content about innovation, AI & STEM literacy, and the Future of Work. His roster of past clients and collaborators include LinkedIn, Intuit, NVIDIA, Google, PBS, Discovery, Bill Nye the Science Guy, and Al Roker.</div>
-      </div>
-      <div class="contact-block">
-        <div class="contact-label">Book This Keynote</div>
-        <div class="contact-item">🌐 <span>justinshaifer.com</span></div>
-        <div class="contact-item">📸 <span>@mr.fascinate</span></div>
-        <div class="contact-item">💼 <span>linkedin.com/in/jshaifer</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="right">
-    <div class="topic-label">Education & Future of Work</div>
-    <h1 class="topic-title">AI <span>EMPOWERMENT</span> &amp; FUTURE OF WORK</h1>
-    <div style="font-size:11px;color:#64748b;font-style:italic;margin-top:3px">Tools to Empower the Next Generation</div>
-    <div class="accent-line"></div>
-    <p class="overview-text">Dive into the nuanced world of Artificial Intelligence with Justin Shaifer. He demystifies the crucial role AI plays in today's educational landscape and beyond  - introducing practical AI tools to revolutionize teaching practices, boost student engagement, and future-proof careers. Customized for Higher Education and K-12 audiences.</p>
-    <div class="section-heading">What Your Audience Will Learn</div>
-    <div class="takeaways">
-      <div class="takeaway"><div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div class="takeaway-text">Build AI literacy and confidence across your organization or classroom</div></div>
-      <div class="takeaway"><div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div class="takeaway-text">Explore the best AI tools for the classroom and the boardroom</div></div>
-      <div class="takeaway"><div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div class="takeaway-text">Understand why educators and leaders need AI today  - not tomorrow</div></div>
-      <div class="takeaway"><div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><div class="takeaway-text">Develop future-proof skills that keep students and professionals competitive</div></div>
-    </div>
-    <div class="section-heading">Customized Tracks</div>
-    <div class="two-col">
-      <div class="track-box">
-        <div class="track-title">Higher Education</div>
-        <div class="track-item">→ AI Literacy for Campus</div>
-        <div class="track-item">→ Best AI Tools for Classroom</div>
-        <div class="track-item">→ Faculty Development</div>
-      </div>
-      <div class="track-box">
-        <div class="track-title">K–12</div>
-        <div class="track-item">→ Why Educators Need AI Today</div>
-        <div class="track-item">→ Future-Proof Skills</div>
-        <div class="track-item">→ Student Engagement</div>
-      </div>
-    </div>
-    <div class="audience-box">
-      <div class="section-heading" style="margin-bottom:0">Ideal For</div>
-      <div class="audience-tags">
-        <span class="audience-tag">Higher Ed Conferences</span>
-        <span class="audience-tag">K–12 Summits</span>
-        <span class="audience-tag">School Boards</span>
-        <span class="audience-tag">Faculty PD Days</span>
-      </div>
-    </div>
-    <div class="stats-section">
-      <div class="stats-label">Speaker Stats <span style="color:#2585E8">powered by Talkadot</span></div>
-      <div class="stats-grid">
-        <div class="stat-item"><div class="stat-number">10,000+</div><div class="stat-desc">Audience Reviews</div></div>
-        <div class="stat-item"><div class="stat-number">5M+</div><div class="stat-desc">Reached</div></div>
-        <div class="stat-item"><div class="stat-number">250+</div><div class="stat-desc">Clients</div></div>
-        <div class="stat-item"><div class="stat-number">98%</div><div class="stat-desc">Satisfaction</div></div>
-      </div>
-    </div>
-    <div class="testimonials-section">
-      <div class="section-heading">What Educators Say</div>
-      <div class="testimonial">
-        <div class="testimonial-quote">"Just listened to Justin Shaifer's talk on being a better educator - absolutely incredible. His energy is infectious, and he blends real-world experience, humor, and cutting-edge insight in a way that makes you rethink how we teach."</div>
-        <div class="testimonial-author">Linn-Benton Community College</div>
-        <div class="testimonial-role">Heather Peacock, Faculty</div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial-quote">"Justin's authenticity is clear to see in his content and his speaking. His ability to share complex ideas in a digestible manner are clear. My students will be better prepared because of my experience."</div>
-        <div class="testimonial-author">Hermiston School District</div>
-        <div class="testimonial-role">John Fisher, Educator</div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial-quote">"The session gave actionable recommendations for how to authentically support our students to engage in STEM education and to integrate AI as a way to deepen learning."</div>
-        <div class="testimonial-author">St. Michael's Prep</div>
-        <div class="testimonial-role">Jacqueline Glenn, Administrator</div>
-      </div>
-    </div>
-    <div class="cta-block">
-      <div class="cta-text">Ready to book this keynote?</div>
-      <div class="cta-url">justinshaifer.com</div>
-    </div>
-  </div>
+<img src="img/ai-empowerment.jpg" alt="Justin Shaifer on a conference stage panel" style="flex: 0 0 270px; width: 270px; height: 210px; object-fit: cover; border-radius: 8px; display: block">
+</section>
+
+<section style="display: flex; gap: 24px; align-items: stretch">
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<h2 style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 19px; text-transform: uppercase">What Your Audience <span style="color: #1f8eea">Will Learn</span></h2>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px">
+<li style="display: flex; gap: 8px"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1769c2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Build AI literacy and confidence across the organization or classroom</span></li>
+<li style="display: flex; gap: 8px"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1769c2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Explore the best AI tools for the classroom and the boardroom</span></li>
+<li style="display: flex; gap: 8px"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1769c2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Understand why educators and leaders need AI today, not later</span></li>
+<li style="display: flex; gap: 8px"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1769c2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Develop future-proof skills that keep students and professionals competitive</span></li>
+</ul>
 </div>
+<div style="flex: 0 0 270px; background: #0d1323; color: #ffffff; border-radius: 8px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 12px">
+<div style="font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #c9d3e4">SPEAKER STATS · TALKADOT</div>
+<div style="flex-grow: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: space-evenly; gap: 14px">
+<div><div style="font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 28px; line-height: 1">10,000+</div><div style="font-size: 11px; color: #c9d3e4">Audience reviews</div></div>
+<div><div style="font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 28px; line-height: 1">5M+</div><div style="font-size: 11px; color: #c9d3e4">People reached</div></div>
+<div><div style="font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 28px; line-height: 1">250+</div><div style="font-size: 11px; color: #c9d3e4">Clients</div></div>
+<div><div style="font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 28px; line-height: 1; color: #1f8eea">98%</div><div style="font-size: 11px; color: #c9d3e4">Satisfaction</div></div>
+</div>
+</div>
+</section>
+
+<section style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+<div style="background: #edf4fc; border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 14px; text-transform: uppercase">Higher Education Track</div><div style="font-size: 11.5px; color: #3a4459">AI literacy for campus · Best AI tools for the classroom · Faculty development</div></div>
+<div style="background: #edf4fc; border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 14px; text-transform: uppercase">K-12 Track</div><div style="font-size: 11.5px; color: #3a4459">Why educators need AI today · Future-proof skills · Student engagement</div></div>
+<div style="background: #edf4fc; border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 14px; text-transform: uppercase">Ideal For</div><div style="font-size: 11.5px; color: #3a4459">Higher ed conferences · K-12 summits · School boards · Faculty PD days</div></div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 8px">
+<h2 style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 19px; text-transform: uppercase">What Educators <span style="color: #1f8eea">Say</span></h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+<figure style="margin: 0; border: 1px solid #d5dfee; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 8px; justify-content: space-between"><blockquote style="margin: 0; font-size: 11.5px">“Absolutely incredible. His energy is infectious, and he blends real-world experience, humor, and cutting-edge insight in a way that makes you rethink how we teach.”</blockquote><figcaption style="font-size: 11px; color: #3a4459"><strong style="color: #0d1323">Linn-Benton Community College</strong><br>Heather Peacock, Faculty</figcaption></figure>
+<figure style="margin: 0; border: 1px solid #d5dfee; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 8px; justify-content: space-between"><blockquote style="margin: 0; font-size: 11.5px">“Justin’s authenticity is clear to see in his content and his speaking. My students will be better prepared because of my experience.”</blockquote><figcaption style="font-size: 11px; color: #3a4459"><strong style="color: #0d1323">Hermiston School District</strong><br>John Fisher, Educator</figcaption></figure>
+<figure style="margin: 0; border: 1px solid #d5dfee; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 8px; justify-content: space-between"><blockquote style="margin: 0; font-size: 11.5px">“The session gave actionable recommendations for how to authentically support our students to engage in STEM education and to integrate AI as a way to deepen learning.”</blockquote><figcaption style="font-size: 11px; color: #3a4459"><strong style="color: #0d1323">St. Michael’s Prep</strong><br>Jacqueline Glenn, Administrator</figcaption></figure>
+</div>
+</section>
+
+<section style="border-top: 1px solid #d5dfee; padding-top: 14px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 5px"><div style="font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase">About Justin</div><p style="margin: 0; font-size: 11.5px; color: #3a4459">Award-winning STEM thought leader, enterprise AI trainer and keynote speaker. His LinkedIn Learning AI courses have trained more than 150,000 professionals.</p></div>
+<div style="display: flex; flex-direction: column; gap: 5px"><div style="font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase">Credentials</div><div style="font-size: 11.5px; color: #3a4459">Forbes 30 Under 30, Education<br>LinkedIn Top Voice in Technology<br>LinkedIn Learning instructor<br>TEDx speaker<br>Executive Producer, Fascinate Media</div></div>
+<div style="display: flex; flex-direction: column; gap: 5px"><div style="font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase">Clients &amp; Collaborators</div><div style="font-size: 11.5px; color: #3a4459">NCTIES · Smithsonian · Antelope Valley · AZ School Boards · Concept Schools · PBS</div></div>
+</section>
+
+</main>
+
+<footer style="background: #0d1323; color: #ffffff; padding: 14px 40px; display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<div style="font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase">Ready to book <span style="color: #1f8eea">this keynote?</span></div>
+<div style="font-size: 11.5px; color: #c9d3e4; text-align: right">justinshaifer.com · @mr.fascinate · linkedin.com/in/jshaifer</div>
+</footer>
+
+</div>
+</div></div>
+<script>
+(function(){var s=document.getElementById('sheet'),w=s.parentElement;function fit(){var k=Math.min(1,(window.innerWidth-16)/816);s.style.transform=k<1?'scale('+k+')':'';w.style.height=k<1?(1056*k+48)+'px':''}window.addEventListener('resize',fit);fit();})();
+</script>
 </body>
 </html>
