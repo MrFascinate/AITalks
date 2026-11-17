@@ -4,6 +4,12 @@
   "framework": "vite",
   "redirects": [
     {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "www.justinshaifer.com" }],
+      "destination": "https://justinshaifer.com/:path",
+      "permanent": true
+    },
+    {
       "source": "/blog/:slug*",
       "destination": "/blog",
       "permanent": true
