@@ -11,6 +11,7 @@ import AIAssessmentLanding from './pages/AIAssessmentLanding.tsx'
 import AICTEProfessionalDev from './pages/AICTEProfessionalDev.tsx'
 import CoursesPage from './pages/CoursesPage.tsx'
 import TheUniverseGame from './pages/TheUniverseGame.tsx'
+import MagicBus from './pages/MagicBus.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/ai-professional-development" element={<AICTEProfessionalDev />} />
         <Route path="/courses" element={<CoursesPage />} />
         <Route path="/TheUniverseGame" element={<TheUniverseGame />} />
+        <Route path="/MagicBus" element={<MagicBus />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

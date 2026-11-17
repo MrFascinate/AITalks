@@ -57,6 +57,8 @@
     { "source": "/free-ai-assessment", "destination": "/index.html" },
     { "source": "/ai-professional-development", "destination": "/index.html" },
     { "source": "/courses", "destination": "/index.html" },
-    { "source": "/TheUniverseGame", "destination": "/index.html" }
+    { "source": "/TheUniverseGame", "destination": "/index.html" },
+    { "source": "/MagicBus", "destination": "/index.html" },
+    { "source": "/magicbus", "destination": "/index.html" }
   ]
 }
